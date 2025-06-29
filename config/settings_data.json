@@ -27,7 +27,7 @@
     "secondary_button_text_color": "#1a1a1a",
     "product_card_text_color": "#1a1a1a",
     "product_primary_badge_background": "#803cee",
-    "heading_font": "barlow_n7",
+    "heading_font": "barlow_n5",
     "heading_font_size": "large",
     "heading_letter_spacing": -2,
     "text_font": "barlow_n4",
@@ -36,7 +36,8 @@
     "product_info_alignment": "start",
     "cart_icon": "shopping_basket",
     "checkout_accent_color": "#f0c417",
-    "checkout_button_color": "#1a1a1a"
+    "checkout_button_color": "#1a1a1a",
+    "content_for_index": []
   },
   "presets": {
     "Sound": {
