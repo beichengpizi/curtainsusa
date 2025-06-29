@@ -268,8 +268,8 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Question 2",
-            "content": "<p>Write content to help your customers to better understand your products or policies.</p>",
+            "title": "Do I need to subtract ⅜ inch?",
+            "content": "<p>Yes. If your window casing width is 50\", you should order width 49-5/8\".(deduct 3/8 inch by yourself)</p>",
             "page": ""
           }
         },
@@ -278,8 +278,48 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Question 3",
-            "content": "<p>Write content to help your customers to better understand your products or policies.</p>",
+            "title": "If I want to have Roman shade inside mounted, what is the minimum window depth?",
+            "content": "<p>For window depths at least 2.5\"</p>",
+            "page": ""
+          }
+        },
+        "item_yAwFVU": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Are Roman shades light filtering or blackout?",
+            "content": "<p>Roman shades can be customized for light filtering or blackout functionality. Whether you want soft, diffused light control and privacy in a living room or total darkness in a bedroom, options like custom Roman shades with blackout lining provide the perfect solution.</p>",
+            "page": ""
+          }
+        },
+        "item_nqd7Nk": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "How to keep Roman shades clean?",
+            "content": "<p>Roman shades are relatively easy to care for. Regular dusting or vacuuming keeps them clean, and many fabrics allow for spot cleaning. For a seamless, low-maintenance option, consider cordless Roman shades.</p>",
+            "page": ""
+          }
+        },
+        "item_HbrjNR": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Are Roman shades suitable for insulation?",
+            "content": "<p>With the right materials, such as thick fabrics or<strong>blackout linings</strong>, Roman shades can improve your home's energy efficiency. These<strong>window coverings</strong>provide insulation by blocking heat in the summer and retaining warmth during winter.</p>",
+            "page": ""
+          }
+        },
+        "item_zkhfWC": {
+          "type": "item",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "How do Roman shades look like from the outside?",
+            "content": "<p>Yes! Roman shades are typically lined with neutral or white backing for a polished and uniform look from the exterior. This makes them a practical and stylish choice for any <strong>custom window</strong>solution.</p>",
             "page": ""
           }
         }
@@ -287,7 +327,11 @@
       "block_order": [
         "item_grDz3i",
         "item_XwRrMz",
-        "item_Ga983k"
+        "item_Ga983k",
+        "item_yAwFVU",
+        "item_nqd7Nk",
+        "item_HbrjNR",
+        "item_zkhfWC"
       ],
       "name": "Accordion content",
       "settings": {
