@@ -168,8 +168,8 @@
           "settings": {
             "icon": "none",
             "icon_width": 20,
-            "title": "Question 1",
-            "content": "<p>Write content to help your customers to better understand your products or policies.</p>",
+            "title": "How to Measure for OUTSIDE MOUNT Shades?",
+            "content": "<p>For window frame depths less than 2 “</p><p>    Measure window width including mouldings and add ½”</p><p>    Measure window height including mouldings and add 3\"</p>",
             "page": ""
           }
         },
@@ -215,7 +215,7 @@
         "heading_gradient": "",
         "button_background": "",
         "button_text_color": "",
-        "accordion_background": "#FFFFFF",
+        "accordion_background": "#ffffff",
         "accordion_text_color": ""
       }
     },
