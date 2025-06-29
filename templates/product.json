@@ -54,6 +54,10 @@
             "collapse_content": false
           }
         },
+        "judge_me_reviews_review_widget_Lw8FyA": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -90,6 +94,7 @@
         "payment_terms",
         "separator",
         "description",
+        "judge_me_reviews_review_widget_Lw8FyA",
         "variant_picker",
         "quantity_selector",
         "buy_buttons"
