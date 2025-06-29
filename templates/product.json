@@ -12,19 +12,11 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "settings": {}
-        },
         "title": {
           "type": "title",
           "settings": {
             "heading_tag": "h2"
           }
-        },
-        "badges": {
-          "type": "badges",
-          "settings": {}
         },
         "price": {
           "type": "price",
@@ -35,7 +27,7 @@
         "rating": {
           "type": "rating",
           "settings": {
-            "show_empty": false
+            "show_empty": true
           }
         },
         "payment_terms": {
@@ -45,14 +37,6 @@
         "separator": {
           "type": "separator",
           "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "collapse_content": false
-          }
         },
         "judge_me_reviews_review_widget_Lw8FyA": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
@@ -86,14 +70,11 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "badges",
         "price",
         "rating",
         "payment_terms",
         "separator",
-        "description",
         "judge_me_reviews_review_widget_Lw8FyA",
         "variant_picker",
         "quantity_selector",
