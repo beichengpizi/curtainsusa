@@ -32,6 +32,7 @@
     "heading_letter_spacing": -2,
     "text_font": "rubik_n4",
     "heading_apparition": "split_fade",
+    "show_product_rating": true,
     "product_color_display": "swatch",
     "product_info_alignment": "start",
     "cart_icon": "shopping_basket",
