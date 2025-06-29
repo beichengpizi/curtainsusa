@@ -120,7 +120,7 @@
           "settings": {
             "title": "Tab 1",
             "content": "<p>Use this text to share information about your brand with your customers.</p>",
-            "page": ""
+            "page": "product-description"
           }
         },
         "tab_M3nbrT": {
