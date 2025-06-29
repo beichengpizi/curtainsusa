@@ -216,7 +216,7 @@
         "button_background": "",
         "button_text_color": "",
         "accordion_background": "#ffffff",
-        "accordion_text_color": ""
+        "accordion_text_color": "rgba(0,0,0,0)"
       }
     },
     "related-products": {
