@@ -21,7 +21,9 @@
   }
 
   @media screen and (pointer: fine) {
-     #shopify-section-{{ section.id }} .group:hover .circle-chevron.group-hover\:colors:not([disabled]), .circle-chevron.hover\:colors:hover:not([disabled]) {
+     #shopify-section-{{ section.id }} .group:hover .circle-chevron.group-hover\:colors:not([disabled]),
+      #shopify-section-{{ section.id }} .circle-chevron.hover\:colors:hover:not([disabled]),
+     #shopify-section-{{ section.id }} .circle-chevron {
         background: none;
     }
   }
