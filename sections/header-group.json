@@ -91,7 +91,7 @@
           "settings": {
             "menu_item": "Free Swatches",
             "layout": "horizontal",
-            "submenu_style": "bold_heading",
+            "submenu_style": "bold_text",
             "image_heading_1": "",
             "image_link_1": "",
             "image_text_color_1": "#ffffff",
