@@ -22,7 +22,7 @@
           "type": "heading",
           "settings": {
             "text": "Find Your Perfect Curtains",
-            "heading_tag": "h1"
+            "heading_tag": "h0"
           }
         },
         "richtext_zmK7TW": {
@@ -49,6 +49,109 @@
         "text_color": "#ffffff",
         "overlay_color": "#000000",
         "overlay_opacity": 0
+      }
+    },
+    "collection_list_DLCEPN": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_xVF4iB": {
+          "type": "collection",
+          "settings": {
+            "collection": "solar-shades",
+            "image": "shopify://shop_images/CURTAINUK465_290x_eeb23cce-efbb-4e77-bed1-96e56e6f3e15.webp",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_ghnEGN": {
+          "type": "collection",
+          "settings": {
+            "collection": "roman-shades",
+            "image": "shopify://shop_images/CURTAINUK481_290x_61659349-f350-4e71-a31b-7ea1a920a5e3.webp",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_PjWRXp": {
+          "type": "collection",
+          "settings": {
+            "collection": "solar-shades",
+            "image": "shopify://shop_images/CURTAINUK465_290x_eeb23cce-efbb-4e77-bed1-96e56e6f3e15.webp",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_3PxHj6": {
+          "type": "collection",
+          "settings": {
+            "collection": "roman-shades",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_hWYhKG": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_xVF4iB",
+        "collection_ghnEGN",
+        "collection_PjWRXp",
+        "collection_3PxHj6",
+        "collection_hWYhKG"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "full_width": true,
+        "stack_collections": true,
+        "collections_per_row_mobile": "1",
+        "collections_per_row": 5,
+        "show_progress_bar": false,
+        "subheading": "",
+        "title": "Popular Category",
+        "content": "<p>Spring Refresh with Elegant Curtains<br/>Refresh Your Home for Spring</p>",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
       }
     },
     "image-link-blocks": {
@@ -150,75 +253,6 @@
         "background_gradient": "",
         "text_color": "",
         "text_gradient": ""
-      }
-    },
-    "collection-list": {
-      "type": "collection-list",
-      "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        }
-      },
-      "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3"
-      ],
-      "settings": {
-        "full_width": true,
-        "stack_collections": false,
-        "collections_per_row_mobile": "1",
-        "collections_per_row": 3,
-        "show_progress_bar": false,
-        "subheading": "",
-        "title": "Collection list",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
       }
     },
     "featured-collection": {
@@ -747,9 +781,9 @@
   },
   "order": [
     "image_with_text_overlay_36A9BQ",
+    "collection_list_DLCEPN",
     "image-link-blocks",
     "scrolling-text",
-    "collection-list",
     "featured-collection",
     "impact-text",
     "image-with-text-overlay",
