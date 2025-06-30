@@ -20,9 +20,13 @@
     transform: rotate(90deg);
   }
 
+   #shopify-section-{{ section.id }} .text-with-icon {
+     color: {{ section.settings.accordion_title_color }};
+   }
+
   @media screen and (pointer: fine) {
      #shopify-section-{{ section.id }} .group:hover .circle-chevron.group-hover\:colors:not([disabled]),
-      #shopify-section-{{ section.id }} .circle-chevron.hover\:colors:hover:not([disabled]),
+    #shopify-section-{{ section.id }} .circle-chevron.hover\:colors:hover:not([disabled]),
      #shopify-section-{{ section.id }} .circle-chevron {
         background: none;
     }
@@ -492,6 +496,11 @@
       "type": "color",
       "id": "accordion_background",
       "label": "Accordion background"
+    },
+    {
+      "type": "color",
+      "id": "accordion_title_color",
+      "label": "Accordion title"
     },
     {
       "type": "color",
