@@ -213,12 +213,46 @@
         "drag_cursor_background": "#ffffff",
         "drag_cursor_color": "#000000"
       }
+    },
+    "featured_collection_CgFHcU": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "custom-100-blackout-linen-roman-shades-for-inside-mount",
+          "custom-100-linen-roman-shade-cordless",
+          "bella-custom-linen-roman-shades",
+          "customizable-opaque-sun-shades-gauze-shades",
+          "customized-linen-100-full-blackout-curtains-shades",
+          "linen-blend-roman-shade-cordless"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_count": 24,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "Featured products",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
     }
   },
   "order": [
     "image_with_text_overlay_36A9BQ",
     "collection_list_DLCEPN",
     "featured-collection",
-    "before-after-image"
+    "before-after-image",
+    "featured_collection_CgFHcU"
   ]
 }
