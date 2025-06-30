@@ -112,6 +112,14 @@
             "menu_title": ""
           }
         },
+        "links_J3Y9wN": {
+          "type": "links",
+          "settings": {
+            "menu": "customer-service",
+            "show_menu_title": true,
+            "menu_title": ""
+          }
+        },
         "newsletter": {
           "type": "newsletter",
           "settings": {
@@ -126,6 +134,7 @@
         "text",
         "links",
         "links_HqUnGV",
+        "links_J3Y9wN",
         "newsletter"
       ],
       "settings": {
