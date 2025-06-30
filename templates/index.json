@@ -279,6 +279,68 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "multi_column_WYnPar": {
+      "type": "multi-column",
+      "blocks": {
+        "item_U4NA9A": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/CURTAINUK124_1_290x_8334de78-27c8-4af2-9f0a-000320ba72d9.webp",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "<p>Measure Your Windows</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_AGPhVQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/CURTAINUK112_1_290x_43e9fde8-9fbd-44a4-8be7-d37e72e5090d.webp",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "<p>Choose Color, Style, Size</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_rQYhqn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/CURTAINUK58_1_290x_4187fd92-02b5-48c5-a731-e93a23fd94d0.webp",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "<p>Install Curtains- Style and Care</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_U4NA9A",
+        "item_AGPhVQ",
+        "item_rQYhqn"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "small",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
@@ -287,6 +349,7 @@
     "featured-collection",
     "before-after-image",
     "featured_collection_CgFHcU",
-    "rich_text_wGQxNk"
+    "rich_text_wGQxNk",
+    "multi_column_WYnPar"
   ]
 }
