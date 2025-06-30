@@ -57,12 +57,12 @@
         "collection_xVF4iB": {
           "type": "collection",
           "settings": {
-            "collection": "solar-shades",
+            "collection": "roman-shades",
             "image": "shopify://shop_images/CURTAINUK465_290x_eeb23cce-efbb-4e77-bed1-96e56e6f3e15.webp",
             "subheading": "",
             "title": "",
             "url": "",
-            "heading_tag": "h2",
+            "heading_tag": "h6",
             "text_position": "place-self-end-start text-start",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -77,7 +77,7 @@
             "subheading": "",
             "title": "",
             "url": "",
-            "heading_tag": "h2",
+            "heading_tag": "h6",
             "text_position": "place-self-end-start text-start",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -92,7 +92,7 @@
             "subheading": "",
             "title": "",
             "url": "",
-            "heading_tag": "h2",
+            "heading_tag": "h6",
             "text_position": "place-self-end-start text-start",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -103,28 +103,30 @@
           "type": "collection",
           "settings": {
             "collection": "roman-shades",
+            "image": "shopify://shop_images/Custom_Shades-vXj_290x_9df2cde3-df79-4053-a38e-4d6ada0e159e.webp",
             "subheading": "",
             "title": "",
             "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-start text-start",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         },
         "collection_hWYhKG": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "solar-shades",
+            "image": "shopify://shop_images/3_290x_bf62ecb5-69e7-4e6f-8dab-a01bbe08d5eb.webp",
             "subheading": "",
             "title": "",
             "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-start text-start",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         }
       },
