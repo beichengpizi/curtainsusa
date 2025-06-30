@@ -49,7 +49,7 @@
         "sidebar_menu": "",
         "secondary_menu": "",
         "menu_open_trigger": "click",
-        "opening_from": "bottom",
+        "opening_from": "left",
         "layout": "logo_left_navigation_center",
         "show_social_media": true,
         "show_locale_selector": true,
