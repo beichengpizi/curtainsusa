@@ -5,7 +5,11 @@
 <style>
   #shopify-section-{{ section.id }} {
     --section-stack-intro: {% if text_position == 'center' %}66.6667%{% else %}50%{% endif %};
-    --section-stack-main: 50%;
+    --section-stack-main:100%;
+  }
+
+  #shopify-section-{{ section.id }}  .accordion-box {
+    padding: 0;
   }
 </style>
 
