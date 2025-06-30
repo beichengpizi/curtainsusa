@@ -46,6 +46,7 @@
             "menu_item": "Shop All Curtains",
             "layout": "horizontal",
             "submenu_style": "bold_text",
+            "image_1": "shopify://shop_images/CURTAINUK144_9b10a611-b1ae-43b3-82df-9aaf133f0539_2.webp",
             "image_heading_1": "",
             "image_link_1": "",
             "image_text_color_1": "#ffffff",
