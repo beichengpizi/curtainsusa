@@ -355,6 +355,66 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "testimonials_j4KLWK": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_64DCbb": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "John Smith",
+            "title": "",
+            "content": "<p>I have now ordered these Roman shades 3 times, I’ve gotten both the light filtering and the black out versions for different homes and different rooms. The sellers are AWESOME they completed our order so quickly and were able to ship them to us quickly as well. They look great, work great, and we’re easy to install. I feel like they are also priced very well for custom sized shades. Would definitely recommend them, and will be using them again in future homes I’m sure!</p>"
+          }
+        },
+        "testimonial_gy7Eht": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Mary U.",
+            "title": "Testimonial 2",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        },
+        "testimonial_3tpGNi": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Joshua A.",
+            "title": "Testimonial 3",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_64DCbb",
+        "testimonial_gy7Eht",
+        "testimonial_3tpGNi"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "full_width": true,
+        "stack_testimonials": false,
+        "subheading": "",
+        "title": "Let customers speak for us",
+        "content": "<p>With Us, Product Quality Is Defined By Word Of Mouth From Real Customers.</p>",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "testimonial_card_background": "",
+        "testimonial_card_text_color": ""
+      }
     }
   },
   "order": [
@@ -364,6 +424,7 @@
     "before-after-image",
     "featured_collection_CgFHcU",
     "rich_text_wGQxNk",
-    "multi_column_WYnPar"
+    "multi_column_WYnPar",
+    "testimonials_j4KLWK"
   ]
 }
