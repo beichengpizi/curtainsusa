@@ -104,6 +104,14 @@
             "menu_title": ""
           }
         },
+        "links_HqUnGV": {
+          "type": "links",
+          "settings": {
+            "menu": "further-info",
+            "show_menu_title": true,
+            "menu_title": ""
+          }
+        },
         "newsletter": {
           "type": "newsletter",
           "settings": {
@@ -117,6 +125,7 @@
       "block_order": [
         "text",
         "links",
+        "links_HqUnGV",
         "newsletter"
       ],
       "settings": {
