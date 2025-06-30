@@ -250,16 +250,10 @@
     "rich_text_wGQxNk": {
       "type": "rich-text",
       "blocks": {
-        "subheading_4VN8Ex": {
-          "type": "subheading",
-          "settings": {
-            "text": "Subheading"
-          }
-        },
         "heading_xk6EHk": {
           "type": "heading",
           "settings": {
-            "text": "Heading",
+            "text": "When Do Curtains Need To Be Replaced?",
             "heading_tag": "h1",
             "text_color": "",
             "gradient": ""
@@ -268,12 +262,11 @@
         "richtext_NmJNmK": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "content": "<p>If you're looking for curtains with breathability, durability, and eco-friendly qualities, linen is your best curtains. They provide excellent airflow, adding a fresh, comfortable ambiance to any room. Their natural texture and elegant drape enhance both modern and traditional decor, making them a versatile and timeless choice for your home.</p>"
           }
         }
       },
       "block_order": [
-        "subheading_4VN8Ex",
         "heading_xk6EHk",
         "richtext_NmJNmK"
       ],
