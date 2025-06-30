@@ -1,6 +1,158 @@
-{% schema %}
-  {
-    "name": "Block name",
-    "settings": []
+<style>
+  {% if block.settings.border_color != blank %}
+    #shopify-block-{{ block.id }} .image-border {
+      border: 2px solid {{ block.settings.border_color }};
+    }
+  {% endif %}
+
+  #shopify-block-{{ block.id }} .image-width {
+    width: {{ block.settings.mobile_image_width }};
   }
+
+  @media screen and (min-width: 768px) {
+    #shopify-block-{{ block.id }} .image-width {
+      width: {{ block.settings.desktop_image_width }};
+    }
+  }
+</style>
+
+{%- if block.settings.image != blank -%}
+  {%- assign alignment = block.settings.alignment | replace: 'left', 'start' | replace: 'right', 'end' -%}
+
+  <div class="justify-items-{{ alignment }}" id="shopify-block-{{ block.id }}">
+    <div class="v-stack justify-items-{{ alignment }}">
+      {%- if block.settings.image != blank -%}
+        {%- capture image_class -%}content-over-media__media zoom-image image-border image-width {% if block.settings.mobile_image != blank %}hidden sm:block{% endif %}{%- endcapture -%}
+        {%- capture mobile_image_class -%}content-over-media__media zoom-image image-border sm:hidden image-width{%- endcapture -%}
+        {{-
+          block.settings.image
+          | image_url: width: block.settings.image.width
+          | image_tag:
+            loading: 'lazy',
+            widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800,2000,2200,2400',
+            class: image_class
+        -}}
+        {% if block.settings.mobile_image != blank %}
+          {{-
+            block.settings.mobile_image
+            | image_url: width: block.settings.mobile_image.width
+            | image_tag:
+              loading: 'lazy',
+              widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800,2000,2200,2400',
+              class: mobile_image_class
+          -}}
+        {% endif %}
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Image",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "3200 x 1600px .jpg recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image",
+      "info": "1300 x 1500px .jpg recommended. Default to desktop image."
+    },
+    {
+      "type": "text_alignment",
+      "id": "alignment",
+      "label": "Image alignment",
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "border_radius",
+      "label": "Border radius",
+      "options":[
+        {
+          "value": "rounded-xs",
+          "label": "XSmall"
+        },
+        {
+          "value": "rounded-sm",
+          "label": "Small"
+        },
+        {
+          "value": "rounded",
+          "label": "Base"
+        },
+        {
+          "value": "rounded-lg",
+          "label": "Large"
+        },
+        {
+          "value": "rounded-full",
+          "label": "X-Large"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color"
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_width",
+      "label": "Mobile image width",
+      "options": [
+        {
+          "value": "100%",
+          "label": "XLarge"
+        },
+        {
+          "value": "85%",
+          "label": "Large"
+        },
+        {
+          "value": "50%",
+          "label": "Medium"
+        },
+        {
+          "value": "25%",
+          "label": "Small"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "desktop_image_width",
+      "label": "Desktop image width",
+      "options": [
+        {
+          "value": "100%",
+          "label": "XLarge"
+        },
+        {
+          "value": "75%",
+          "label": "Large"
+        },
+        {
+          "value": "50%",
+          "label": "Medium"
+        },
+        {
+          "value": "25%",
+          "label": "Small"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image"
+    }
+  ]
+}
 {% endschema %}
