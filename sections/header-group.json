@@ -45,7 +45,7 @@
         "logo": "{{shop.brand.logo}}",
         "logo_max_width": 120,
         "logo_mobile_max_width": 100,
-        "menu": "main-menu",
+        "menu": "new-main-menu",
         "sidebar_menu": "",
         "secondary_menu": "",
         "menu_open_trigger": "click",
