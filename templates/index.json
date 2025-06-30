@@ -321,12 +321,26 @@
             "link_text": "",
             "link_style": "link"
           }
+        },
+        "item_P7Fi4i": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/CURTAINUK206_1_290x_bb57fdd2-08d9-4b2d-94ad-5c9d573f4da2.webp",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "<p>Define the Style and Enjoy Life</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
         }
       },
       "block_order": [
         "item_U4NA9A",
         "item_AGPhVQ",
-        "item_rQYhqn"
+        "item_rQYhqn",
+        "item_P7Fi4i"
       ],
       "name": "Multi-column",
       "settings": {
