@@ -34,6 +34,7 @@
     "heading_apparition": "split_fade",
     "color_swatch_style": "square",
     "show_product_rating": true,
+    "product_rating_mode": "count",
     "product_color_display": "swatch",
     "product_info_alignment": "start",
     "cart_icon": "shopping_basket",
