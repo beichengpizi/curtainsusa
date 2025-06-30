@@ -1,6 +1,259 @@
-{% schema %}
-  {
-    "name": "Block name",
-    "settings": []
+<style>
+  {% if block.settings.background != blank %}
+    #shopify-block-{{ block.id }} {
+      background-color: {{ block.settings.background }};
+      border-radius: 24px;
+    }
+  {% endif %}
+  @media screen and (max-width: 700px) {
+    #shopify-block-{{ block.id }} .group-block {
+      display: flex;
+      flex-direction: {{ block.settings.mobile_flex_wrap }};
+      align-items: {{ block.settings.mobile_align_item }};
+      justify-content: {{ block.settings.mobile_justify_content }};
+      gap: {% if block.settings.gap == 'small' %}0{% elsif block.settings.gap == 'medium' %}0.5rem{% else %}2rem{% endif %};
+    }
+    {% if block.settings.mobile_flex == false %}
+      #shopify-block-{{ block.id }} {
+        flex: 1;
+      }
+    {% endif %}
   }
+  @media screen and (min-width: 700px){
+    #shopify-block-{{ block.id }} .group-block {
+      display: flex;
+      flex-direction: {{ block.settings.flex_wrap}};
+      align-items: {{ block.settings.align_item }};
+      justify-content: {{ block.settings.desktop_justify_content }};
+      gap: {% if block.settings.gap == 'small' %}0{% elsif block.settings.gap == 'medium' %}1rem{% else %}2rem{% endif %};
+    }
+    {% if block.settings.desktop_flex == false %}
+      #shopify-block-{{ block.id }} {
+        flex: 1;
+      }
+    {% endif %}
+  }
+
+  {% if block.settings.height %}
+    #shopify-block-{{ block.id }},
+    #shopify-block-{{ block.id }} .group-block {
+      height: 100%;
+    }
+  {% endif %}
+</style>
+
+<div class="group-block">
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "Group",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "height",
+      "label": "Full height",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "desktop_flex",
+      "label": "Desktop flex",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "flex_wrap",
+      "label": "Flex wrap",
+      "options":[
+        {
+          "value": "column",
+          "label": "Column"
+        },
+        {
+          "value": "row",
+          "label": "Row"
+        },
+        {
+          "value": "row-reverse",
+          "label": "Row reverse"
+        },
+        {
+          "value": "column-reverse",
+          "label": "Column reverse"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "mobile_flex_wrap",
+      "label": "Mobile flex wrap",
+      "options":[
+        {
+          "value": "column",
+          "label": "Column"
+        },
+        {
+          "value": "row",
+          "label": "Row"
+        },
+        {
+          "value": "row-reverse",
+          "label": "Row reverse"
+        },
+        {
+          "value": "column-reverse",
+          "label": "Column reverse"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "align_item",
+      "label": "Align item",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-start",
+          "label": "Start"
+        },
+        {
+          "value": "flex-end",
+          "label": "End"
+        },
+        {
+          "value": "stretch",
+          "label": "Stretch"
+        },
+        {
+          "value": "space-around",
+          "label": "Space around"
+        },
+      ]
+    },
+    {
+      "type": "select",
+      "id": "desktop_justify_content",
+      "label": "Desktop justify content",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-start",
+          "label": "Start"
+        },
+        {
+          "value": "flex-end",
+          "label": "End"
+        },
+        {
+          "value": "stretch",
+          "label": "Stretch"
+        },
+        {
+          "value": "space-between",
+          "label": "Space between"
+        },
+        {
+          "value": "space-around",
+          "label": "Space around"
+        },
+      ]
+    },
+    {
+      "type": "select",
+      "id": "mobile_align_item",
+      "label": "Mobile align item",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-start",
+          "label": "Start"
+        },
+        {
+          "value": "flex-end",
+          "label": "End"
+        },
+        {
+          "value": "stretch",
+          "label": "Stretch"
+        },
+        {
+          "value": "space-around",
+          "label": "Space around"
+        },
+      ]
+    },
+    {
+      "type": "select",
+      "id": "mobile_justify_content",
+      "label": "Mobile justify content",
+      "options": [
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-start",
+          "label": "Start"
+        },
+        {
+          "value": "flex-end",
+          "label": "End"
+        },
+        {
+          "value": "stretch",
+          "label": "Stretch"
+        },
+        {
+          "value": "space-between",
+          "label": "Space between"
+        },
+        {
+          "value": "space-around",
+          "label": "Space around"
+        },
+      ]
+    },
+    {
+      "type":"select",
+      "id": "gap",
+      "label": "Gap",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Group"
+    }
+  ]
+}
 {% endschema %}
