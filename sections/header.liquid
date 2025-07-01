@@ -135,7 +135,7 @@ the underlying logic of the menu.
                            {%- render 'mega-menu-horizontal', link: link, mega_menu_block: mega_menu_block -%}
                           </details>
                         {%- else -%}
-                          <button aria-controls="navigation-drawer-{{ forloop.index }}" aria-expanded="false" class="text-with-icon gap-2.5 bold link-faded-reverse">
+                          <button aria-controls="navigation-drawer-{{ forloop.index }}" aria-expanded="false" class="text-with-icon gap-2.5 link-faded-reverse">
                             {{- link.title -}} {%- render 'icon' with 'chevron-bottom' -%}
                           </button>
 
