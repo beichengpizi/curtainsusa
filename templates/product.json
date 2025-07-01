@@ -562,7 +562,7 @@
                 "desktop_text_position": "sm:place-self-center sm:text-center",
                 "background": "",
                 "background_gradient": "",
-                "border": "transparent",
+                "border": "rgba(0,0,0,0)",
                 "text_color": "#ffffff",
                 "text_gradient": "",
                 "button_background": "#000000",
@@ -620,7 +620,7 @@
                 "desktop_text_position": "sm:place-self-center sm:text-center",
                 "background": "",
                 "background_gradient": "",
-                "border": "transparent",
+                "border": "rgba(0,0,0,0)",
                 "text_color": "#ffffff",
                 "text_gradient": "",
                 "button_background": "#000000",
@@ -700,6 +700,111 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": ""
+      }
+    },
+    "custom_grid_6fFpCi": {
+      "type": "custom-grid",
+      "blocks": {
+        "grid_group_yEKwUm": {
+          "type": "grid-group",
+          "name": "Grid group",
+          "settings": {
+            "desktop_padding": 0,
+            "mobile_padding": 0,
+            "grid_area": "",
+            "border_radius": "rounded",
+            "link_url": "",
+            "mobile_column_span": 2,
+            "mobile_row_span": 1,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 1,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "",
+            "background_gradient": "",
+            "border": "transparent",
+            "text_color": "#000000",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          },
+          "blocks": {
+            "accordion_ynL3TL": {
+              "type": "accordion",
+              "name": "Accordion",
+              "settings": {
+                "title": "Benefits of Roman Shade",
+                "content": "<p>Write content about your brand or products.</p>",
+                "page": ""
+              },
+              "blocks": {
+                "rich_text_jVEAFN": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<p>Write some text about your products or your brand.</p>",
+                    "content_width": "small",
+                    "text_alignment": "center",
+                    "mobile_text_alignment": "center",
+                    "color": "",
+                    "desktop_font_size": 18,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_jVEAFN"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_ynL3TL"
+          ]
+        },
+        "grid_group_nh9hWE": {
+          "type": "grid-group",
+          "name": "Grid group",
+          "settings": {
+            "desktop_padding": 0,
+            "mobile_padding": 0,
+            "grid_area": "",
+            "border_radius": "rounded",
+            "link_url": "",
+            "mobile_column_span": 2,
+            "mobile_row_span": 1,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 1,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "",
+            "background_gradient": "",
+            "border": "transparent",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "grid_group_yEKwUm",
+        "grid_group_nh9hWE"
+      ],
+      "name": "Custom grid",
+      "settings": {
+        "full_width": true,
+        "gap": "xlg",
+        "heading": "",
+        "subheading": "",
+        "content": "",
+        "desktop_column_num": 2,
+        "mobile_column_num": 4,
+        "background": "",
+        "background_gradient": ""
       }
     },
     "rich_text_MQDkaa": {
@@ -917,6 +1022,7 @@
   "order": [
     "main",
     "custom_tabs_tn3L3a",
+    "custom_grid_6fFpCi",
     "rich_text_MQDkaa",
     "media_grid_GjEMm4",
     "accordion_content_JXnBFH",
