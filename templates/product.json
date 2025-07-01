@@ -957,7 +957,7 @@
           "type": "heading",
           "settings": {
             "text": "Stack Height",
-            "heading_tag": "h4",
+            "heading_tag": "h5",
             "text_color": "#745239",
             "gradient": ""
           }
