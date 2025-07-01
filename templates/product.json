@@ -953,6 +953,15 @@
     "rich_text_MQDkaa": {
       "type": "rich-text",
       "blocks": {
+        "heading_LGLcBE": {
+          "type": "heading",
+          "settings": {
+            "text": "Stack Height",
+            "heading_tag": "h4",
+            "text_color": "#745239",
+            "gradient": ""
+          }
+        },
         "richtext_jfKbA3": {
           "type": "richtext",
           "settings": {
@@ -961,6 +970,7 @@
         }
       },
       "block_order": [
+        "heading_LGLcBE",
         "richtext_jfKbA3"
       ],
       "name": "Rich text",
