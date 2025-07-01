@@ -415,6 +415,8 @@ Supported variables
           {%- if block.settings.title != blank or block.settings.content != blank -%}
             {%- render 'offer', block: block -%}
           {%- endif -%}
+        {%- when 'discount' -%}
+          {% render 'discounts', block: block %}
 
         {%- when 'share_buttons' -%}
           <div class="product-form__share justify-items-{{ block.settings.alignment | replace: 'left', 'start' | replace: 'right', 'end' }}">
