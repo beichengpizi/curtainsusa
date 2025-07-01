@@ -544,6 +544,50 @@
             "mobile_column_num": 4
           },
           "blocks": {
+            "grid_group_D9aNjn": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 2,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "background": "",
+                "background_gradient": "",
+                "border": "transparent",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_RBA3JM": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<h4>Measure Width and Length Correctly</h4><p>Shades can be inside or outside mounted. Considering the window frame depth is the first step.</p>",
+                    "content_width": "small",
+                    "text_alignment": "center",
+                    "mobile_text_alignment": "center",
+                    "color": "#1a1a1a",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_RBA3JM"
+              ]
+            },
             "image_TxpBLf": {
               "type": "image",
               "name": "Image",
@@ -660,6 +704,7 @@
             }
           },
           "block_order": [
+            "grid_group_D9aNjn",
             "image_TxpBLf",
             "image_VbTHeU",
             "grid_group_HbKbHE",
@@ -675,10 +720,72 @@
             "heading": "",
             "subheading": "",
             "content": "",
-            "desktop_column_num": 3,
+            "desktop_column_num": 2,
             "mobile_column_num": 4
           },
-          "blocks": {}
+          "blocks": {
+            "image_CJiibJ": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify://shop_images/inside-mount_03b4fb6a-8239-4a14-88b2-01f4099849c5.webp",
+                "alignment": "center",
+                "border_radius": "rounded-xs",
+                "border_color": "",
+                "mobile_image_width": "100%",
+                "desktop_image_width": "100%"
+              },
+              "blocks": {}
+            },
+            "grid_group_cCMMc4": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded-xs",
+                "link_url": "",
+                "mobile_column_span": 1,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 1,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "background": "",
+                "background_gradient": "",
+                "border": "#1a1a1a",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_MpALrd": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<h3>#Measurement & <br/>Installation</h3><p>6 Steps Easy Installation for Inside Mount</p>",
+                    "content_width": "small",
+                    "text_alignment": "center",
+                    "mobile_text_alignment": "center",
+                    "color": "#1a1a1a",
+                    "desktop_font_size": 18,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_MpALrd"
+              ]
+            }
+          },
+          "block_order": [
+            "image_CJiibJ",
+            "grid_group_cCMMc4"
+          ]
         }
       },
       "block_order": [
