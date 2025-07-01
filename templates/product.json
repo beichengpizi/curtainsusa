@@ -861,11 +861,11 @@
             "mobile_text_position": "place-self-center text-center",
             "desktop_column_span": 1,
             "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
             "background": "",
             "background_gradient": "",
             "border": "rgba(0,0,0,0)",
-            "text_color": "#000000",
+            "text_color": "#745239",
             "text_gradient": "",
             "button_background": "#000000",
             "overlay_color": "#000000",
@@ -877,7 +877,7 @@
               "name": "Accordion",
               "settings": {
                 "title": "Benefits of Roman Shade",
-                "content": "<p>Write content about your brand or products.</p>",
+                "content": "<p><strong>Versatility: </strong>Suitable for various rooms, Roman shades can complement both modern and traditional interiors. It's versatile due to its adaptability in style, fabric, and functionality.<br/><strong>Light Control and Privacy: </strong>The ability to be fully raised, lowered or positioned at different heights provides unparalleled control over the amount of natural light.<br/><strong>Energy-efficient:</strong> Roman shades come with a lining that prevents solar heat gain in hot climates, helping to keep interiors cooler. In cold climates it blocks cold drafts, helping to reduce energy consumption.<br/><strong>Aesthetics and Functionality: </strong>Blending aesthetics and functionality, the neutral tone and soft pleats add a touch of sophistication to the room.</p>",
                 "page": ""
               },
               "blocks": {
@@ -912,6 +912,7 @@
             "desktop_padding": 0,
             "mobile_padding": 0,
             "grid_area": "",
+            "image": "shopify://shop_images/Lesley-Custom-Linen-Roman-Shades-Ivory-02_1_470x_6336cbb6-3177-4263-89d9-3aaa13578d7e.webp",
             "border_radius": "rounded",
             "link_url": "",
             "mobile_column_span": 2,
