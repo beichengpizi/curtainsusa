@@ -51,7 +51,13 @@ Supported parameters
         {% endif %}
       {%- endif -%}
 
-      <span class="circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate accordion-arrow">{%- render 'icon' with 'accordion-arrow' -%}</span>
+      <span class="circle-chevron group-hover:colors group-expanded:colors group-expanded:rotate accordion-arrow">
+        {% if new_arrorw == true %}
+          {%- render 'icon' with 'accordion-arrow' -%}
+        {% else %}
+          {% render 'icon' with 'chevron-bottom-small' %}
+        {% endif %}
+      </span>
     </div>
   </summary>
 
