@@ -1,1 +1,430 @@
-{"sections":{"slideshow":{"type":"slideshow","blocks":{"slide-1":{"type":"image","settings":{"content_max_width":780,"mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","subheading":"Tell your story","title":"Slide title","heading_tag":"h0","button_text":"","button_link":"","text_color":"#ffffff","button_background":"#ffffff","button_text_color":"#000000","overlay_color":"#000000","overlay_opacity":30,"background":"","background_gradient":""}},"slide-2":{"type":"image","settings":{"content_max_width":780,"mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","subheading":"Tell your story","title":"Slide title","heading_tag":"h0","button_text":"","button_link":"","text_color":"#ffffff","button_background":"#ffffff","button_text_color":"#000000","overlay_color":"#000000","overlay_opacity":30,"background":"","background_gradient":""}}},"block_order":["slide-1","slide-2"],"settings":{"full_width":true,"allow_transparent_header":true,"image_size":"auto","controls_type":"numbers","transition_type":"fade_with_text","autoplay":true,"cycle_speed":6,"background":"#F2F2F2","background_gradient":"linear-gradient(60deg, rgba(60, 65, 68, 1), rgba(23, 29, 33, 1) 98%)"}},"image-link-blocks":{"type":"image-link-blocks","blocks":{"1664424046b00c932c-0":{"type":"item","settings":{"stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"1664424046b00c932c-1":{"type":"item","settings":{"stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"1664424046b00c932c-2":{"type":"item","settings":{"stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"1664424046b00c932c-3":{"type":"item","settings":{"stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"e4a0ef18-1856-4ddd-83d8-871a60d7acac":{"type":"item","settings":{"stretch_image":true,"link_text":"","link_url":"","background":"","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}}},"block_order":["1664424046b00c932c-0","1664424046b00c932c-1","1664424046b00c932c-2","1664424046b00c932c-3","e4a0ef18-1856-4ddd-83d8-871a60d7acac"],"settings":{"full_width":false,"block_size":"medium","subheading":"","title":"","content":"","link_url":"","link_text":"","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":""}},"scrolling-text":{"type":"scrolling-text","settings":{"full_width":true,"text":"Promotion text","text_size":"large","text_style":"fill","scrolling_mode":"auto","scrolling_speed":5,"background":"","background_gradient":"","text_color":"","text_gradient":""}},"collection-list":{"type":"collection-list","blocks":{"collection-1":{"type":"collection","settings":{"collection":"","subheading":"","title":"","url":"","heading_tag":"h2","text_position":"place-self-center text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"collection-2":{"type":"collection","settings":{"collection":"","subheading":"","title":"","url":"","heading_tag":"h2","text_position":"place-self-center text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"collection-3":{"type":"collection","settings":{"collection":"","subheading":"","title":"","url":"","heading_tag":"h2","text_position":"place-self-center text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}}},"block_order":["collection-1","collection-2","collection-3"],"settings":{"full_width":true,"stack_collections":false,"collections_per_row":3,"show_progress_bar":false,"subheading":"","title":"Collection list","content":"","link_url":"","link_text":"View all","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":""}},"featured-collection":{"type":"featured-collection","settings":{"collection":"","products":[],"full_width":true,"stack_products":false,"show_progress_bar":false,"products_count":6,"products_per_row_mobile":"2","products_per_row_desktop":4,"subheading":"","title":"Featured collection","content":"","link_url":"","link_text":"View all","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","product_card_background":"","product_card_text_color":""}},"impact-text":{"type":"impact-text","blocks":{"1664424181b38582d5-0":{"type":"item","settings":{"title":"100%","subheading":"Showcase a benefit of your product","content":"","button_text":"","button_url":"","animate_impact_text":false,"animate_impact_text_duration":2}}},"block_order":["1664424181b38582d5-0"],"settings":{"full_width":true,"stack_mobile":true,"text_alignment":"center","impact_text_style":"fill","text_divider":"none","impact_text_size_ratio":1,"background":"","background_gradient":"","heading_text_color":"","heading_gradient":"linear-gradient(180deg, rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0) 100%)","text_color":"","button_background":"","button_text_color":""}},"image-with-text-overlay":{"type":"image-with-text-overlay","blocks":{"1664424230c4756b0e-0":{"type":"subheading","settings":{"text":"Subheading"}},"1664424230c4756b0e-1":{"type":"heading","settings":{"text":"Image with text overlay","heading_tag":"h1"}},"1664424230c4756b0e-2":{"type":"richtext","settings":{"content":"<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"}}},"block_order":["1664424230c4756b0e-0","1664424230c4756b0e-1","1664424230c4756b0e-2"],"settings":{"full_width":true,"allow_transparent_header":false,"enable_parallax":false,"image_size":"auto","mobile_text_position":"place-self-center text-center","desktop_text_position":"sm:place-self-center sm:text-center","text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":30}},"media-grid":{"type":"media-grid","blocks":{"item-1":{"type":"image","settings":{"title":"Promote your products","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":2,"desktop_row_span":2,"desktop_text_position":"sm:place-self-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"item-2":{"type":"image","settings":{"title":"Promote your products","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":1,"desktop_row_span":1,"desktop_text_position":"sm:place-self-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"item-3":{"type":"image","settings":{"title":"Promote your products","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":1,"desktop_row_span":1,"desktop_text_position":"sm:place-self-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}},"29246d34-c6e0-4373-84f6-b15e57736a00":{"type":"image","settings":{"title":"Promote your products","heading_tag":"h4","link_url":"","link_text":"","mobile_text_position":"place-self-center text-center","desktop_column_span":2,"desktop_row_span":1,"desktop_text_position":"sm:place-self-center sm:text-center","background":"#000000","background_gradient":"","text_color":"#ffffff","text_gradient":"","button_background":"#000000","button_text_color":"#ffffff","overlay_color":"#000000","overlay_opacity":0}}},"block_order":["item-1","item-2","item-3","29246d34-c6e0-4373-84f6-b15e57736a00"],"settings":{"full_width":true,"reduce_width":false,"desktop_row_height":290,"background":"","background_gradient":""}},"before-after-image":{"type":"before-after-image","settings":{"full_width":true,"subheading":"","title":"Before\/after","content":"<p>Showcase your product benefit by using before\/after image comparison.<\/p>","expand_image":false,"text_position":"center","before_after_text_position":"bottom","before_text":"Before","after_text":"After","drag_initial_position":50,"background":"","background_gradient":"","text_color":"","before_text_color":"#ffffff","after_text_color":"#ffffff"}},"press":{"type":"press","blocks":{"16644243327ba53d2a-0":{"type":"quote","settings":{"logo_width":100,"author":"","content":"Share info about what your customers say about your products.","show_rating":false,"rating":4}},"16644243327ba53d2a-1":{"type":"quote","settings":{"logo_width":100,"author":"","content":"Or share content about your promotion, offers...","show_rating":false,"rating":4}}},"block_order":["16644243327ba53d2a-0","16644243327ba53d2a-1"],"settings":{"full_width":true,"content_size":"medium","background":"","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","logo_item_background":"","logo_item_border":""}},"hot-spots":{"type":"hot-spots","blocks":{"1664424434f5b7d0e0-0":{"type":"item","settings":{"horizontal_position":24,"vertical_position":70,"horizontal_position_mobile":24,"vertical_position_mobile":70,"icon_width":32,"title":"Feature name","content":"<p>Share useful information about your product features.<\/p>"}},"1664424434f5b7d0e0-1":{"type":"item","settings":{"horizontal_position":62,"vertical_position":14,"horizontal_position_mobile":62,"vertical_position_mobile":14,"icon_width":32,"title":"Feature name","content":"<p>Share useful information about your product features.<\/p>"}},"1664424434f5b7d0e0-2":{"type":"item","settings":{"horizontal_position":83,"vertical_position":75,"horizontal_position_mobile":83,"vertical_position_mobile":75,"icon_width":32,"title":"Feature name","content":"<p>Share useful information about your product features.<\/p>"}}},"block_order":["1664424434f5b7d0e0-0","1664424434f5b7d0e0-1","1664424434f5b7d0e0-2"],"settings":{"full_width":true,"title":"","content":"","button_text":"","button_url":"","desktop_text_position":"place-self-start text-start","image_background":"","image_background_gradient":"","overlay_color":"#000000","overlay_opacity":0,"overlay_text_color":"#ffffff","overlay_button_background":"","overlay_button_text_color":"","hot_spot_dot_background":"#ffffff","hot_spot_dot_text_color":"#000000","hot_spot_content_background":"#ffffff","hot_spot_content_text_color":"#000000","hot_spot_content_opacity":90,"hot_spot_content_blur_radius":3}},"multiple-images-with-text":{"type":"multiple-images-with-text","blocks":{"1664424486a2b084ab-0":{"type":"item","settings":{"image_rotation_degrees":-2,"subheading":"","title":"Heading 1","content":"<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>","button_url":"","button_text":""}},"1664424486a2b084ab-1":{"type":"item","settings":{"image_rotation_degrees":1.5,"subheading":"","title":"Heading 2","content":"<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>","button_url":"","button_text":""}}},"block_order":["1664424486a2b084ab-0","1664424486a2b084ab-1"],"settings":{"full_width":true,"images_layout":"scattered","collage_images_alignment":"middle","background":"","background_gradient":"","text_color":"","button_background":"","button_text_color":""}},"featured-product":{"type":"featured-product","blocks":{"vendor":{"type":"vendor","settings":{}},"title":{"type":"title","settings":{"heading_tag":"h2"}},"badges":{"type":"badges","settings":{}},"price":{"type":"price","settings":{"show_taxes_notice":false}},"rating":{"type":"rating","settings":{"show_empty":false}},"separator":{"type":"separator","settings":{}},"description":{"type":"description","settings":{"collapse_content":false}},"variant-picker":{"type":"variant_picker","settings":{"hide_sold_out_variants":false,"stack_blocks":true,"selector_style":"block","swatch_selector_style":"color","size_chart_page":""}},"quantity-selector":{"type":"quantity_selector","settings":{}},"buy-buttons":{"type":"buy_buttons","settings":{"show_payment_button":true,"atc_button_background":"","atc_button_text_color":"","payment_button_background":"","payment_button_text_color":""}}},"block_order":["vendor","title","badges","price","rating","separator","description","variant-picker","quantity-selector","buy-buttons"],"settings":{"full_width":false,"product":"","desktop_media_width":55,"desktop_media_layout":"carousel_thumbnails_left","mobile_media_size":"expanded","mobile_carousel_control":"floating_dots","enable_video_autoplay":true,"enable_video_looping":false,"enable_image_zoom":true,"max_image_zoom_level":3,"background":"#ffffff","background_gradient":"","text_color":"","input_background":"rgba(0,0,0,0)","input_text_color":""}},"faq":{"type":"faq","blocks":{"166442457738b23caf-0":{"type":"item","settings":{"title":"Do you ship overseas?","content":"<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"}},"166442457738b23caf-1":{"type":"item","settings":{"title":"How long will it take to get my orders?","content":"<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"}},"166442457738b23caf-2":{"type":"item","settings":{"title":"Any question?","content":"<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"}}},"block_order":["166442457738b23caf-0","166442457738b23caf-1","166442457738b23caf-2"],"settings":{"full_width":false,"subheading":"","title":"FAQ","content":"<p>Use this text to share information about your product or shipping policies.<\/p>","team_avatar_width":160,"support_hours":"Our customer support is available Monday to Friday: 8am-8:30pm.","answer_time":"Average answer time: 24h","button_text":"","button_url":"","text_position":"start","background":"#ffffff","background_gradient":"","text_color":"","heading_color":"","heading_gradient":"","button_background":"","button_text_color":"","accordion_background":"","accordion_text_color":""}}},"order":["slideshow","image-link-blocks","scrolling-text","collection-list","featured-collection","impact-text","image-with-text-overlay","media-grid","before-after-image","press","hot-spots","multiple-images-with-text","featured-product","faq"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_36A9BQ": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_xVAkG7": {
+          "type": "subheading",
+          "settings": {
+            "text": "Spring Sale"
+          }
+        },
+        "heading_wmF4xF": {
+          "type": "heading",
+          "settings": {
+            "text": "Find Your Perfect Curtains",
+            "heading_tag": "h0"
+          }
+        },
+        "richtext_zmK7TW": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Save up to 25% off on selected items.</p><p><a href=\"/products/custom-100-blackout-linen-roman-shades-for-inside-mount\" title=\"Custom 100% Blackout Bamboo Hemp Roman Shade\">Shop Now</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_xVAkG7",
+        "heading_wmF4xF",
+        "richtext_zmK7TW"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": true,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/CURTAINUK-133.webp",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "collection_list_DLCEPN": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_xVF4iB": {
+          "type": "collection",
+          "settings": {
+            "collection": "roman-shades",
+            "image": "shopify://shop_images/CURTAINUK465_290x_eeb23cce-efbb-4e77-bed1-96e56e6f3e15.webp",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_ghnEGN": {
+          "type": "collection",
+          "settings": {
+            "collection": "roman-shades",
+            "image": "shopify://shop_images/CURTAINUK481_290x_61659349-f350-4e71-a31b-7ea1a920a5e3.webp",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_PjWRXp": {
+          "type": "collection",
+          "settings": {
+            "collection": "solar-shades",
+            "image": "shopify://shop_images/CURTAINUK465_290x_eeb23cce-efbb-4e77-bed1-96e56e6f3e15.webp",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_3PxHj6": {
+          "type": "collection",
+          "settings": {
+            "collection": "roman-shades",
+            "image": "shopify://shop_images/Custom_Shades-vXj_290x_9df2cde3-df79-4053-a38e-4d6ada0e159e.webp",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_hWYhKG": {
+          "type": "collection",
+          "settings": {
+            "collection": "solar-shades",
+            "image": "shopify://shop_images/3_290x_bf62ecb5-69e7-4e6f-8dab-a01bbe08d5eb.webp",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h6",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "collection_xVF4iB",
+        "collection_ghnEGN",
+        "collection_PjWRXp",
+        "collection_3PxHj6",
+        "collection_hWYhKG"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 5,
+        "show_progress_bar": false,
+        "subheading": "",
+        "title": "Popular Category",
+        "content": "<p>Spring Refresh with Elegant Curtains<br/>Refresh Your Home for Spring</p>",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "custom-100-blackout-linen-roman-shades-for-inside-mount",
+          "custom-100-linen-roman-shade-cordless",
+          "bella-custom-linen-roman-shades",
+          "customizable-opaque-sun-shades-gauze-shades",
+          "customized-linen-100-full-blackout-curtains-shades",
+          "linen-blend-roman-shade-cordless"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "New Products",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "before-after-image": {
+      "type": "before-after-image",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Made To Fit Your Windows",
+        "content": "<p>We make all our draperies and curtains above and beyond industry standards.</p><p><a href=\"/products/custom-100-blackout-linen-roman-shades-for-inside-mount\" title=\"Custom 100% Blackout Bamboo Hemp Roman Shade\">Shop New Shades</a></p>",
+        "before_image": "shopify://shop_images/CURTAINUK3_1_1920x_22a7efd7-9afe-413d-ae1d-e8ccfd30accf.webp",
+        "before_image_mobile": "shopify://shop_images/CURTAINUK3_2_355x_d3e6ca67-f0b4-4a85-9729-f968f3ec0a49.webp",
+        "after_image": "shopify://shop_images/CURTAINUK2_1_1920x_592ee855-7705-48e0-b3cb-7089c8a0338b.webp",
+        "after_image_mobile": "shopify://shop_images/CURTAINUK2_2_355x_14f2bff9-dc10-498a-b396-8e899dbeb69b.webp",
+        "expand_image": false,
+        "text_position": "end",
+        "before_after_text_position": "bottom",
+        "before_text": "",
+        "after_text": "",
+        "drag_initial_position": 50,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "before_text_color": "#ffffff",
+        "after_text_color": "#ffffff",
+        "drag_cursor_background": "#ffffff",
+        "drag_cursor_color": "#000000"
+      }
+    },
+    "featured_collection_CgFHcU": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "custom-100-blackout-linen-roman-shades-for-inside-mount",
+          "custom-100-linen-roman-shade-cordless",
+          "bella-custom-linen-roman-shades",
+          "customizable-opaque-sun-shades-gauze-shades",
+          "customized-linen-100-full-blackout-curtains-shades",
+          "linen-blend-roman-shade-cordless"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 24,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "Featured products",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "rich_text_wGQxNk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xk6EHk": {
+          "type": "heading",
+          "settings": {
+            "text": "When Do Curtains Need To Be Replaced?",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_NmJNmK": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>If you're looking for curtains with breathability, durability, and eco-friendly qualities, linen is your best curtains. They provide excellent airflow, adding a fresh, comfortable ambiance to any room. Their natural texture and elegant drape enhance both modern and traditional decor, making them a versatile and timeless choice for your home.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xk6EHk",
+        "richtext_NmJNmK"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "large",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "multi_column_WYnPar": {
+      "type": "multi-column",
+      "blocks": {
+        "item_U4NA9A": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/CURTAINUK124_1_290x_8334de78-27c8-4af2-9f0a-000320ba72d9.webp",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "<p>Measure Your Windows</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_AGPhVQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/CURTAINUK112_1_290x_43e9fde8-9fbd-44a4-8be7-d37e72e5090d.webp",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "<p>Choose Color, Style, Size</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_rQYhqn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/CURTAINUK58_1_290x_4187fd92-02b5-48c5-a731-e93a23fd94d0.webp",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "<p>Install Curtains- Style and Care</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_P7Fi4i": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/CURTAINUK206_1_290x_bb57fdd2-08d9-4b2d-94ad-5c9d573f4da2.webp",
+            "column_size": "4",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "<p>Define the Style and Enjoy Life</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_U4NA9A",
+        "item_AGPhVQ",
+        "item_rQYhqn",
+        "item_P7Fi4i"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "small",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "testimonials_j4KLWK": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_64DCbb": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "John Smith",
+            "title": "",
+            "content": "<p>I have now ordered these Roman shades 3 times, I’ve gotten both the light filtering and the black out versions for different homes and different rooms. The sellers are AWESOME they completed our order so quickly and were able to ship them to us quickly as well. They look great, work great, and we’re easy to install. I feel like they are also priced very well for custom sized shades. Would definitely recommend them, and will be using them again in future homes I’m sure!</p>"
+          }
+        },
+        "testimonial_gy7Eht": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Domineke Simpson",
+            "title": "",
+            "content": "<p>These blackout curtains are excellent! They effectively block out sunlight, making my room much darker and more comfortable for sleeping. The fabric feels high-quality, with a thick and durable texture. Installation was easy, and they hang beautifully, adding a sleek, modern touch to the space. Overall, a great purchase for anyone looking for style and functionality—highly recommended!</p>"
+          }
+        },
+        "testimonial_3tpGNi": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Annie Lee",
+            "title": "",
+            "content": "<p>I ordered the ones that are not completely black-out and they are perfect. They let just a little bit of light in. They fold up nicely and the size was exactly right.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_64DCbb",
+        "testimonial_gy7Eht",
+        "testimonial_3tpGNi"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "full_width": true,
+        "stack_testimonials": false,
+        "subheading": "",
+        "title": "Let customers speak for us",
+        "content": "<p>With Us, Product Quality Is Defined By Word Of Mouth From Real Customers.</p>",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "testimonial_card_background": "",
+        "testimonial_card_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_36A9BQ",
+    "collection_list_DLCEPN",
+    "featured-collection",
+    "before-after-image",
+    "featured_collection_CgFHcU",
+    "rich_text_wGQxNk",
+    "multi_column_WYnPar",
+    "testimonials_j4KLWK"
+  ]
+}

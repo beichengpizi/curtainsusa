@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "Header group",
@@ -8,7 +17,8 @@
         "message": {
           "type": "message",
           "settings": {
-            "text": "Announce something here"
+            "text": "Announce something here",
+            "url": ""
           }
         }
       },
@@ -17,26 +27,112 @@
       ],
       "settings": {
         "enable_sticky": false,
+        "autoplay": false,
+        "cycle_speed": 6,
         "text_size": "text-xs",
-        "navigation_mode": "scrolling",
+        "navigation_mode": "arrows",
         "scrolling_speed": 10,
-        "background": "#1a1a1a",
+        "background": "#745239",
+        "background_gradient": "",
         "text_color": "#ffffff"
       }
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "mega_menu_mLLEcL": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Shop All Curtains",
+            "layout": "horizontal",
+            "submenu_style": "bold_text",
+            "image_1": "shopify://shop_images/CURTAINUK144_9b10a611-b1ae-43b3-82df-9aaf133f0539_2.webp",
+            "image_heading_1": "",
+            "image_link_1": "",
+            "image_text_color_1": "#ffffff",
+            "image_heading_2": "",
+            "image_link_2": "",
+            "image_text_color_2": "#ffffff",
+            "image_heading_3": "",
+            "image_link_3": "",
+            "image_text_color_3": "#ffffff",
+            "product": "",
+            "product_card_background": "",
+            "product_card_text_color": "",
+            "promo_content_layout": "grid",
+            "stretch_promo": false,
+            "drawer_link_image": "hide"
+          }
+        },
+        "mega_menu_q4R3BG": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Shop By Room",
+            "layout": "horizontal",
+            "submenu_style": "bold_text",
+            "image_1": "shopify://shop_images/shades_banner_1.webp",
+            "image_heading_1": "",
+            "image_link_1": "",
+            "image_text_color_1": "#ffffff",
+            "image_heading_2": "",
+            "image_link_2": "",
+            "image_text_color_2": "#ffffff",
+            "image_heading_3": "",
+            "image_link_3": "",
+            "image_text_color_3": "#ffffff",
+            "product": "",
+            "product_card_background": "",
+            "product_card_text_color": "",
+            "promo_content_layout": "grid",
+            "stretch_promo": false,
+            "drawer_link_image": "hide"
+          }
+        },
+        "mega_menu_hBym6E": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Free Swatches",
+            "layout": "horizontal",
+            "submenu_style": "bold_text",
+            "image_1": "shopify://shop_images/simple1_1_3b6e2be2-23f5-4968-943e-1186e3b5f353_1.webp",
+            "image_heading_1": "",
+            "image_link_1": "",
+            "image_text_color_1": "#ffffff",
+            "image_heading_2": "",
+            "image_link_2": "",
+            "image_text_color_2": "#ffffff",
+            "image_heading_3": "",
+            "image_link_3": "",
+            "image_text_color_3": "#ffffff",
+            "product": "",
+            "product_card_background": "",
+            "product_card_text_color": "",
+            "promo_content_layout": "grid",
+            "stretch_promo": false,
+            "drawer_link_image": "hide"
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_mLLEcL",
+        "mega_menu_q4R3BG",
+        "mega_menu_hBym6E"
+      ],
       "settings": {
         "enable_sticky": true,
         "hide_on_scroll": false,
         "logo": "{{shop.brand.logo}}",
         "logo_max_width": 120,
         "logo_mobile_max_width": 100,
-        "menu": "main-menu",
+        "menu": "new-main-menu",
+        "sidebar_menu": "",
+        "secondary_menu": "",
         "menu_open_trigger": "click",
-        "opening_from": "bottom",
+        "opening_from": "left",
         "layout": "logo_left_navigation_center",
         "show_social_media": true,
+        "show_locale_selector": true,
+        "show_country_selector": true,
         "show_country_flag": true,
         "show_country_name": false,
         "transparent_header_text_color": "#ffffff",

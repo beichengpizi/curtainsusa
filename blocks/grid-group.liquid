@@ -1,0 +1,365 @@
+<style>
+  #media-grid-{{ block.id }} {
+    --content-over-media-overlay: {{ block.settings.overlay_color.rgb }} /{{ block.settings.overlay_opacity | divided_by: 100.0 }};
+    --media-grid-column-span: {{ block.settings.mobile_column_span }};
+    --media-grid-row-span: {{ block.settings.mobile_row_span }};
+  }
+
+  #media-grid-{{ block.id }} .content-over-media>:is(img,video,iframe,svg,video-media), #media-grid-{{ block.id }} .icon-width {
+    height: 100%;
+    width: auto;
+  }
+
+  #media-grid-{{ block.id }} .content-over-media {
+    border: 2px solid {{ block.settings.border }};
+    padding: {{ block.settings.desktop_padding }}px;
+  }
+
+  @media screen and (max-width: 700px){
+    #media-grid-{{ block.id }} {
+      grid-area: {% if block.settings.grid_area != blank %}{{ block.settings.grid_area }}{% else %}span var(--media-grid-row-span) / span var(--media-grid-column-span){% endif %};
+    }
+
+    #media-grid-{{ block.id }} .content-over-media {
+      padding: {{ block.settings.mobile_padding }}px;
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    #media-grid-{{ block.id }} {
+      --content-over-media-gap: 1rem;
+      --media-grid-column-span: {{ block.settings.desktop_column_span }};
+      --media-grid-row-span: {{ block.settings.desktop_row_span }};
+    }
+  }
+  #media-grid-{{ block.id }} {
+    --content-over-media-gap: 0.5rem;
+    }
+</style>
+
+<{% if block.settings.link_url != blank %}a{% else %}div{% endif %}
+  id="media-grid-{{ block.id }}"
+  {% if block.settings.link_url != blank %}
+    href="{{ block.settings.link_url }}"
+  {% endif %}
+  class="media-grid__item group"
+  reveal-js
+  {{ block.shopify_attributes }}
+  style="{{ block.settings.custom_style }}"
+>
+  {%- assign class = 'content-over-media ' | append: block.settings.border_radius -%}
+  <div
+    {% render 'surface',
+      class: class,
+      background: block.settings.background,
+      background_gradient: block.settings.background_gradient,
+      text_color: block.settings.text_color
+    %}
+  >
+    {%- if block.settings.image != blank -%}
+      {%- capture image_class -%}content-over-media__media zoom-image {% if block.settings.mobile_image != blank %}hidden sm:block{% endif %}{%- endcapture -%}
+      {{-
+        block.settings.image
+        | image_url: width: block.settings.image.width
+        | image_tag:
+          loading: 'lazy',
+          widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800,2000,2200,2400',
+          class: image_class
+      -}}
+      {% if block.settings.mobile_image != blank %}
+        {{-
+          block.settings.mobile_image
+          | image_url: width: block.settings.mobile_image.width
+          | image_tag:
+            loading: 'lazy',
+            widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800,2000,2200,2400',
+            class: 'sm:hidden'
+        -}}
+      {% endif %}
+    {%- endif -%}
+
+    <div class="{{ block.settings.mobile_text_position }} {{ block.settings.desktop_text_position }} text-width group-block">
+      {% content_for 'blocks' %}
+    </div>
+  </div>
+</{% if block.settings.link_url != blank %}a{% else %}div{% endif %}>
+
+{% schema %}
+{
+  "name": "Grid group",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "tag":null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding",
+      "label": "Desktop padding",
+      "max": 100,
+      "min": 0,
+      "default": 0,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding",
+      "label": "Mobile padding",
+      "max": 100,
+      "min": 0,
+      "default": 0,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "grid_area",
+      "label": "Grid area"
+    },
+    {
+      "type": "header",
+      "content": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1000 x 1500px .jpg recommended (portrait) or 1500 x 1500px .jpg recommended (square)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image",
+      "info": "1000 x 1500px .jpg recommended (portrait) or 1500 x 1500px .jpg recommended (square)"
+    },
+    {
+      "type": "select",
+      "id": "border_radius",
+      "label": "Border radius",
+      "options": [
+        {
+          "value": "rounded-xs",
+          "label": "rounded-xs"
+        },
+        {
+          "value": "rounded-sm",
+          "label": "rounded-sm"
+        },
+        {
+          "value": "rounded",
+          "label": "rounded"
+        },
+        {
+          "value": "rounded-lg",
+          "label": "rounded-lg"
+        },
+        {
+          "value": "rounded-full",
+          "label": "rounded-full"
+        }
+      ],
+      "default": "rounded"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_column_span",
+      "label": "Column",
+      "min": 1,
+      "max": 10,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "mobile_row_span",
+      "label": "Row",
+      "min": 1,
+      "max": 10,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "mobile_text_position",
+      "label": "Content position",
+      "options": [
+        {
+          "value": "place-self-start text-start",
+          "label": "Top left"
+        },
+        {
+          "value": "place-self-start-center text-center",
+          "label": "Top center"
+        },
+        {
+          "value": "place-self-start-end text-end",
+          "label": "Top right"
+        },
+        {
+          "value": "place-self-center-start text-start",
+          "label": "Middle left"
+        },
+        {
+          "value": "place-self-center text-center",
+          "label": "Middle center"
+        },
+        {
+          "value": "place-self-center-end text-end",
+          "label": "Middle right"
+        },
+        {
+          "value": "place-self-end-start text-start",
+          "label": "Bottom left"
+        },
+        {
+          "value": "place-self-end-center text-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "place-self-end text-end",
+          "label": "Bottom right"
+        }
+      ],
+      "default": "place-self-center text-center"
+    },
+    {
+      "type": "header",
+      "content": "Desktop",
+      "info": "When using a 1x1 tile, we recommend not using text on top of media."
+    },
+    {
+      "type": "range",
+      "id": "desktop_column_span",
+      "label": "Column",
+      "min": 1,
+      "max": 12,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "desktop_row_span",
+      "label": "Row",
+      "min": 1,
+      "max": 12,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "desktop_text_position",
+      "label": "Content position",
+      "options": [
+        {
+          "value": "sm:place-self-start sm:text-start",
+          "label": "Top left"
+        },
+        {
+          "value": "sm:place-self-start-center sm:text-center",
+          "label": "Top center"
+        },
+        {
+          "value": "sm:place-self-start-end sm:text-end",
+          "label": "Top right"
+        },
+        {
+          "value": "sm:place-self-center-start sm:text-start",
+          "label": "Middle left"
+        },
+        {
+          "value": "sm:place-self-center sm:text-center",
+          "label": "Middle center"
+        },
+        {
+          "value": "sm:place-self-center-end sm:text-end",
+          "label": "Middle right"
+        },
+        {
+          "value": "sm:place-self-end-start sm:text-start",
+          "label": "Bottom left"
+        },
+        {
+          "value": "sm:place-self-end-center sm:text-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "sm:place-self-end sm:text-end",
+          "label": "Bottom right"
+        }
+      ],
+      "default": "sm:place-self-center sm:text-center"
+    },
+    {
+      "type": "header",
+      "content": "Colors",
+      "info": "Gradient replaces solid colors when set. Background is ignored when image is used."
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "Background gradient"
+    },
+    {
+      "type": "color",
+      "id": "border",
+      "label": "Border",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "text_gradient",
+      "label": "Text gradient"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Grid group"
+    }
+  ]
+}
+{% endschema %}
