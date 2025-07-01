@@ -37,7 +37,7 @@
     "product_rating_mode": "count",
     "product_color_display": "variant",
     "product_info_alignment": "start",
-    "cart_icon": "shopping_basket",
+    "cart_icon": "shopping_cart",
     "cart_show_free_shipping_threshold": true,
     "cart_free_shipping_threshold": "299",
     "checkout_accent_color": "#f0c417",
