@@ -983,6 +983,21 @@
         "text_color": ""
       }
     },
+    "custom_grid_G3HbJ4": {
+      "type": "custom-grid",
+      "name": "Custom grid",
+      "settings": {
+        "full_width": true,
+        "gap": "xlg",
+        "heading": "",
+        "subheading": "",
+        "content": "",
+        "desktop_column_num": 4,
+        "mobile_column_num": 4,
+        "background": "",
+        "background_gradient": ""
+      }
+    },
     "media_grid_GjEMm4": {
       "type": "media-grid",
       "blocks": {
@@ -1177,6 +1192,7 @@
     "custom_tabs_tn3L3a",
     "custom_grid_6fFpCi",
     "rich_text_MQDkaa",
+    "custom_grid_G3HbJ4",
     "media_grid_GjEMm4",
     "accordion_content_JXnBFH",
     "related-products"
