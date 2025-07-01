@@ -107,45 +107,592 @@
         "input_text_color": ""
       }
     },
-    "tabs_PNVA68": {
-      "type": "tabs",
+    "custom_tabs_tn3L3a": {
+      "type": "custom-tabs",
       "blocks": {
-        "tab_C46RFA": {
-          "type": "tab",
+        "tabs_hWzttk": {
+          "type": "tabs",
+          "name": "Tabs",
           "settings": {
-            "title": "Tab 1",
-            "content": "<p>Use this text to share information about your brand with your customers.</p>",
-            "page": "product-description"
-          }
+            "title": "Description",
+            "gap": "xlg",
+            "heading": "",
+            "subheading": "",
+            "content": "",
+            "desktop_column_num": 3,
+            "mobile_column_num": 4
+          },
+          "blocks": {
+            "grid_group_Dr6K93": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 3,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "background": "",
+                "background_gradient": "",
+                "border": "rgba(0,0,0,0)",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_cqVKbi": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<p>Where Heritage Craftsmanship Meets Light Elimination Science</p><h3>The Ultimate Darkness Experience</h3><p>Engineered for perfectionists who demand absolute light control without compromising natural aesthetics. Our blackout linen shades achieve what others can't - <strong>complete darkness</strong> merged with <strong>breathable organic materials</strong>.</p><h6><strong>Triple-Layer Defense System</strong></h6>",
+                    "content_width": "large",
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "center",
+                    "color": "#000000",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_cqVKbi"
+              ]
+            },
+            "grid_group_EbR9yz": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 15,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded-sm",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 1,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "background": "#f8f9fa",
+                "background_gradient": "",
+                "border": "rgba(0,0,0,0)",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_UTeRgm": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<p>1</p><h4>Organic Linen Surface</h4><ul><li>200+ GSM heavyweight European flax</li><li>Natural temperature regulation</li><li>Oeko-Tex 100 baby-safe certification</li></ul>",
+                    "content_width": "small",
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "center",
+                    "color": "#000000",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_UTeRgm"
+              ]
+            },
+            "grid_group_hEDhdT": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 15,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded-sm",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 1,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "background": "#f8f9fa",
+                "background_gradient": "",
+                "border": "rgba(0,0,0,0)",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_Nqj7Lc": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<p>2</p><h4>Nano-Fused Core</h4><ul><li>Micro-encapsulated light-absorbing particles</li><li>Blocks 100% visible light (ASTM D737-96)</li><li>97.3% UV radiation elimination</li></ul>",
+                    "content_width": "small",
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "center",
+                    "color": "#000000",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 14
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_Nqj7Lc"
+              ]
+            },
+            "grid_group_fEdaUQ": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 15,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded-sm",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 1,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "background": "#f8f9fa",
+                "background_gradient": "",
+                "border": "rgba(0,0,0,0)",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_fQQth4": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<p>3</p><h4>Acoustic Backing</h4><ul><li>34dB noise reduction (STC Rating)</li><li>Mold/mildew resistant</li><li>Insulation R-value: 3.25</li></ul>",
+                    "content_width": "small",
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "center",
+                    "color": "#000000",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_fQQth4"
+              ]
+            },
+            "grid_group_JGnpit": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 3,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center-start sm:text-start",
+                "background": "",
+                "background_gradient": "",
+                "border": "rgba(0,0,0,0)",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_hDBnCd": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<h6>Precision Customization Journey</h6>",
+                    "content_width": "small",
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "center",
+                    "color": "#1a1a1a",
+                    "desktop_font_size": 18,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_hDBnCd"
+              ]
+            },
+            "grid_group_AzzcCK": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 1,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center-start sm:text-start",
+                "background": "",
+                "background_gradient": "",
+                "border": "rgba(0,0,0,0)",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_dQFceA": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<h4>Laser Measurement</h4><p>Use our <a href=\"https://curtainuk.com/pages/measurement-finder\" target=\"_blank\" title=\"measurement professional guide\">measurement professional guide</a></p>",
+                    "content_width": "small",
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "center",
+                    "color": "#1a1a1a",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_dQFceA"
+              ]
+            },
+            "grid_group_FaMfVw": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 1,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center-start sm:text-start",
+                "background": "",
+                "background_gradient": "",
+                "border": "rgba(0,0,0,0)",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_TUaG9D": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<h4>Design Studio</h4><p>25 natural hues × 6 texture patterns × 3 header styles</p>",
+                    "content_width": "small",
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "center",
+                    "color": "#1a1a1a",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_TUaG9D"
+              ]
+            },
+            "grid_group_baMdEd": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 1,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center-start sm:text-start",
+                "background": "",
+                "background_gradient": "",
+                "border": "rgba(0,0,0,0)",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_xmc6JE": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<h4>German Engineering</h4><p>CNC cutting with 0.2mm precision tolerance</p>",
+                    "content_width": "small",
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "center",
+                    "color": "#1a1a1a",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_xmc6JE"
+              ]
+            },
+            "grid_group_WeYTGH": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 2,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center-start sm:text-start",
+                "background": "",
+                "background_gradient": "",
+                "border": "rgba(0,0,0,0)",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "rich_text_cryMeR": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<h4>Where Perfection Matters</h4><p><strong>NICU Lighting Control</strong></p><p>Hospital-grade darkness for light-sensitive environments</p><p><strong>5-Star Hotel Suites</strong></p><p>Complete circadian rhythm management</p>",
+                    "content_width": "small",
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "center",
+                    "color": "#1a1a1a",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_cryMeR"
+              ]
+            }
+          },
+          "block_order": [
+            "grid_group_Dr6K93",
+            "grid_group_EbR9yz",
+            "grid_group_hEDhdT",
+            "grid_group_fEdaUQ",
+            "grid_group_JGnpit",
+            "grid_group_AzzcCK",
+            "grid_group_FaMfVw",
+            "grid_group_baMdEd",
+            "grid_group_WeYTGH"
+          ]
         },
-        "tab_M3nbrT": {
-          "type": "tab",
+        "tabs_DrH3pn": {
+          "type": "tabs",
+          "name": "Tabs",
           "settings": {
-            "title": "Tab 2",
-            "content": "<p>Describe a product, share announcements, or welcome customers to your store.</p>",
-            "page": ""
-          }
+            "title": "Measurement Guide",
+            "gap": "xlg",
+            "heading": "",
+            "subheading": "",
+            "content": "",
+            "desktop_column_num": 2,
+            "mobile_column_num": 4
+          },
+          "blocks": {
+            "grid_group_b8k8Re": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 1,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "background": "",
+                "background_gradient": "",
+                "border": "transparent",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "image_te4KTr": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Roman-60.webp",
+                    "alignment": "center",
+                    "border_radius": "rounded-xs",
+                    "border_color": "",
+                    "mobile_image_width": "100%",
+                    "desktop_image_width": "100%"
+                  },
+                  "blocks": {}
+                },
+                "rich_text_dxY3KX": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<p>Write some text about your products or your brand.</p>",
+                    "content_width": "small",
+                    "text_alignment": "center",
+                    "mobile_text_alignment": "center",
+                    "color": "",
+                    "desktop_font_size": 18,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_te4KTr",
+                "rich_text_dxY3KX"
+              ]
+            },
+            "grid_group_BghzcM": {
+              "type": "grid-group",
+              "name": "Grid group",
+              "settings": {
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded",
+                "link_url": "",
+                "mobile_column_span": 2,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 1,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "background": "",
+                "background_gradient": "",
+                "border": "transparent",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+              },
+              "blocks": {
+                "image_7fWTQn": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Roman-60.webp",
+                    "alignment": "center",
+                    "border_radius": "rounded-xs",
+                    "border_color": "",
+                    "mobile_image_width": "100%",
+                    "desktop_image_width": "100%"
+                  },
+                  "blocks": {}
+                },
+                "rich_text_7nRgYH": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<p>Write some text about your products or your brand.</p>",
+                    "content_width": "small",
+                    "text_alignment": "center",
+                    "mobile_text_alignment": "center",
+                    "color": "",
+                    "desktop_font_size": 18,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_7fWTQn",
+                "rich_text_7nRgYH"
+              ]
+            }
+          },
+          "block_order": [
+            "grid_group_b8k8Re",
+            "grid_group_BghzcM"
+          ]
         },
-        "tab_cfbYLh": {
-          "type": "tab",
+        "tabs_8eHih8": {
+          "type": "tabs",
+          "name": "Tabs",
           "settings": {
-            "title": "Tab 3",
-            "content": "<p>Share information about your shipping rates, return policy or contact information.</p>",
-            "page": ""
-          }
+            "title": "Installation Guide",
+            "gap": "xlg",
+            "heading": "",
+            "subheading": "",
+            "content": "",
+            "desktop_column_num": 3,
+            "mobile_column_num": 4
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "tab_C46RFA",
-        "tab_M3nbrT",
-        "tab_cfbYLh"
+        "tabs_hWzttk",
+        "tabs_DrH3pn",
+        "tabs_8eHih8"
       ],
-      "name": "Tabs",
+      "name": "Custom tabs",
       "settings": {
         "full_width": true,
-        "content_size": "fill",
-        "subheading": "Subheading",
-        "title": "Heading",
+        "content_size": "large",
+        "subheading": "",
+        "title": "",
         "text_alignment": "center",
         "first_tab_open": false,
         "background": "",
@@ -369,7 +916,7 @@
   },
   "order": [
     "main",
-    "tabs_PNVA68",
+    "custom_tabs_tn3L3a",
     "rich_text_MQDkaa",
     "media_grid_GjEMm4",
     "accordion_content_JXnBFH",
