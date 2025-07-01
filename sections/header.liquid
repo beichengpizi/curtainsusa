@@ -117,7 +117,7 @@ the underlying logic of the menu.
 
                   <li>
                     {%- if link.levels == 0 and mega_menu_block == '' -%}
-                      <a href="{{ link.url }}" class="bold link-faded-reverse" {% if link.current %}aria-current="page"{% endif %}>{{- link.title -}}</a>
+                      <a href="{{ link.url }}" class="link-faded-reverse" {% if link.current %}aria-current="page"{% endif %}>{{- link.title -}}</a>
                     {%- else -%}
                       {%- if mega_menu_block != '' -%}
                         {%- comment -%}
@@ -145,7 +145,7 @@ the underlying logic of the menu.
                         {%- endunless -%}
                       {%- else -%}
                         <details class="relative" is="dropdown-disclosure" trigger="{{ section.settings.menu_open_trigger | escape }}">
-                          <summary class="text-with-icon gap-2.5 bold link-faded-reverse" {% if link.url != '#' %}data-url="{{ link.url | escape }}"{% endif %}>
+                          <summary class="text-with-icon gap-2.5 link-faded-reverse" {% if link.url != '#' %}data-url="{{ link.url | escape }}"{% endif %}>
                             {{- link.title -}} {%- render 'icon' with 'chevron-bottom' -%}
                           </summary>
 
@@ -233,7 +233,7 @@ the underlying logic of the menu.
             <ul class="contents">
               {%- for link in section.settings.secondary_menu.links -%}
                 <li>
-                  <a href="{{ link.url }}" class="bold link-faded-reverse">{{ link.title }}</a>
+                  <a href="{{ link.url }}" class="link-faded-reverse">{{ link.title }}</a>
                 </li>
               {%- endfor -%}
             </ul>
