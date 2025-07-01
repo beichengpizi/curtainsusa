@@ -63,7 +63,7 @@
           "settings": {
             "text_alignment": "start",
             "icon_position": "aligned",
-            "icon": "picto-truck",
+            "icon": "new-truck",
             "icon_width": 20,
             "title": "Free Shipping",
             "content": "<p>Free standard shipping on orders over $299<br/>Estimated to be delivered on 12/01/2024 - 06/06/2025.</p>",
