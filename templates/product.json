@@ -544,7 +544,33 @@
             "mobile_column_num": 4
           },
           "blocks": {
-            "grid_group_b8k8Re": {
+            "image_TxpBLf": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify://shop_images/Roman-60.webp",
+                "alignment": "center",
+                "border_radius": "rounded-xs",
+                "border_color": "",
+                "mobile_image_width": "100%",
+                "desktop_image_width": "100%"
+              },
+              "blocks": {}
+            },
+            "image_VbTHeU": {
+              "type": "image",
+              "name": "Image",
+              "settings": {
+                "image": "shopify://shop_images/Roman-60.webp",
+                "alignment": "center",
+                "border_radius": "rounded-xs",
+                "border_color": "",
+                "mobile_image_width": "100%",
+                "desktop_image_width": "100%"
+              },
+              "blocks": {}
+            },
+            "grid_group_HbKbHE": {
               "type": "grid-group",
               "name": "Grid group",
               "settings": {
@@ -553,15 +579,15 @@
                 "grid_area": "",
                 "border_radius": "rounded",
                 "link_url": "",
-                "mobile_column_span": 2,
+                "mobile_column_span": 1,
                 "mobile_row_span": 1,
                 "mobile_text_position": "place-self-center text-center",
                 "desktop_column_span": 1,
                 "desktop_row_span": 1,
-                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "desktop_text_position": "sm:place-self-center-start sm:text-start",
                 "background": "",
                 "background_gradient": "",
-                "border": "rgba(0,0,0,0)",
+                "border": "transparent",
                 "text_color": "#ffffff",
                 "text_gradient": "",
                 "button_background": "#000000",
@@ -569,40 +595,26 @@
                 "overlay_opacity": 0
               },
               "blocks": {
-                "image_te4KTr": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {
-                    "image": "shopify://shop_images/Roman-60.webp",
-                    "alignment": "center",
-                    "border_radius": "rounded-xs",
-                    "border_color": "",
-                    "mobile_image_width": "100%",
-                    "desktop_image_width": "100%"
-                  },
-                  "blocks": {}
-                },
-                "rich_text_dxY3KX": {
+                "rich_text_d6WmdH": {
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<p>Write some text about your products or your brand.</p>",
+                    "text": "<h6>Inside Mount</h6><ul><li>A clean, built-in look, 2 1/2 inches minimum depth requirement；</li><li>3/8 inch headrail deduction taken at your actual measuring to ensure the side does not touch the edges tightly；</li><li>Note there will be slight gaps on the sides due to fabric deductions.</li></ul>",
                     "content_width": "small",
-                    "text_alignment": "center",
-                    "mobile_text_alignment": "center",
-                    "color": "",
-                    "desktop_font_size": 18,
-                    "mobile_font_size": 18
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "left",
+                    "color": "#1a1a1a",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 14
                   },
                   "blocks": {}
                 }
               },
               "block_order": [
-                "image_te4KTr",
-                "rich_text_dxY3KX"
+                "rich_text_d6WmdH"
               ]
             },
-            "grid_group_BghzcM": {
+            "grid_group_higwiJ": {
               "type": "grid-group",
               "name": "Grid group",
               "settings": {
@@ -611,15 +623,15 @@
                 "grid_area": "",
                 "border_radius": "rounded",
                 "link_url": "",
-                "mobile_column_span": 2,
+                "mobile_column_span": 1,
                 "mobile_row_span": 1,
                 "mobile_text_position": "place-self-center text-center",
                 "desktop_column_span": 1,
                 "desktop_row_span": 1,
-                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "desktop_text_position": "sm:place-self-center-start sm:text-start",
                 "background": "",
                 "background_gradient": "",
-                "border": "rgba(0,0,0,0)",
+                "border": "transparent",
                 "text_color": "#ffffff",
                 "text_gradient": "",
                 "button_background": "#000000",
@@ -627,43 +639,31 @@
                 "overlay_opacity": 0
               },
               "blocks": {
-                "image_7fWTQn": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {
-                    "image": "shopify://shop_images/Roman-60.webp",
-                    "alignment": "center",
-                    "border_radius": "rounded-xs",
-                    "border_color": "",
-                    "mobile_image_width": "100%",
-                    "desktop_image_width": "100%"
-                  },
-                  "blocks": {}
-                },
-                "rich_text_7nRgYH": {
+                "rich_text_NjTQW8": {
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<p>Write some text about your products or your brand.</p>",
+                    "text": "<h6>Outside Mount</h6><ul><li>No minimum depth requirement.</li><li>We recommend ordering additional width 4-6 inches to prevent light gaps on the sides of your window.</li></ul>",
                     "content_width": "small",
-                    "text_alignment": "center",
-                    "mobile_text_alignment": "center",
-                    "color": "",
-                    "desktop_font_size": 18,
-                    "mobile_font_size": 18
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "left",
+                    "color": "#1a1a1a",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 14
                   },
                   "blocks": {}
                 }
               },
               "block_order": [
-                "image_7fWTQn",
-                "rich_text_7nRgYH"
+                "rich_text_NjTQW8"
               ]
             }
           },
           "block_order": [
-            "grid_group_b8k8Re",
-            "grid_group_BghzcM"
+            "image_TxpBLf",
+            "image_VbTHeU",
+            "grid_group_HbKbHE",
+            "grid_group_higwiJ"
           ]
         },
         "tabs_8eHih8": {
