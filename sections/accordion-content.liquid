@@ -96,7 +96,7 @@
               {%- endcapture -%}
 
               {%- assign icon = block.settings.custom_icon | default: block.settings.icon -%}
-              {%- render 'accordion', title: block.settings.title, content: accordion_content, icon: icon, icon_width: block.settings.icon_width, block: block, uppercase: true -%}
+              {%- render 'accordion', title: block.settings.title, content: accordion_content, icon: icon, icon_width: block.settings.icon_width, block: block, uppercase: true, new_arrow: true -%}
             {%- endif -%}
           {%- endfor -%}
         </div>
