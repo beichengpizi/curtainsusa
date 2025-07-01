@@ -1,0 +1,359 @@
+<div class="mrk-bulkcoupon mrk-bulkcoupon--margin__0">
+  <div class="mrk-discount-tag">
+    <div class="mrk-tag-item">
+      <div class="mrk-text-wrap">
+        <div class="mrk-text-ellipsis">{{ block.settings.discount1 }}</div>
+      </div>
+    </div>
+    <div class="mrk-tag-item">
+      <div class="mrk-text-wrap">
+        <div class="mrk-text-ellipsis">{{ block.settings.discount2 }}</div>
+      </div>
+    </div>
+    <div class="mrk-more-wrap">
+      <span class="mrk-more">View more</span>
+      {% comment %}
+      <span class="iconfont icon-cm-gengduo mrk-more-icon"><span></span><span></span><span></span></span>
+      {% endcomment %}
+
+      <div class="mrk-coupons-box">
+        <div class="mrk-coupons-title">
+          Promos <span class="iconfont icon-cm-cancel-1-copy">
+            {% render 'mrk-close' %}
+          </span>
+        </div>
+        <div class="mrk-coupons-item-list">
+          <div class="mrk-coupons-item">
+            <span class="iconfont icon-cm-biaoqian">{% render 'discount-svg' %}</span>
+            <span>{{ block.settings.discount1 }}</span>
+          </div>
+          <div class="mrk-coupons-item">
+            <span class="iconfont icon-cm-biaoqian">{% render 'discount-svg' %}</span>
+            <span>{{ block.settings.discount2 }}</span>
+          </div>
+          <div class="mrk-coupons-item">
+            <span class="iconfont icon-cm-biaoqian">{% render 'discount-svg' %}</span>
+            <span>{{ block.settings.discount3 }}</span>
+          </div>
+          {% if block.settings.discount4 != blank %}
+          <div class="mrk-coupons-item">
+            <span class="iconfont icon-cm-biaoqian">{% render 'discount-svg' %}</span>
+            <span>{{ block.settings.discount4 }}</span>
+          </div>
+          {% endif %}
+          {% if block.settings.discount5 != blank %}
+          <div class="mrk-coupons-item">
+            <span class="iconfont icon-cm-biaoqian">{% render 'discount-svg' %}</span>
+            <span>{{ block.settings.discount5 }}</span>
+          </div>
+          {% endif %}
+          {% if block.settings.discount6 != blank %}
+          <div class="mrk-coupons-item">
+            <span class="iconfont icon-cm-biaoqian">{% render 'discount-svg' %}</span>
+            <span>{{ block.settings.discount6 }}</span>
+          </div>
+          {% endif %}
+          {% if block.settings.discount7 != blank %}
+          <div class="mrk-coupons-item">
+            <span class="iconfont icon-cm-biaoqian">{% render 'discount-svg' %}</span>
+            <span>{{ block.settings.discount7 }}</span>
+          </div>
+          {% endif %}
+          {% if block.settings.discount8 != blank %}
+          <div class="mrk-coupons-item">
+            <span class="iconfont icon-cm-biaoqian">{% render 'discount-svg' %}</span>
+            <span>{{ block.settings.discount8 }}</span>
+          </div>
+          {% endif %}
+          {% if block.settings.discount9 != blank %}
+          <div class="mrk-coupons-item">
+            <span class="iconfont icon-cm-biaoqian">{% render 'discount-svg' %}</span>
+            <span>{{ block.settings.discount9 }}</span>
+          </div>
+          {% endif %}
+          {% if block.settings.discount10 != blank %}
+          <div class="mrk-coupons-item">
+            <span class="iconfont icon-cm-biaoqian">{% render 'discount-svg' %}</span>
+            <span>{{ block.settings.discount10 }}</span>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="mrk-page-modal"></div>
+    </div>
+  </div>
+</div>
+<script>
+  if (window.innerWidth < 769) {
+    var _popup = document.querySelector('.mrk-coupons-box');
+    var _popup_overlay = document.querySelector('.mrk-page-modal');
+
+    document.querySelector('.mrk-coupons-box').remove();
+    document.querySelector('.mrk-page-modal').remove();
+
+    document.body.append(_popup);
+    document.body.append(_popup_overlay);
+
+  }
+  document.querySelector('.mrk-more').addEventListener('click', showCouponsBox);
+  // document.querySelector('.mrk-more-icon').addEventListener('click', showCouponsBox);
+  function showCouponsBox() {
+    document.querySelector('.mrk-coupons-box').classList.add('mrk-active');
+    document.querySelector('.mrk-page-modal').classList.add('mrk-active');
+  }
+  function hideCouponsBox() {
+    document.querySelector('.mrk-coupons-box').classList.remove('mrk-active');
+    document.querySelector('.mrk-page-modal').classList.remove('mrk-active');
+  }
+  document.querySelector('.icon-cm-cancel-1-copy').addEventListener('click', hideCouponsBox);
+  document.querySelector('.mrk-page-modal').addEventListener('click', hideCouponsBox);
+
+
+
+</script>
+<style>
+  /* Bulk Coupon Styles */
+  .mrk-bulkcoupon {
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .mrk-bulkcoupon--margin__0 {
+    margin-top: 0 !important;
+  }
+
+  .mrk-bulkcoupon h4 {
+    color: #2f2f2f;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* Discount Tag Styles */
+  .mrk-discount-tag {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .mrk-tag-item {
+    background: rgba(232, 11, 43, 0.05);
+    color: #e80b2b;
+    border: 1px solid #e80b2b;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .mrk-tag-item:before,
+  .mrk-tag-item:after {
+    background-color: #fff;
+    border-color: #0000 #0000 #e80b2b #e80b2b;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    content: "";
+    height: 9px;
+    margin-top: -5px;
+    position: absolute;
+    top: 50%;
+    width: 9px;
+  }
+
+  .mrk-tag-item:before {
+    left: -5px;
+    transform: rotate(-135deg);
+  }
+
+  .mrk-tag-item:after {
+    right: -5px;
+    transform: rotate(45deg);
+  }
+
+  .mrk-text-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /* More Button and Coupons Box */
+  .mrk-more-wrap {
+    position: relative;
+    display: inline-block;
+  }
+
+  .mrk-more {
+    color: #008dff;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .mrk-more-icon {
+    margin-left: 5px;
+    font-size: 14px;
+    color: #008dff;
+  }
+
+  .mrk-coupons-box {
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px 0 #8187924d;
+    display: none;
+    max-height: 180px;
+    max-width: 100vw;
+    overflow-y: auto;
+    padding: 12px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 31px;
+    width: auto;
+    z-index: 10;
+  }
+
+  .mrk-coupons-box.mrk-active {
+    display: block;
+  }
+
+  .mrk-coupons-title {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .mrk-coupons-title .iconfont {
+    float: right;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .mrk-coupons-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mrk-coupons-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 21px;
+    white-space: nowrap;
+  }
+
+  .mrk-coupons-item .iconfont {
+    color: #e80b2b;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .mrk-coupons-title .iconfont svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .mrk-coupons-item .iconfont svg {
+    width: 16px;
+    height: 16px;
+  }
+
+
+  /* Media Queries for Responsive Design */
+  @media screen and (max-width: 767px) {
+
+    /* Page Modal */
+    .mrk-page-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(54, 54, 54, 0.5);
+      z-index: 999;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.3s, opacity 0.3s;
+    }
+
+    .mrk-page-modal.mrk-active {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .mrk-tag-item {
+      font-size: 12px;
+      line-height: 24px;
+    }
+
+    .mrk-coupons-box {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: auto;
+      width: 100%;
+      max-height: 350px;
+      z-index: 1100;
+      animation: mrk-slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
+    .mrk-coupons-title {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .mrk-coupons-item {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .mrk-more-wrap .mrk-more {
+      /* display: none; */
+    }
+
+    .mrk-coupons-title .iconfont svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .mrk-coupons-item .iconfont svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .mrk-more-icon span {
+      height: 7px;
+      width: 7px;
+      background: #999;
+      border-radius: 50%;
+    }
+
+    .mrk-more-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5px;
+    }
+  }
+
+  /* Keyframes for Animation */
+  @keyframes mrk-slide-top {
+    from {
+      transform: translateY(100%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+</style>
