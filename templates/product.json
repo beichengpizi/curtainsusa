@@ -561,7 +561,7 @@
                 "desktop_text_position": "sm:place-self-center sm:text-center",
                 "background": "",
                 "background_gradient": "",
-                "border": "transparent",
+                "border": "rgba(0,0,0,0)",
                 "text_color": "#ffffff",
                 "text_gradient": "",
                 "button_background": "#000000",
@@ -631,7 +631,7 @@
                 "desktop_text_position": "sm:place-self-center-start sm:text-start",
                 "background": "#f8f9fa",
                 "background_gradient": "",
-                "border": "transparent",
+                "border": "rgba(0,0,0,0)",
                 "text_color": "#ffffff",
                 "text_gradient": "",
                 "button_background": "#000000",
@@ -675,7 +675,7 @@
                 "desktop_text_position": "sm:place-self-center-start sm:text-start",
                 "background": "#f8f9fa",
                 "background_gradient": "",
-                "border": "transparent",
+                "border": "rgba(0,0,0,0)",
                 "text_color": "#ffffff",
                 "text_gradient": "",
                 "button_background": "#000000",
@@ -762,23 +762,59 @@
                 "overlay_opacity": 0
               },
               "blocks": {
-                "rich_text_MpALrd": {
-                  "type": "rich-text",
-                  "name": "Rich text",
+                "group_LapqtM": {
+                  "type": "group",
+                  "name": "Group",
                   "settings": {
-                    "text": "<h3>#Measurement & <br/>Installation</h3><p>6 Steps Easy Installation for Inside Mount</p>",
-                    "content_width": "small",
-                    "text_alignment": "center",
-                    "mobile_text_alignment": "center",
-                    "color": "#1a1a1a",
-                    "desktop_font_size": 18,
-                    "mobile_font_size": 18
+                    "height": true,
+                    "desktop_flex": true,
+                    "flex_wrap": "column",
+                    "mobile_flex_wrap": "column",
+                    "align_item": "center",
+                    "desktop_justify_content": "center",
+                    "mobile_align_item": "center",
+                    "mobile_justify_content": "center",
+                    "gap": "small",
+                    "background": ""
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "rich_text_CWbHyN": {
+                      "type": "rich-text",
+                      "name": "Rich text",
+                      "settings": {
+                        "text": "<h2>#Measurement & <br/>Installation</h2><p>6 Steps Easy Installation for Inside Mount</p>",
+                        "content_width": "small",
+                        "text_alignment": "center",
+                        "mobile_text_alignment": "center",
+                        "color": "#1a1a1a",
+                        "desktop_font_size": 16,
+                        "mobile_font_size": 18
+                      },
+                      "blocks": {}
+                    },
+                    "button_Gphkg3": {
+                      "type": "button",
+                      "name": "Button",
+                      "settings": {
+                        "text": "Measurement Finder",
+                        "url": "",
+                        "open_in_new_tab": false,
+                        "style": "fill",
+                        "size": "xl",
+                        "background": "",
+                        "text_color": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "rich_text_CWbHyN",
+                    "button_Gphkg3"
+                  ]
                 }
               },
               "block_order": [
-                "rich_text_MpALrd"
+                "group_LapqtM"
               ]
             }
           },
