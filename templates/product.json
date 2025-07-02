@@ -742,7 +742,7 @@
               "name": "Grid group",
               "settings": {
                 "desktop_padding": 15,
-                "mobile_padding": 0,
+                "mobile_padding": 15,
                 "grid_area": "3/1/4/2",
                 "border_radius": "rounded-xs",
                 "link_url": "",
@@ -786,7 +786,7 @@
               "name": "Grid group",
               "settings": {
                 "desktop_padding": 15,
-                "mobile_padding": 0,
+                "mobile_padding": 15,
                 "grid_area": "",
                 "border_radius": "rounded-xs",
                 "link_url": "",
