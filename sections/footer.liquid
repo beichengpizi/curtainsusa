@@ -1,4 +1,5 @@
 {%- assign newsletter_block = section.blocks | where: 'type', 'newsletter' | first -%}
+{% assign menu_fold = section.settings.menu_fold %}
 
 {%- if section.blocks.size > 3 -%}
 <style>
@@ -11,6 +12,34 @@
       --footer-block-list-justify-content: space-between;
     }
   }
+
+  #shopify-section-{{ section.id }} .accordion__toggle {
+    --accordion-spacing: var(--spacing-3);
+  }
+
+  #shopify-section-{{ section.id }} .footer-block-padding {
+    padding: 15px 0;
+  }
+
+  #shopify-section-{{ section.id }} .accordion__content {
+    display: grid;
+    gap: var(--spacing-4);
+  }
+
+  {% if menu_fold == true %}
+    #shopify-section-{{ section.id }} .footer__block-list {
+      grid: unset;
+      gap: 0;
+    }
+
+    #shopify-section-{{ section.id }} .footer__block--text {
+      grid-column: span 1;
+    }
+
+    #shopify-section-{{ section.id }} .footer__block--menu {
+      max-width: unset;
+    }
+  {% endif %}
 </style>
 {%- endif -%}
 
@@ -27,48 +56,75 @@
         <div class="footer__block-list empty:hidden">
           {%- for block in section.blocks -%}
             {%- case block.type -%}
-              {%- when '@app' -%}
-                <div class="footer__block footer__block--app">
-                  {%- render block -%}
-                </div>
-
               {%- when 'text' -%}
                 {%- if block.settings.title != blank or block.settings.content != blank or shop.features.follow_on_shop? and block.settings.enable_follow_on_shop -%}
-                  <div class="footer__block footer__block--text" {{ block.shopify_attributes }}>
+                  <div class="footer__block footer__block--text {% if block.settings.menu_fold == false %}footer-block-padding{% endif %}" {{ block.shopify_attributes }}>
+                    {% assign title = block.settings.title %}
+                    {% capture content %}
+                      {%- if block.settings.content != blank -%}
+                        <div class="prose text-subdued">
+                          {{- block.settings.content -}}
+                        </div>
+                      {%- endif -%}
+  
+                      {%- if shop.features.follow_on_shop? and block.settings.enable_follow_on_shop -%}
+                        <div class="follow-on-shop">
+                          {{- shop | login_button: action: 'follow' -}}
+                        </div>
+                      {%- endif -%}
+  
+                      {% if block.settings.image != blank %}
+                        {%- capture sizes -%}(max-width: 699px) calc(73vw - 40px), (max-width: 999px) calc(38vw - 64px), calc(min({{ settings.page_width }}px, 100vw)){%- endcapture -%}
+                        {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: sizes, widths: '300,400,500,600,800,1000,1200,1400,1600,1800', class: 'rounded' -}}
+                      {% endif %}
+                    {% endcapture %}
                     {%- if block.settings.title != blank -%}
-                      <p class="bold">{{ block.settings.title | escape }}</p>
+                      <p class="bold {% if block.settings.menu_fold == true %}hidden sm:block{% endif %}">{{ title }}</p>
                     {%- endif -%}
+                    
+                    <div class="{% if block.settings.menu_fold == true %}hidden sm:block{% endif %} v-stack gap-4">
+                      {{ content }}
+                    </div>
 
-                    {%- if block.settings.content != blank -%}
-                      <div class="prose text-subdued">
-                        {{- block.settings.content -}}
+                    {% if block.settings.menu_fold == true %}
+                      <div class="{% if section.settings.menu_fold == true %}sm:hidden{% endif %}">
+                        {%- render 'accordion', title: title, content: content, block: block -%}
                       </div>
-                    {%- endif -%}
-
-                    {%- if shop.features.follow_on_shop? and block.settings.enable_follow_on_shop -%}
-                      <div class="follow-on-shop">
-                        {{- shop | login_button: action: 'follow' -}}
-                      </div>
-                    {%- endif -%}
+                    {% endif %}
                   </div>
                 {%- endif -%}
 
               {%- when 'links' -%}
-                {%- if block.settings.menu != blank -%}
-                  <div class="footer__block footer__block--menu" {{ block.shopify_attributes }}>
-                    {%- if block.settings.show_menu_title -%}
-                      <p class="bold">{{ block.settings.menu_title | default: block.settings.menu.title }}</p>
-                    {%- endif -%}
+                  {%- if block.settings.menu != blank -%}
+                    <div class="footer__block footer__block--menu" {{ block.shopify_attributes }}>
+                      {% assign menu_title = block.settings.menu_title | default: block.settings.menu.title %}
+                      {% capture accordion_content %}
+                        <ul class="v-stack gap-3" role="list">
+                          {%- for link in block.settings.menu.links -%}
+                            <li>
+                              <a href="{{ link.url }}" class="inline-block link-faded break-all">{{ link.title }}</a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {% endcapture %}
 
-                    <ul class="v-stack gap-3" role="list">
-                      {%- for link in block.settings.menu.links -%}
-                        <li>
-                          <a href="{{ link.url }}" class="inline-block link-faded break-all">{{ link.title }}</a>
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  </div>
-                {%- endif -%}
+                      {%- if block.settings.show_menu_title -%}
+                        <p class="bold {% if section.settings.menu_fold == true %}hidden sm:block{% endif %}">
+                          {{ menu_title }}
+                        </p>
+                      {%- endif -%}
+
+                      <div class="{% if section.settings.menu_fold == true %}hidden sm:block{% endif %}">
+                        {{ accordion_content }}
+                      </div>
+                      
+                      {% if section.settings.menu_fold == true %}
+                        <div class="{% if section.settings.menu_fold == true %}sm:hidden{% endif %}">
+                          {%- render 'accordion', title: menu_title, content: accordion_content, block: block -%}
+                        </div>
+                      {% endif %}
+                    </div>
+                  {%- endif -%}
 
               {%- when 'newsletter' -%}
                 <div class="footer__block footer__block--newsletter" {{ block.shopify_attributes }}>
@@ -170,24 +226,19 @@
 
         <div class="footer__aside-bottom">
           {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
-            <ul class="footer__payment-icons h-stack wrap gap-2">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="contents">{{ type | payment_type_svg_tag }}</li>
+            <div class="footer__payment-icons h-stack wrap gap-2">
+              {% assign enabled_payment_types = 'american_express,visa,master,paypal,apple_pay,maestro,discover,diners_club,shopify_pay,jcb,facebook_pay,google_pay,venmo' | remove: ' ' | split: ',' %}
+              {% for type in enabled_payment_types %}
+                {{- type | payment_type_svg_tag -}}
               {%- endfor -%}
-            </ul>
+              {{ 'klarna' | payment_type_svg_tag }}
+            </div>
           {%- endif -%}
-
-          <div class="footer__copyright v-stack gap-1">
-            <p class="text-sm text-subdued">© {{ 'now' | date: '%Y' }}, {{ shop.name }}. {{ powered_by_link }}</p>
-
-            {%- if section.settings.show_policy_links and shop.policies.size > 0 -%}
-              <ul class="footer__policy-links unstyled-list">
-                {%- for policy in shop.policies -%}
-                  <li class="contents"><a href="{{ policy.url }}" class="text-sm link-faded">{{ policy.title }}</a></li>
-                {%- endfor -%}
-              </ul>
-            {%- endif -%}
-          </div>
+          {% if section.settings.copyright != blank %}
+            <p class="footer__copyright text-sm text-subdued">{{ section.settings.copyright }}</p>
+          {% else %}
+            <p class="footer__copyright text-sm text-subdued">© {{ 'now' | date: '%Y' }}, {{ shop.name }}. {{ powered_by_link }}</p>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -203,6 +254,17 @@
   "settings": [
     {
       "type": "checkbox",
+      "id": "menu_fold",
+      "label": "Menu fold",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "Copyright"
+    },
+    {
+      "type": "checkbox",
       "id": "show_social_media",
       "label": "Show social media",
       "info": "To configure social media, go to your social media settings.",
@@ -213,12 +275,6 @@
       "id": "show_payment_icons",
       "label": "Show payment icons",
       "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_policy_links",
-      "label": "Show policy links",
-      "info": "To add store policies, go to your [policy settings](/admin/settings/legal).",
     },
     {
       "type": "header",
@@ -257,12 +313,15 @@
   ],
   "blocks": [
     {
-      "type": "@app"
-    },
-    {
       "type": "text",
       "name": "Text",
       "settings": [
+      {
+        "type": "checkbox",
+        "id": "menu_fold",
+        "label": "Menu fold",
+        "default": false
+      },
         {
           "type": "text",
           "id": "title",
@@ -281,6 +340,11 @@
           "label": "Show Follow on Shop",
           "info": "To allow customers to follow your store on the Shop app from your storefront, Shop Pay must be enabled. [Learn more](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)",
           "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
         }
       ]
     },
