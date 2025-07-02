@@ -512,7 +512,7 @@
                 "desktop_text_position": "sm:place-self-center sm:text-center",
                 "background": "",
                 "background_gradient": "",
-                "border": "transparent",
+                "border": "rgba(0,0,0,0)",
                 "text_color": "#ffffff",
                 "text_gradient": "",
                 "button_background": "#000000",
@@ -1091,7 +1091,7 @@
             "link_url": "",
             "mobile_column_span": 2,
             "mobile_row_span": 1,
-            "mobile_text_position": "place-self-center text-center",
+            "mobile_text_position": "place-self-end-start text-start",
             "desktop_column_span": 1,
             "desktop_row_span": 1,
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
@@ -1115,8 +1115,8 @@
                 "mobile_flex_wrap": "column",
                 "align_item": "flex-start",
                 "desktop_justify_content": "flex-end",
-                "mobile_align_item": "center",
-                "mobile_justify_content": "center",
+                "mobile_align_item": "flex-start",
+                "mobile_justify_content": "flex-end",
                 "gap": "small",
                 "background": ""
               },
@@ -1181,8 +1181,8 @@
                 "mobile_flex_wrap": "column",
                 "align_item": "flex-start",
                 "desktop_justify_content": "flex-end",
-                "mobile_align_item": "center",
-                "mobile_justify_content": "center",
+                "mobile_align_item": "flex-start",
+                "mobile_justify_content": "flex-end",
                 "gap": "small",
                 "background": ""
               },
@@ -1218,7 +1218,8 @@
         "grid_group_96jd33"
       ],
       "custom_css": [
-        ".rich-text__wrapper:has(a) {margin-left: 45px; margin-bottom: 30px; padding: 15px; background: rgba(116, 82, 57, 0.6); border-radius: 4px;}"
+        ".rich-text__wrapper:has(a) {margin-left: 45px; margin-bottom: 30px; padding: 15px; background: rgba(116, 82, 57, 0.6); border-radius: 4px;}",
+        "@media screen and (max-width: 700px) {.rich-text__wrapper:has(a) {margin-left: 0; margin-bottom: 0; }}"
       ],
       "name": "Custom grid",
       "settings": {
