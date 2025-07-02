@@ -12,6 +12,21 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "discount_JTGPhe": {
+          "type": "discount",
+          "settings": {
+            "discount1": "discount 1",
+            "discount2": "discount 2",
+            "discount3": "",
+            "discount4": "",
+            "discount5": "",
+            "discount6": "",
+            "discount7": "",
+            "discount8": "",
+            "discount9": "",
+            "discount10": ""
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -77,6 +92,7 @@
         }
       },
       "block_order": [
+        "discount_JTGPhe",
         "title",
         "judge_me_reviews_preview_badge_NUKQ6a",
         "price",
@@ -953,136 +969,6 @@
     "custom_grid_G3HbJ4": {
       "type": "custom-grid",
       "blocks": {
-        "grid_group_7GdPjH": {
-          "type": "grid-group",
-          "name": "Grid group",
-          "settings": {
-            "desktop_padding": 0,
-            "mobile_padding": 0,
-            "grid_area": "",
-            "border_radius": "rounded",
-            "link_url": "",
-            "mobile_column_span": 1,
-            "mobile_row_span": 1,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
-            "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "",
-            "background_gradient": "",
-            "border": "rgba(0,0,0,0)",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          },
-          "blocks": {
-            "heading_U7YGtG": {
-              "type": "heading",
-              "name": "Heading",
-              "settings": {
-                "text": "Stack Height",
-                "size": "h5",
-                "html_tag": "p",
-                "text_color": "#745239",
-                "gradient": ""
-              },
-              "blocks": {}
-            },
-            "rich_text_PhWGRQ": {
-              "type": "rich-text",
-              "name": "Rich text",
-              "settings": {
-                "text": "<p>The stack height will vary slightly based on the size of the Roman blinds as well as the fold type. The stack height will vary from 9 inches to 14 inches, with taller shades having a larger stack height.</p>",
-                "content_width": "small",
-                "text_alignment": "center",
-                "mobile_text_alignment": "center",
-                "color": "#000000",
-                "desktop_font_size": 16,
-                "mobile_font_size": 14
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_U7YGtG",
-            "rich_text_PhWGRQ"
-          ]
-        },
-        "grid_group_3tdQxg": {
-          "type": "grid-group",
-          "name": "Grid group",
-          "settings": {
-            "desktop_padding": 0,
-            "mobile_padding": 0,
-            "grid_area": "",
-            "image": "shopify://shop_images/Roman-Shade-2-07_940x_1e70faf2-6aa7-401b-bf3b-828f30540fe7.webp",
-            "border_radius": "rounded",
-            "link_url": "",
-            "mobile_column_span": 1,
-            "mobile_row_span": 1,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
-            "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "",
-            "background_gradient": "",
-            "border": "rgba(0,0,0,0)",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          },
-          "blocks": {}
-        },
-        "grid_group_DcH6j3": {
-          "type": "grid-group",
-          "name": "Grid group",
-          "settings": {
-            "desktop_padding": 0,
-            "mobile_padding": 0,
-            "grid_area": "",
-            "image": "shopify://shop_images/Roman-Shade-2-08_940x_31e67186-8891-42c6-991e-619618bd1ee5.webp",
-            "border_radius": "rounded",
-            "link_url": "",
-            "mobile_column_span": 1,
-            "mobile_row_span": 1,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
-            "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "background": "",
-            "background_gradient": "",
-            "border": "rgba(0,0,0,0)",
-            "text_color": "#ffffff",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "grid_group_7GdPjH",
-        "grid_group_3tdQxg",
-        "grid_group_DcH6j3"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "full_width": true,
-        "content_width": "large",
-        "text_position": "center",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "custom_grid_G3HbJ4": {
-      "type": "custom-grid",
-      "blocks": {
         "grid_group_JkjArR": {
           "type": "grid-group",
           "name": "Grid group",
@@ -1101,7 +987,7 @@
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "background": "",
             "background_gradient": "",
-            "border": "transparent",
+            "border": "rgba(0,0,0,0)",
             "text_color": "#ffffff",
             "text_gradient": "",
             "button_background": "#000000",
@@ -1149,7 +1035,7 @@
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "background": "",
             "background_gradient": "",
-            "border": "transparent",
+            "border": "rgba(0,0,0,0)",
             "text_color": "#ffffff",
             "text_gradient": "",
             "button_background": "#000000",
