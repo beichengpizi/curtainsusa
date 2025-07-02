@@ -524,7 +524,7 @@
                   "type": "liquid",
                   "name": "Liquid",
                   "settings": {
-                    "liquid": "<style>\n#shopify-section-{{section.id}} table {\n    width: 100%;\n    border-collapse: collapse;\n    border-spacing: 0;\n    table-layout: auto;\n    margin: 0;\n}\n</style>\n<table class=\"comparison-table\">\n<thead>\n<tr>\n<th>Feature</th>\n<th>Standard Blackout</th>\n<th>Our Innovation</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Total Light Block</td>\n<td>94-97%</td>\n<td class=\"highlight\">100%</td>\n</tr>\n<tr>\n<td>Breathability</td>\n<td>14 air exchanges/hr</td>\n<td class=\"highlight\">28 air exchanges/hr</td>\n</tr>\n<tr>\n<td>Solar Gain Coefficient</td>\n<td>0.32</td>\n<td class=\"highlight\">0.18</td>\n</tr>\n</tbody>\n</table>"
+                    "liquid": "<style>\n#shopify-section-{{section.id}} table {\n    width: 100%;\n    border-collapse: collapse;\n    border-spacing: 0;\n    table-layout: auto;\n    margin: 0;\n}\n#shopify-section-{{section.id}} table td {\n    padding: 11px 13px 8px;\n    text-align: left;\n}\n</style>\n<table class=\"comparison-table\">\n<thead>\n<tr>\n<th>Feature</th>\n<th>Standard Blackout</th>\n<th>Our Innovation</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Total Light Block</td>\n<td>94-97%</td>\n<td class=\"highlight\">100%</td>\n</tr>\n<tr>\n<td>Breathability</td>\n<td>14 air exchanges/hr</td>\n<td class=\"highlight\">28 air exchanges/hr</td>\n</tr>\n<tr>\n<td>Solar Gain Coefficient</td>\n<td>0.32</td>\n<td class=\"highlight\">0.18</td>\n</tr>\n</tbody>\n</table>"
                   },
                   "blocks": {}
                 }
