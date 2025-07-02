@@ -974,6 +974,84 @@
     "custom_grid_G3HbJ4": {
       "type": "custom-grid",
       "blocks": {
+        "grid_group_NFAizt": {
+          "type": "grid-group",
+          "name": "Grid group",
+          "settings": {
+            "desktop_padding": 0,
+            "mobile_padding": 0,
+            "grid_area": "",
+            "border_radius": "rounded",
+            "link_url": "",
+            "mobile_column_span": 2,
+            "mobile_row_span": 1,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "",
+            "background_gradient": "",
+            "border": "transparent",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          },
+          "blocks": {
+            "group_8xC4XV": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "height": false,
+                "desktop_flex": true,
+                "flex_wrap": "column",
+                "mobile_flex_wrap": "column",
+                "align_item": "center",
+                "desktop_justify_content": "center",
+                "mobile_align_item": "center",
+                "mobile_justify_content": "center",
+                "gap": "medium",
+                "background": ""
+              },
+              "blocks": {
+                "heading_jGPJeC": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "text": "Stack Height",
+                    "size": "h5",
+                    "html_tag": "p",
+                    "text_color": "#745239",
+                    "gradient": ""
+                  },
+                  "blocks": {}
+                },
+                "rich_text_67hMHP": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<p>The stack height will vary slightly based on the size of the Roman blinds as well as the fold type. The stack height will vary from 9 inches to 14 inches, with taller shades having a larger stack height.</p>",
+                    "content_width": "large",
+                    "text_alignment": "center",
+                    "mobile_text_alignment": "center",
+                    "color": "#3c3c3c",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 14
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_jGPJeC",
+                "rich_text_67hMHP"
+              ]
+            }
+          },
+          "block_order": [
+            "group_8xC4XV"
+          ]
+        },
         "grid_group_JkjArR": {
           "type": "grid-group",
           "name": "Grid group",
@@ -987,7 +1065,7 @@
             "mobile_column_span": 2,
             "mobile_row_span": 1,
             "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
+            "desktop_column_span": 1,
             "desktop_row_span": 1,
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "background": "",
@@ -1035,7 +1113,7 @@
             "mobile_column_span": 2,
             "mobile_row_span": 1,
             "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
+            "desktop_column_span": 1,
             "desktop_row_span": 1,
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "background": "",
@@ -1051,6 +1129,7 @@
         }
       },
       "block_order": [
+        "grid_group_NFAizt",
         "grid_group_JkjArR",
         "grid_group_96jd33"
       ],
