@@ -1070,6 +1070,99 @@
         "grid_group_3tdQxg",
         "grid_group_DcH6j3"
       ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "large",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_grid_G3HbJ4": {
+      "type": "custom-grid",
+      "blocks": {
+        "grid_group_JkjArR": {
+          "type": "grid-group",
+          "name": "Grid group",
+          "settings": {
+            "desktop_padding": 0,
+            "mobile_padding": 0,
+            "grid_area": "",
+            "image": "shopify://shop_images/Roman-Shade-2-07_940x_1e70faf2-6aa7-401b-bf3b-828f30540fe7.webp",
+            "border_radius": "rounded",
+            "link_url": "",
+            "mobile_column_span": 2,
+            "mobile_row_span": 1,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "",
+            "background_gradient": "",
+            "border": "transparent",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          },
+          "blocks": {
+            "group_rfQ6jQ": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "height": false,
+                "desktop_flex": true,
+                "flex_wrap": "column",
+                "mobile_flex_wrap": "column",
+                "align_item": "center",
+                "desktop_justify_content": "center",
+                "mobile_align_item": "center",
+                "mobile_justify_content": "center",
+                "gap": "small",
+                "background": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_rfQ6jQ"
+          ]
+        },
+        "grid_group_96jd33": {
+          "type": "grid-group",
+          "name": "Grid group",
+          "settings": {
+            "desktop_padding": 0,
+            "mobile_padding": 0,
+            "grid_area": "",
+            "image": "shopify://shop_images/Roman-Shade-2-08_940x_31e67186-8891-42c6-991e-619618bd1ee5.webp",
+            "border_radius": "rounded",
+            "link_url": "",
+            "mobile_column_span": 2,
+            "mobile_row_span": 1,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "",
+            "background_gradient": "",
+            "border": "transparent",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "grid_group_JkjArR",
+        "grid_group_96jd33"
+      ],
       "name": "Custom grid",
       "settings": {
         "full_width": true,
@@ -1077,7 +1170,7 @@
         "heading": "",
         "subheading": "",
         "content": "",
-        "desktop_column_num": 4,
+        "desktop_column_num": 2,
         "mobile_column_num": 1,
         "background": "",
         "background_gradient": ""
