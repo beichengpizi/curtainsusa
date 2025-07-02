@@ -856,7 +856,7 @@
             "grid_area": "",
             "border_radius": "rounded",
             "link_url": "",
-            "mobile_column_span": 2,
+            "mobile_column_span": 1,
             "mobile_row_span": 1,
             "mobile_text_position": "place-self-center text-center",
             "desktop_column_span": 1,
@@ -915,7 +915,7 @@
             "image": "shopify://shop_images/Lesley-Custom-Linen-Roman-Shades-Ivory-02_1_470x_6336cbb6-3177-4263-89d9-3aaa13578d7e.webp",
             "border_radius": "rounded",
             "link_url": "",
-            "mobile_column_span": 2,
+            "mobile_column_span": 1,
             "mobile_row_span": 1,
             "mobile_text_position": "place-self-center text-center",
             "desktop_column_span": 1,
@@ -945,7 +945,7 @@
         "subheading": "",
         "content": "",
         "desktop_column_num": 2,
-        "mobile_column_num": 4,
+        "mobile_column_num": 1,
         "background": "",
         "background_gradient": ""
       }
