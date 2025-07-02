@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "section_vertical_spacing": "xsmall",
+    "section_vertical_spacing": "medium",
     "button_border_radius": 60,
     "input_border_radius": 8,
     "block_border_radius": 24,
@@ -17,8 +17,8 @@
     "block_shadow_vertical_offset": 18,
     "background": "#FFFFFF",
     "text_color": "#1a1a1a",
-    "header_background": "#ffffff",
-    "header_text_color": "#745239",
+    "header_background": "#f0f0f0",
+    "header_text_color": "#1a1a1a",
     "footer_background": "#ffffff",
     "footer_text_color": "#1a1a1a",
     "primary_button_background": "#1a1a1a",
@@ -37,7 +37,7 @@
     "product_rating_mode": "count",
     "product_color_display": "variant",
     "product_info_alignment": "start",
-    "cart_icon": "shopping_cart",
+    "cart_icon": "shopping_basket",
     "cart_show_free_shipping_threshold": true,
     "cart_free_shipping_threshold": "299",
     "checkout_accent_color": "#f0c417",

@@ -19,6 +19,7 @@ Supported variables
 <div class="panel-list__wrapper">
   <div class="panel">
     <div class="panel__wrapper" {% if mega_menu_block.settings.promo_content_layout == 'grid' or mega_menu_block.settings.promo_content_layout == 'collage' %}style="--panel-wrapper-justify-content: flex-start"{% endif %}>
+      <h4 class="h3">Menu</h4>
       <div class="panel__scroller v-stack gap-8">
         {%- if is_mega_menu -%}
           <button is="close-button" aria-label="{{ 'general.accessibility.close' | t | escape }}" {%- if section.settings.opening_from == 'bottom' -%}class="sm-max:hidden"{%- endif -%}>
@@ -58,11 +59,11 @@ Supported variables
 
             {%- endunless -%}
 
-            <li class="h3 sm:h4">
+            <li class="text-lg">
               {%- if link.links.size > 0 or mega_menu_block != '' and is_mega_menu == false -%}
                 <button class="text-with-icon w-full group justify-between" aria-expanded="false" data-panel="1-{% increment level_1 %}">
                   <span>{{ link.title }}</span>
-                  <span class="circle-chevron group-hover:colors group-expanded:colors">{%- render 'icon' with 'chevron-right-small', direction_aware: true -%}</span>
+                  <span class="circle-chevron group-hover:colors group-expanded:colors">{%- render 'icon' with 'chevron-right', width: 15, height: 15, direction_aware: true -%}</span>
                 </button>
               {%- else -%}
                 <a href="{{ link.url }}" class="group block w-full">
@@ -85,7 +86,7 @@ Supported variables
 
                     {%- if link.links.size > 0 -%}
                       {%- for sub_link in link.links -%}
-                        <li class="h3 {% if is_mega_menu %}sm:h5{% else %}sm:h4{% endif %}">
+                        <li class="text-lg">
                           {%- if sub_link.links.size > 0 -%}
                             <button class="text-with-icon w-full justify-between" aria-expanded="false" data-panel="2-{% increment level_2 %}">
                               <span>{{ sub_link.title }}</span>
@@ -133,7 +134,7 @@ Supported variables
                                 </li>
 
                                 {%- for sub_sub_link in sub_link.links -%}
-                                  <li class="{% if mobile_opening == 'left' %}h3{% else %}h5{% endif %} sm:h5">
+                                  <li class="text-lg">
                                     <a class="group {% if is_image_shown %}h-stack gap-4{% else %}block w-full{% endif %}"
                                        href="{{ sub_sub_link.url }}">
                                       {%- if is_image_shown and sub_sub_link.object != blank -%}

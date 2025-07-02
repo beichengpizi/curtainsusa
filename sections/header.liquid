@@ -73,6 +73,29 @@ the underlying logic of the menu.
       }
     }
   {%- endif -%}
+
+  navigation-drawer .circle-chevron {
+    background: transparent;
+  }
+
+  .navigation-drawer [is=close-button] {
+    position: absolute;
+    border-width: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  navigation-drawer .panel-list__wrapper {
+    height: 100vh;
+    overflow: auto;
+  }
+
+  @media screen and (pointer: fine) {
+    .group:hover .circle-chevron.group-hover\:colors:not([disabled]), .circle-chevron.hover\:colors:hover:not([disabled]) {
+      background: transparent;
+      color: black;
+    }
+  }
 </style>
 
 <height-observer variable="header">
@@ -129,14 +152,16 @@ the underlying logic of the menu.
                         {%- unless mega_menu_block.settings.layout == 'drawer' -%}
                           <details is="mega-menu-disclosure" trigger="{{ section.settings.menu_open_trigger | escape }}" {{ mega_menu_block.shopify_attributes }}>
                             <summary class="text-with-icon gap-2.5 link-faded-reverse" {% if link.url != '#' %}data-url="{{ link.url | escape }}"{% endif %}>
-                              {{- link.title -}} {%- render 'icon' with 'chevron-bottom' -%}
+                              {{- link.title -}}
+                              {% comment %} {%- render 'icon' with 'chevron-bottom' -%} {% endcomment %}
                             </summary>
 
                            {%- render 'mega-menu-horizontal', link: link, mega_menu_block: mega_menu_block -%}
                           </details>
                         {%- else -%}
                           <button aria-controls="navigation-drawer-{{ forloop.index }}" aria-expanded="false" class="text-with-icon gap-2.5 link-faded-reverse">
-                            {{- link.title -}} {%- render 'icon' with 'chevron-bottom' -%}
+                            {{- link.title -}}
+                            {% comment %} {%- render 'icon' with 'chevron-bottom' -%} {% endcomment %}
                           </button>
 
                           <navigation-drawer class="navigation-drawer drawer lg-max:hidden" id="navigation-drawer-{{ forloop.index }}" open-from="left" mega-menu>
@@ -146,7 +171,8 @@ the underlying logic of the menu.
                       {%- else -%}
                         <details class="relative" is="dropdown-disclosure" trigger="{{ section.settings.menu_open_trigger | escape }}">
                           <summary class="text-with-icon gap-2.5 link-faded-reverse" {% if link.url != '#' %}data-url="{{ link.url | escape }}"{% endif %}>
-                            {{- link.title -}} {%- render 'icon' with 'chevron-bottom' -%}
+                            {{- link.title -}}
+                            {% comment %} {%- render 'icon' with 'chevron-bottom' -%} {% endcomment %}
                           </summary>
 
                           <div class="dropdown-menu {% if link.levels <= 1 %}dropdown-menu--restrictable{% endif %}">
