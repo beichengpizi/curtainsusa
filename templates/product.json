@@ -58,6 +58,10 @@
           "type": "separator",
           "settings": {}
         },
+        "optis_product_options_variant_option_set_dMcDfY": {
+          "type": "shopify://apps/optis-product-options-variant/blocks/option-set/2c446099-c349-4e73-80cd-49c9770b7807",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -98,6 +102,7 @@
         "price",
         "variant_picker",
         "separator",
+        "optis_product_options_variant_option_set_dMcDfY",
         "quantity_selector",
         "buy_buttons",
         "offer_beXpTf",
