@@ -11,6 +11,14 @@
     border-radius: 2px;
   }
 
+  #shopify-section-{{ section.id }} .thumbnail-swatch:before {
+    box-shadow: 0 0 0 1px;
+  }
+
+  #shopify-section-{{ section.id }} :checked+.thumbnail-swatch:before, .thumbnail-swatch.is-selected:before {
+    transform: scale(1.05);
+  }
+
   @media screen and (max-width: 999px) {
     #shopify-section-{{ section.id }} {
       --section-spacing-block-start: {% if section.settings.mobile_media_size == 'expanded' %}0px{% else %}var(--container-gutter){% endif %};
