@@ -26,6 +26,12 @@
     color: red;
   }
 
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} .buy-buttons--multiple {
+       grid-template-columns: unset;
+    }
+  }
+
   #shopify-section-{{ section.id }} :checked+.thumbnail-swatch:before, .thumbnail-swatch.is-selected:before {
     transform: scale(1.07);
   }
