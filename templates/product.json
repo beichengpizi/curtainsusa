@@ -1067,7 +1067,7 @@
             "mobile_text_position": "place-self-center text-center",
             "desktop_column_span": 1,
             "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "background": "",
             "background_gradient": "",
             "border": "rgba(0,0,0,0)",
@@ -1078,26 +1078,44 @@
             "overlay_opacity": 0
           },
           "blocks": {
-            "group_rfQ6jQ": {
+            "group_b4xPA8": {
               "type": "group",
               "name": "Group",
               "settings": {
-                "height": false,
+                "height": true,
                 "desktop_flex": true,
                 "flex_wrap": "column",
                 "mobile_flex_wrap": "column",
-                "align_item": "center",
-                "desktop_justify_content": "center",
+                "align_item": "flex-start",
+                "desktop_justify_content": "flex-end",
                 "mobile_align_item": "center",
                 "mobile_justify_content": "center",
                 "gap": "small",
                 "background": ""
               },
-              "blocks": {}
+              "blocks": {
+                "rich_text_fPbqke": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<p><a href=\"/products/custom-100-blackout-linen-roman-shades-for-inside-mount\" title=\"Custom 100% Blackout Bamboo Hemp Roman Shade\">INSIDE MOUNT STACK HEIGHT</a></p>",
+                    "content_width": "small",
+                    "text_alignment": "center",
+                    "mobile_text_alignment": "center",
+                    "color": "",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 14
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_fPbqke"
+              ]
             }
           },
           "block_order": [
-            "group_rfQ6jQ"
+            "group_b4xPA8"
           ]
         },
         "grid_group_96jd33": {
