@@ -30,6 +30,10 @@
       padding-inline-end: 0;
     }
 
+    #shopify-section-{{ section.id }} .prose :is(.h0,.h1,.h2,.h3,.h4,h1,h2,h3,h4)+* {
+      margin-block-start: 0;
+    }
+
     @media screen and (min-width: 700px) {
       #shopify-section-{{ section.id }} .media-grid {
         grid: auto-flow dense minmax(10px, auto) / repeat({{ section.settings.desktop_column_num }},minmax(0,1fr));
