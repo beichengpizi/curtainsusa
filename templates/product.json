@@ -897,7 +897,7 @@
                     "desktop_justify_content": "center",
                     "mobile_align_item": "center",
                     "mobile_justify_content": "center",
-                    "gap": "small",
+                    "gap": "large",
                     "background": ""
                   },
                   "blocks": {
