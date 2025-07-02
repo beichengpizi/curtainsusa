@@ -127,6 +127,54 @@
         "input_text_color": ""
       }
     },
+    "tabs_Q67izd": {
+      "type": "tabs",
+      "blocks": {
+        "tab_8dknjW": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 1",
+            "content": "<p>Use this text to share information about your brand with your customers.</p>",
+            "page": ""
+          }
+        },
+        "tab_eMExDj": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 2",
+            "content": "<p>Describe a product, share announcements, or welcome customers to your store.</p>",
+            "page": ""
+          }
+        },
+        "tab_EcV3cW": {
+          "type": "tab",
+          "settings": {
+            "title": "Tab 3",
+            "content": "<p>Share information about your shipping rates, return policy or contact information.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_8dknjW",
+        "tab_eMExDj",
+        "tab_EcV3cW"
+      ],
+      "name": "Tabs",
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "subheading": "Subheading",
+        "title": "Heading",
+        "text_alignment": "center",
+        "first_tab_open": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "custom_tabs_tn3L3a": {
       "type": "custom-tabs",
       "blocks": {
@@ -538,7 +586,7 @@
                   "type": "liquid",
                   "name": "Liquid",
                   "settings": {
-                    "liquid": "<style>\n#shopify-section-{{section.id}} table {\n    width: 100%;\n    border-collapse: collapse;\n    border-spacing: 0;\n    table-layout: auto;\n    margin: 0;\n}\n#shopify-section-{{section.id}} table td {\n    padding: 11px 13px 8px;\n    text-align: left;\n}\n#shopify-section-{{section.id}} table tr:nth-child(odd) {\n    background: #f1f1f1;\n}\n#shopify-section-{{section.id}} .highlight {\n    background: #e8f5e9;\n    font-weight: 600;\n}\n#shopify-section-{{section.id}} table:not(.table--bordered) :is(th,td):first-child {\n    padding-inline-start: 1rem;\n}\n</style>\n<table class=\"comparison-table text-sm\">\n<thead>\n<tr>\n<th>Feature</th>\n<th>Standard Blackout</th>\n<th>Our Innovation</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Total Light Block</td>\n<td>94-97%</td>\n<td class=\"highlight\">100%</td>\n</tr>\n<tr>\n<td>Breathability</td>\n<td>14 air exchanges/hr</td>\n<td class=\"highlight\">28 air exchanges/hr</td>\n</tr>\n<tr>\n<td>Solar Gain Coefficient</td>\n<td>0.32</td>\n<td class=\"highlight\">0.18</td>\n</tr>\n</tbody>\n</table>"
+                    "liquid": "<style>\n#shopify-section-{{section.id}} table {\n    width: 100%;\n    border-collapse: collapse;\n    border-spacing: 0;\n    table-layout: auto;\n    margin: 0;\n}\n#shopify-section-{{section.id}} table td {\n    padding: 11px 13px 8px;\n    text-align: left;\n}\n#shopify-section-{{section.id}} table tr:nth-child(odd) {\n    background: #f1f1f1;\n}\n#shopify-section-{{section.id}} .highlight {\n    background: #e8f5e9;\n    font-weight: 600;\n}\n#shopify-section-{{section.id}} table:not(.table--bordered) :is(th,td):first-child {\n    padding-inline-start: 1rem;\n}\n#shopify-section-{{section.id}} table:not(.table--bordered) :is(th,td):last-child {\npadding-inline-end: 1rem;\n}\n</style>\n<table class=\"comparison-table text-sm\">\n<thead>\n<tr>\n<th>Feature</th>\n<th>Standard Blackout</th>\n<th>Our Innovation</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Total Light Block</td>\n<td>94-97%</td>\n<td class=\"highlight\">100%</td>\n</tr>\n<tr>\n<td>Breathability</td>\n<td>14 air exchanges/hr</td>\n<td class=\"highlight\">28 air exchanges/hr</td>\n</tr>\n<tr>\n<td>Solar Gain Coefficient</td>\n<td>0.32</td>\n<td class=\"highlight\">0.18</td>\n</tr>\n</tbody>\n</table>"
                   },
                   "blocks": {}
                 }
@@ -1390,6 +1438,7 @@
   },
   "order": [
     "main",
+    "tabs_Q67izd",
     "custom_tabs_tn3L3a",
     "custom_grid_6fFpCi",
     "custom_grid_G3HbJ4",
