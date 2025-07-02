@@ -39,6 +39,11 @@
         grid: auto-flow dense minmax(10px, auto) / repeat({{ section.settings.desktop_column_num }},minmax(0,1fr));
       }
     }
+
+    #shopify-section-{{ section.id }} .accordion__content {
+      margin-inline-end: 0;
+      padding-inline-end: 0;
+    }
   </style>
 
   <div {% render 'section-properties' %}>

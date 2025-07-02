@@ -1003,25 +1003,7 @@
                 "content": "<p><strong>Versatility: </strong>Suitable for various rooms, Roman shades can complement both modern and traditional interiors. It's versatile due to its adaptability in style, fabric, and functionality.<br/><strong>Light Control and Privacy: </strong>The ability to be fully raised, lowered or positioned at different heights provides unparalleled control over the amount of natural light.<br/><strong>Energy-efficient:</strong> Roman shades come with a lining that prevents solar heat gain in hot climates, helping to keep interiors cooler. In cold climates it blocks cold drafts, helping to reduce energy consumption.<br/><strong>Aesthetics and Functionality: </strong>Blending aesthetics and functionality, the neutral tone and soft pleats add a touch of sophistication to the room.</p>",
                 "page": ""
               },
-              "blocks": {
-                "rich_text_jVEAFN": {
-                  "type": "rich-text",
-                  "name": "Rich text",
-                  "settings": {
-                    "text": "<p>Write some text about your products or your brand.</p>",
-                    "content_width": "small",
-                    "text_alignment": "center",
-                    "mobile_text_alignment": "center",
-                    "color": "",
-                    "desktop_font_size": 18,
-                    "mobile_font_size": 18
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "rich_text_jVEAFN"
-              ]
+              "blocks": {}
             }
           },
           "block_order": [
