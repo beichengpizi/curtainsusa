@@ -504,7 +504,7 @@
                 "grid_area": "",
                 "border_radius": "rounded",
                 "link_url": "",
-                "mobile_column_span": 2,
+                "mobile_column_span": 1,
                 "mobile_row_span": 1,
                 "mobile_text_position": "place-self-center text-center",
                 "desktop_column_span": 2,
