@@ -19,6 +19,10 @@
     transform: scale(1.05);
   }
 
+  #shopify-section-{{ section.id }} .thumbnail-swatch {
+    border-radius: 2px;
+  }
+
   @media screen and (max-width: 999px) {
     #shopify-section-{{ section.id }} {
       --section-spacing-block-start: {% if section.settings.mobile_media_size == 'expanded' %}0px{% else %}var(--container-gutter){% endif %};
