@@ -702,7 +702,7 @@
                     "mobile_text_alignment": "center",
                     "color": "#1a1a1a",
                     "desktop_font_size": 16,
-                    "mobile_font_size": 18
+                    "mobile_font_size": 14
                   },
                   "blocks": {}
                 }
@@ -865,7 +865,7 @@
               "name": "Grid group",
               "settings": {
                 "desktop_padding": 0,
-                "mobile_padding": 0,
+                "mobile_padding": 30,
                 "grid_area": "",
                 "border_radius": "rounded-xs",
                 "link_url": "",
