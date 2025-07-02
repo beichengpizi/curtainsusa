@@ -192,7 +192,7 @@
               "name": "Grid group",
               "settings": {
                 "desktop_padding": 15,
-                "mobile_padding": 0,
+                "mobile_padding": 15,
                 "grid_area": "",
                 "border_radius": "rounded-sm",
                 "link_url": "",
@@ -236,7 +236,7 @@
               "name": "Grid group",
               "settings": {
                 "desktop_padding": 15,
-                "mobile_padding": 0,
+                "mobile_padding": 15,
                 "grid_area": "",
                 "border_radius": "rounded-sm",
                 "link_url": "",
@@ -280,7 +280,7 @@
               "name": "Grid group",
               "settings": {
                 "desktop_padding": 15,
-                "mobile_padding": 0,
+                "mobile_padding": 15,
                 "grid_area": "",
                 "border_radius": "rounded-sm",
                 "link_url": "",
