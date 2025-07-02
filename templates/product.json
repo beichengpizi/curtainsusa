@@ -520,6 +520,20 @@
                 "overlay_opacity": 0
               },
               "blocks": {
+                "rich_text_JMKcab": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<h5>Performance Comparison</h5>",
+                    "content_width": "small",
+                    "text_alignment": "center",
+                    "mobile_text_alignment": "center",
+                    "color": "",
+                    "desktop_font_size": 18,
+                    "mobile_font_size": 18
+                  },
+                  "blocks": {}
+                },
                 "liquid_pR7eVj": {
                   "type": "liquid",
                   "name": "Liquid",
@@ -530,6 +544,7 @@
                 }
               },
               "block_order": [
+                "rich_text_JMKcab",
                 "liquid_pR7eVj"
               ]
             },
