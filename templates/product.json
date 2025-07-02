@@ -1079,68 +1079,6 @@
         "background_gradient": ""
       }
     },
-    "media_grid_GjEMm4": {
-      "type": "media-grid",
-      "blocks": {
-        "image_Nd4BKM": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Roman-Shade-2-07_940x_1e70faf2-6aa7-401b-bf3b-828f30540fe7.webp",
-            "title": "Promote your products",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
-            "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-end-start sm:text-start",
-            "background": "rgba(0,0,0,0)",
-            "background_gradient": "",
-            "text_color": "#000000",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "image_QDmaNb": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Roman-Shade-2-08_940x_31e67186-8891-42c6-991e-619618bd1ee5.webp",
-            "title": "Promote your products",
-            "heading_tag": "h4",
-            "link_url": "",
-            "link_text": "",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_column_span": 2,
-            "desktop_row_span": 1,
-            "desktop_text_position": "sm:place-self-end-start sm:text-start",
-            "background": "rgba(0,0,0,0)",
-            "background_gradient": "",
-            "text_color": "#000000",
-            "text_gradient": "",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "image_Nd4BKM",
-        "image_QDmaNb"
-      ],
-      "name": "Media grid",
-      "settings": {
-        "full_width": true,
-        "reduce_width": false,
-        "desktop_row_height": 400,
-        "mobile_row_height": 120,
-        "background": "",
-        "background_gradient": ""
-      }
-    },
     "accordion_content_JXnBFH": {
       "type": "accordion-content",
       "blocks": {
@@ -1274,7 +1212,6 @@
     "custom_grid_6fFpCi",
     "rich_text_MQDkaa",
     "custom_grid_G3HbJ4",
-    "media_grid_GjEMm4",
     "accordion_content_JXnBFH",
     "related-products"
   ]
