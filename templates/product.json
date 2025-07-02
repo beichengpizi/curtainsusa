@@ -1143,13 +1143,55 @@
             "overlay_color": "#000000",
             "overlay_opacity": 0
           },
-          "blocks": {}
+          "blocks": {
+            "group_LTnJnL": {
+              "type": "group",
+              "name": "Group",
+              "settings": {
+                "height": true,
+                "desktop_flex": true,
+                "flex_wrap": "column",
+                "mobile_flex_wrap": "column",
+                "align_item": "flex-start",
+                "desktop_justify_content": "flex-end",
+                "mobile_align_item": "center",
+                "mobile_justify_content": "center",
+                "gap": "small",
+                "background": ""
+              },
+              "blocks": {
+                "rich_text_qeEmAj": {
+                  "type": "rich-text",
+                  "name": "Rich text",
+                  "settings": {
+                    "text": "<p><a>OUTSIDE MOUNT STACK HEIGHT</a></p>",
+                    "content_width": "small",
+                    "text_alignment": "center",
+                    "mobile_text_alignment": "center",
+                    "color": "",
+                    "desktop_font_size": 16,
+                    "mobile_font_size": 14
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "rich_text_qeEmAj"
+              ]
+            }
+          },
+          "block_order": [
+            "group_LTnJnL"
+          ]
         }
       },
       "block_order": [
         "grid_group_NFAizt",
         "grid_group_JkjArR",
         "grid_group_96jd33"
+      ],
+      "custom_css": [
+        ".rich-text__wrapper:has(a) {margin-left: 45px; margin-bottom: 30px; padding: 15px; background: rgba(116, 82, 57, 0.6); border-radius: 4px;}"
       ],
       "name": "Custom grid",
       "settings": {
@@ -1160,7 +1202,7 @@
         "content": "",
         "desktop_column_num": 2,
         "mobile_column_num": 1,
-        "background": "",
+        "background": "rgba(0,0,0,0)",
         "background_gradient": ""
       }
     },
