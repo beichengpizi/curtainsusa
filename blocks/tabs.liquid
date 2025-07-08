@@ -1,98 +1,16 @@
 <style>
-  #shopify-section-{{ section.id }} .content-over-media {
-    align-items: var(--align-items);
-    justify-items: var(--justify-items);
-  }
-
-  #shopify-section-{{ section.id }} .content-over-media>:not(img,video,iframe,svg,video-media) {
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
-  }
-
-  #shopify-block-{{ block.id }} .media-grid {
+  #shopify-block-{{ block.id }}.media-grid {
     position: relative;
     gap: {% if block.settings.gap == 'xlg' %}1.25rem{% elsif block.settings.gap == 'lg' %}1rem{% elsif block.settings.gap == 'md' %}0.5rem{% else %}0{% endif %};
   }
 
-  #shopify-section-{{ section.id }} .prose:has(.icon-width) {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
   @media screen and (min-width: 700px) {
-    {%- for block in section.blocks -%}
-      #media-grid-{{ block.id }} {
-        --grid-area: {% if block.settings.pc_grid_area != blank %}{{ block.settings.pc_grid_area }}{% else %}span var(--media-grid-row-span) / span var(--media-grid-column-span){% endif %};
-      }
-    {%- endfor -%}
-    
     #shopify-block-{{ block.id }}.media-grid {
+      --media-grid-column-span: {{ block.settings.desktop_column_span }};
+      --media-grid-row-span: {{ block.settings.desktop_row_span }};
       grid: auto-flow dense minmax(10px, auto) / repeat({{ block.settings.desktop_column_num }}, minmax(0,1fr));
     }
   }
-
-  @media screen and (max-width: 700px) {
-    {%- for block in section.blocks -%}
-      #media-grid-{{ block.id }} {
-        --grid-area: {% if block.settings.grid_area != blank %}{{ block.settings.grid_area }}{% else %}span var(--media-grid-row-span) / span var(--media-grid-column-span){% endif %};
-      }
-    {%- endfor -%}
-  }
-
-  {%- for block in section.blocks -%}
-    #media-grid-{{ block.id }} {
-      --content-over-media-overlay: {{ block.settings.overlay_color.rgb }} /{{ block.settings.overlay_opacity | divided_by: 100.0 }};
-      --media-grid-column-span: {{ block.settings.mobile_column_span }};
-      --media-grid-row-span: {{ block.settings.mobile_row_span }};
-      --align-items: {{ block.settings.align_items }};
-      --justify-items: {{ block.settings.justify_items }};
-
-      {%- if block.settings.heading_tag == 'h5' or block.settings.heading_tag == 'h6' -%}
-        --content-over-media-gap: 1rem;
-      {%- endif -%}
-    }
-
-    #media-grid-{{ block.id }} .content-over-media>:is(img,video,iframe,svg,video-media), #media-grid-{{ block.id }} .icon-width {
-      height: {% if block.settings.image_size == 'sm' %}25%{% elsif block.settings.image_size == 'md' %}50%{% elsif block.settings.image_size == 'lg' %}75%{% else %}auto{% endif %};
-      min-height: {% if block.settings.image_size == 'auto' %}auto{% elsif block.settings.image_size == 'xlg' %}100%{% else %}0%{% endif %};
-      overflow: {{ block.settings.overflow }};
-      width: {% if block.settings.image_size == 'xlg' %}100%{% else %}auto{% endif %};
-    }
-
-    #media-grid-{{ block.id }} .content-over-media {
-      border: 2px solid {{ block.settings.border }};
-    }
-
-    @media screen and (max-width: 740px){
-      #media-grid-{{ block.id }} .content-over-media>:is(img,video,iframe,svg,video-media), #media-grid-{{ block.id }} .icon-width {
-        height: {% if block.settings.mobile_image_size == 'sm' %}25%{% elsif block.settings.mobile_image_size == 'md' %}50%{% elsif block.settings.mobile_image_size == 'lg' %}75%{% else %}auto{% endif %};
-        min-height: {% if block.settings.mobile_image_size == 'auto' %}100%{% else %}0%{% endif %};
-        width: {% if block.settings.mobile_image_size == 'xlg' %}100%{% else %}auto{% endif %};
-      }
-
-      #media-grid-{{ block.id }} {
-        --align-items: {{ block.settings.mobile_align_items }};
-        --justify-items: {{ block.settings.mobile_justify_items }};
-      }
-    }
-
-    @media screen and (min-width: 740px) {
-      #media-grid-{{ block.id }} {
-        --content-over-media-gap: 1.5rem;
-        --media-grid-column-span: {{ block.settings.desktop_column_span }};
-        --media-grid-row-span: {{ block.settings.desktop_row_span }};
-      }
-    }
-
-    @media screen and (min-width: 740px) {
-      #media-grid-{{ block.id }} {
-        --media-grid-column-span: {{ block.settings.desktop_column_span }};
-        --media-grid-row-span: {{ block.settings.desktop_row_span }};
-      }
-    }
-  {%- endfor -%}
 </style>
 
 {%- liquid
@@ -100,7 +18,7 @@
 -%}
 
 {% capture content %}
-  <media-grid class="media-grid">
+  <media-grid id="shopify-block-{{ block.id }}" class="media-grid">
     {% content_for 'blocks' %}
   </media-grid>
 {% endcapture %}
