@@ -2,56 +2,60 @@
 {% assign menu_fold = section.settings.menu_fold %}
 
 {%- if section.blocks.size > 3 -%}
-<style>
-  @media screen and (min-width: 1000px) {
-    #shopify-section-{{ section.id }} {
-      {%- if newsletter_block != blank -%}
-        --footer-block-list-gap: var(--spacing-10);
-      {%- endif -%}
+  <style>
+    @media screen and (min-width: 1000px) {
+      #shopify-section-{{ section.id }} {
+        {%- if newsletter_block != blank -%}
+          --footer-block-list-gap: var(--spacing-10);
+        {%- endif -%}
 
-      --footer-block-list-justify-content: space-between;
-    }
-  }
-
-  #shopify-section-{{ section.id }} .accordion__toggle {
-    --accordion-spacing: var(--spacing-3);
-  }
-
-  #shopify-section-{{ section.id }} .footer-block-padding {
-    padding: 15px 0;
-  }
-
-  #shopify-section-{{ section.id }} .accordion__content {
-    display: grid;
-    gap: var(--spacing-4);
-  }
-
-  {% if menu_fold == true %}
-    #shopify-section-{{ section.id }} .footer__block-list {
-      grid: unset;
-      gap: 0;
+        --footer-block-list-justify-content: space-between;
+      }
     }
 
-    #shopify-section-{{ section.id }} .footer__block--text,
-    #shopify-section-{{ section.id }} .footer__block--newsletter {
-      grid-column: span 1;
-      padding: 10px 0;
+    #shopify-section-{{ section.id }} .accordion__toggle {
+      --accordion-spacing: var(--spacing-3);
     }
 
-    #shopify-section-{{ section.id }} .footer__block--menu {
-      max-width: unset;
+    #shopify-section-{{ section.id }} .footer__block--text {
+      flex-basis: 18%;
     }
-  {% endif %}
-</style>
+
+    #shopify-section-{{ section.id }} .footer-block-padding {
+      padding: 15px 0;
+    }
+
+    #shopify-section-{{ section.id }} .accordion__content {
+      display: grid;
+      gap: var(--spacing-4);
+    }
+
+    {% if menu_fold == true %}
+      #shopify-section-{{ section.id }} .footer__block-list {
+        grid: unset;
+        gap: 0;
+      }
+
+      #shopify-section-{{ section.id }} .footer__block--text,
+      #shopify-section-{{ section.id }} .footer__block--newsletter {
+        grid-column: span 1;
+        padding: 10px 0;
+      }
+
+      #shopify-section-{{ section.id }} .footer__block--menu {
+        max-width: unset;
+      }
+    {% endif %}
+  </style>
 {%- endif -%}
 
 <div class="footer">
   <div class="container">
     <div class="footer__wrapper">
       {%- comment -%}
-      ------------------------------------------------------------------------------------------------------------------
-      BLOCK AREA
-      ------------------------------------------------------------------------------------------------------------------
+        ------------------------------------------------------------------------------------------------------------------
+        BLOCK AREA
+        ------------------------------------------------------------------------------------------------------------------
       {%- endcomment -%}
 
       {%- if section.blocks.size > 0 -%}
@@ -59,8 +63,15 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'text' -%}
-                {%- if block.settings.title != blank or block.settings.content != blank or shop.features.follow_on_shop? and block.settings.enable_follow_on_shop -%}
-                  <div class="footer__block footer__block--text {% if block.settings.menu_fold == false %}footer-block-padding{% endif %}" {{ block.shopify_attributes }}>
+                {%- if block.settings.title != blank
+                  or block.settings.content != blank
+                  or shop.features.follow_on_shop?
+                  and block.settings.enable_follow_on_shop
+                -%}
+                  <div
+                    class="footer__block footer__block--text {% if block.settings.menu_fold == false %}footer-block-padding{% endif %}"
+                    {{ block.shopify_attributes }}
+                  >
                     {% assign title = block.settings.title %}
                     {% capture content %}
                       {%- if block.settings.content != blank -%}
@@ -81,9 +92,11 @@
                       {% endif %}
                     {% endcapture %}
                     {%- if block.settings.title != blank -%}
-                      <p class="bold {% if block.settings.menu_fold == true %}hidden sm:block{% endif %}">{{ title }}</p>
+                      <p class="bold {% if block.settings.menu_fold == true %}hidden sm:block{% endif %}">
+                        {{ title }}
+                      </p>
                     {%- endif -%}
-                    
+
                     <div class="{% if block.settings.menu_fold == true %}hidden sm:block{% endif %} v-stack gap-4">
                       {{ content }}
                     </div>
@@ -97,10 +110,10 @@
                 {%- endif -%}
 
               {%- when 'links' -%}
-                  {%- if block.settings.menu != blank -%}
-                    <div class="footer__block footer__block--menu" {{ block.shopify_attributes }}>
-                      {% assign menu_title = block.settings.menu_title | default: block.settings.menu.title %}
-                      {% capture accordion_content %}
+                {%- if block.settings.menu != blank -%}
+                  <div class="footer__block footer__block--menu" {{ block.shopify_attributes }}>
+                    {% assign menu_title = block.settings.menu_title | default: block.settings.menu.title %}
+                    {% capture accordion_content %}
                         <ul class="v-stack gap-3" role="list">
                           {%- for link in block.settings.menu.links -%}
                             <li>
@@ -110,23 +123,23 @@
                         </ul>
                       {% endcapture %}
 
-                      {%- if block.settings.show_menu_title -%}
-                        <p class="bold {% if section.settings.menu_fold == true %}hidden sm:block{% endif %}">
-                          {{ menu_title }}
-                        </p>
-                      {%- endif -%}
+                    {%- if block.settings.show_menu_title -%}
+                      <p class="bold {% if section.settings.menu_fold == true %}hidden sm:block{% endif %}">
+                        {{ menu_title }}
+                      </p>
+                    {%- endif -%}
 
-                      <div class="{% if section.settings.menu_fold == true %}hidden sm:block{% endif %}">
-                        {{ accordion_content }}
-                      </div>
-                      
-                      {% if section.settings.menu_fold == true %}
-                        <div class="{% if section.settings.menu_fold == true %}sm:hidden{% endif %}">
-                          {%- render 'accordion', title: menu_title, content: accordion_content, block: block -%}
-                        </div>
-                      {% endif %}
+                    <div class="{% if section.settings.menu_fold == true %}hidden sm:block{% endif %}">
+                      {{ accordion_content }}
                     </div>
-                  {%- endif -%}
+
+                    {% if section.settings.menu_fold == true %}
+                      <div class="{% if section.settings.menu_fold == true %}sm:hidden{% endif %}">
+                        {%- render 'accordion', title: menu_title, content: accordion_content, block: block -%}
+                      </div>
+                    {% endif %}
+                  </div>
+                {%- endif -%}
 
               {%- when 'newsletter' -%}
                 <div class="footer__block footer__block--newsletter" {{ block.shopify_attributes }}>
@@ -134,7 +147,11 @@
                     {%- capture sizes -%}{{ block.settings.image_width }}px{%- endcapture -%}
                     {%- capture widths -%}{{ block.settings.image_width }}, {{ block.settings.image_width | times: 2 | at_most: block.settings.image.width }}{%- endcapture -%}
                     {%- capture style -%}max-width: {{ block.settings.image_width }}px{%- endcapture -%}
-                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', style: style, sizes: sizes, widths: widths -}}
+                    {{-
+                      block.settings.image
+                      | image_url: width: block.settings.image.width
+                      | image_tag: loading: 'lazy', style: style, sizes: sizes, widths: widths
+                    -}}
                   {%- endif -%}
 
                   <div class="v-stack gap-6">
@@ -161,7 +178,15 @@
                         <input type="hidden" name="contact[tags]" value="newsletter">
 
                         {%- capture label -%}{{ 'general.newsletter.email' | t }}{%- endcapture -%}
-                        {%- render 'input', name: 'contact[email]', label: label, type: 'email', required: true, autocomplete: 'email', enterkeyhint: 'send', self_submit: true -%}
+                        {%- render 'input',
+                          name: 'contact[email]',
+                          label: label,
+                          type: 'email',
+                          required: true,
+                          autocomplete: 'email',
+                          enterkeyhint: 'send',
+                          self_submit: true
+                        -%}
                       {%- endif -%}
                     {%- endform -%}
                   </div>
@@ -172,16 +197,16 @@
       {%- endif -%}
 
       {%- comment -%}
-      ------------------------------------------------------------------------------------------------------------------
-      SECONDARY AREA
-      ------------------------------------------------------------------------------------------------------------------
+        ------------------------------------------------------------------------------------------------------------------
+        SECONDARY AREA
+        ------------------------------------------------------------------------------------------------------------------
       {%- endcomment -%}
 
       <div class="footer__aside empty:hidden">
         {%- comment -%}
-        ----------------------------------------------------------------------------------------------------------------
-        SOCIAL MEDIA + LOCALIZATION
-        ----------------------------------------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------------------------------------------
+          SOCIAL MEDIA + LOCALIZATION
+          ----------------------------------------------------------------------------------------------------------------
         {%- endcomment -%}
 
         {%- if section.settings.show_social_media -%}
@@ -209,11 +234,19 @@
                 {%- endif -%}
 
                 {%- if country_selector -%}
-                  {%- render 'localization-selector', type: 'country', show_country_name: section.settings.show_country_name, show_country_flag: section.settings.show_country_flag, popover_horizontal_position: popover_horizontal_position -%}
+                  {%- render 'localization-selector',
+                    type: 'country',
+                    show_country_name: section.settings.show_country_name,
+                    show_country_flag: section.settings.show_country_flag,
+                    popover_horizontal_position: popover_horizontal_position
+                  -%}
                 {%- endif -%}
 
                 {%- if locale_selector -%}
-                  {%- render 'localization-selector', type: 'locale', popover_horizontal_position: popover_horizontal_position -%}
+                  {%- render 'localization-selector',
+                    type: 'locale',
+                    popover_horizontal_position: popover_horizontal_position
+                  -%}
                 {%- endif -%}
               </div>
             {%- endif -%}
@@ -221,15 +254,18 @@
         {%- endif -%}
 
         {%- comment -%}
-        ----------------------------------------------------------------------------------------------------------------
-        COPYRIGHT + PAYMENT METHODS
-        ----------------------------------------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------------------------------------------
+          COPYRIGHT + PAYMENT METHODS
+          ----------------------------------------------------------------------------------------------------------------
         {%- endcomment -%}
 
         <div class="footer__aside-bottom">
           {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
             <div class="footer__payment-icons h-stack wrap gap-2">
-              {% assign enabled_payment_types = 'american_express,visa,master,paypal,apple_pay,maestro,discover,diners_club,shopify_pay,jcb,facebook_pay,google_pay,venmo' | remove: ' ' | split: ',' %}
+              {% assign enabled_payment_types = 'american_express,visa,master,paypal,apple_pay,maestro,discover,diners_club,shopify_pay,jcb,facebook_pay,google_pay,venmo'
+                | remove: ' '
+                | split: ','
+              %}
               {% for type in enabled_payment_types %}
                 {{- type | payment_type_svg_tag -}}
               {%- endfor -%}
@@ -241,7 +277,9 @@
             {%- if section.settings.show_policy_links and shop.policies.size > 0 -%}
               <ul class="footer__policy-links unstyled-list">
                 {%- for policy in shop.policies -%}
-                  <li class="contents"><a href="{{ policy.url }}" class="text-sm link-faded">{{ policy.title }}</a></li>
+                  <li class="contents">
+                    <a href="{{ policy.url }}" class="text-sm link-faded">{{ policy.title }}</a>
+                  </li>
                 {%- endfor -%}
               </ul>
             {%- endif -%}
