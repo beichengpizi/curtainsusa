@@ -21,8 +21,10 @@
       flex-basis: 18%;
     }
 
-    #shopify-section-{{ section.id }} .footer-block-padding {
-      padding: 15px 0;
+    @media screen and (max-width: 700px){
+      #shopify-section-{{ section.id }} .footer-block-padding {
+        padding: 15px 0;
+      }
     }
 
     #shopify-section-{{ section.id }} .accordion__content {
