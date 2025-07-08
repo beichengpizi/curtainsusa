@@ -1,6 +1,15 @@
 <div class="black-countdown-global">
-  <div class="black-countdown-title">
-    {{ section.settings.title }}
+  <div>
+    {% if section.settings.title != blank %}
+      <div class="black-countdown-title">
+        {{ section.settings.title }}
+      </div>
+    {% endif %}
+    {% if section.settings.content != blank %}
+      <div>
+        {{ section.settings.content }}
+      </div>
+    {% endif %}
   </div>
   {%- assign timetxt = section.settings.timetxt | split: '|' -%}
   <div class="black-countdown-box" data-end-time="{{ section.settings.time }}">
@@ -224,6 +233,11 @@
       "id": "title",
       "label": "标题",
       "default": "Limited-Time Offers"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Content"
     },
     {
       "type": "textarea",
