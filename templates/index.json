@@ -40,7 +40,7 @@
       "name": "Image with text overlay",
       "settings": {
         "full_width": true,
-        "allow_transparent_header": true,
+        "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "auto",
         "image": "shopify://shop_images/CURTAINUK-133.webp",
