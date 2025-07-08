@@ -6,7 +6,7 @@
       </div>
     {% endif %}
     {% if section.settings.content != blank %}
-      <div>
+      <div class="countdown-content">
         {{ section.settings.content }}
       </div>
     {% endif %}
@@ -51,6 +51,10 @@
   </div>
 </div>
 <style>
+  .countdown-content{
+    color: {{ section.settings.content_color }};  
+  }
+  
   .black-countdown-global {
     background: #262425;
     padding: 60px 15px;
@@ -262,6 +266,12 @@
       "type": "color",
       "id": "text-color",
       "label": "倒计时数字颜色",
+      "default":"#fff",
+    },
+    {
+      "type": "color",
+      "id": "content_color",
+      "label": "Content color",
       "default":"#fff",
     },
     {
