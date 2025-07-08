@@ -51,39 +51,48 @@
   </div>
 </div>
 <style>
-  .countdown-content{
+  #shopify-section-{{ section.id }} .countdown-content{
     color: {{ section.settings.content_color }};  
     font-size: 20px;
   }
+
+  @media screen and (max-width: 700px){
+    #shopify-section-{{ section.id }} .countdown-content{
+      color: {{ section.settings.content_color }};  
+      font-size: 20px;
+    }
+  }
   
-  .black-countdown-global {
+  #shopify-section-{{ section.id }} .black-countdown-global {
     background: #262425;
     padding: 60px 15px;
     color: #fff;
     position: relative;
   }
-  .black-countdown-title {
+  
+  #shopify-section-{{ section.id }} .black-countdown-title {
     text-align: center;
     font-weight: 600;
     font-size: 48px;
     margin-bottom: 50px;
   }
-  .black-countdown-box {
+  
+  #shopify-section-{{ section.id }} .black-countdown-box {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .black-countdown-num-box {
+  
+  #shopify-section-{{ section.id }} .black-countdown-num-box {
     display: flex;
     align-items: center;
   }
-  .black-countdown-num {
+  #shopify-section-{{ section.id }} .black-countdown-num {
     background: {{ section.settings.background }};
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
     border-radius: 4px;
     color: {{ section.settings.text-color }};
     display: block;
-
     height: 67px;
     display: flex;
     justify-content: center;
@@ -92,29 +101,29 @@
     font-weight: 500;
     font-size: 32px;
   }
-  .black-countdown-num,
-  .black-countdown-text {
+  #shopify-section-{{ section.id }} .black-countdown-num,
+  #shopify-section-{{ section.id }} .black-countdown-text {
     width: 63px;
   }
-  .black-countdown-box em {
+  #shopify-section-{{ section.id }} .black-countdown-box em {
     vertical-align: top;
     margin: 0 7px;
     font-style: normal; /* 去掉斜体样式 */
     font-weight: 500;
     font-size: 18px;
   }
-  .black-countdown-text {
+  #shopify-section-{{ section.id }} .black-countdown-text {
     text-align: center;
     margin-top: 10px;
     font-size: 14px;
   }
-  .black-countdown-icon-box {
+  #shopify-section-{{ section.id }} .black-countdown-icon-box {
     position: absolute;
     bottom: 0;
     width: calc(100% - 30px);
     height: 78px;
   }
-  .black-countdown-icon-box img {
+  #shopify-section-{{ section.id }} .black-countdown-icon-box img {
     height: 100%;
     width: auto;
     position: absolute;
@@ -124,28 +133,28 @@
     z-index: 1;
   }
   @media (max-width: 960px) {
-    .black-countdown-global {
+    #shopify-section-{{ section.id }} .black-countdown-global {
       padding: 30px 15px 60px 15px;
     }
-    .black-countdown-title {
+    #shopify-section-{{ section.id }} .black-countdown-title {
       font-size: 22px;
     }
-    .black-countdown-num,
-    .black-countdown-text {
+    #shopify-section-{{ section.id }} .black-countdown-num,
+    #shopify-section-{{ section.id }} .black-countdown-text {
       width: 53px;
     }
-    .black-countdown-num {
+    #shopify-section-{{ section.id }} .black-countdown-num {
       height: 53px;
       font-size: 26px;
     }
-    .black-countdown-title {
+    #shopify-section-{{ section.id }} .black-countdown-title {
       margin-bottom: 24px;
     }
-    .black-countdown-text {
+    #shopify-section-{{ section.id }} .black-countdown-text {
       margin-top: 2px;
       font-size: 12px;
     }
-    .black-countdown-icon-box {
+    #shopify-section-{{ section.id }} .black-countdown-icon-box {
       height: 46px;
     }
   }
