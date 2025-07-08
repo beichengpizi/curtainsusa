@@ -799,18 +799,48 @@
             "mobile_column_num": 4
           },
           "blocks": {
-            "image_CJiibJ": {
-              "type": "image",
-              "name": "Image",
+            "grid_group_f3MUqH": {
+              "type": "grid-group",
+              "name": "Grid group",
               "settings": {
-                "image": "shopify://shop_images/inside-mount_03b4fb6a-8239-4a14-88b2-01f4099849c5.webp",
-                "alignment": "center",
-                "border_radius": "rounded-xs",
-                "border_color": "",
-                "mobile_image_width": "100%",
-                "desktop_image_width": "100%"
+                "desktop_padding": 0,
+                "mobile_padding": 0,
+                "grid_area": "",
+                "border_radius": "rounded",
+                "link_url": "",
+                "mobile_column_span": 1,
+                "mobile_row_span": 1,
+                "mobile_text_position": "place-self-center text-center",
+                "desktop_column_span": 1,
+                "desktop_row_span": 1,
+                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "background": "",
+                "background_gradient": "",
+                "border": "transparent",
+                "text_color": "#ffffff",
+                "text_gradient": "",
+                "button_background": "#000000",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
               },
-              "blocks": {}
+              "blocks": {
+                "image_wmeiew": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/inside-mount_03b4fb6a-8239-4a14-88b2-01f4099849c5.webp",
+                    "alignment": "center",
+                    "border_radius": "rounded-xs",
+                    "border_color": "",
+                    "mobile_image_width": "100%",
+                    "desktop_image_width": "100%"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_wmeiew"
+              ]
             },
             "grid_group_cCMMc4": {
               "type": "grid-group",
@@ -894,7 +924,7 @@
             }
           },
           "block_order": [
-            "image_CJiibJ",
+            "grid_group_f3MUqH",
             "grid_group_cCMMc4"
           ]
         }
