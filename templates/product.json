@@ -806,6 +806,7 @@
                 "desktop_padding": 0,
                 "mobile_padding": 0,
                 "grid_area": "",
+                "image": "shopify://shop_images/inside-mount_03b4fb6a-8239-4a14-88b2-01f4099849c5.webp",
                 "border_radius": "rounded",
                 "link_url": "",
                 "mobile_column_span": 1,
@@ -823,24 +824,7 @@
                 "overlay_color": "#000000",
                 "overlay_opacity": 0
               },
-              "blocks": {
-                "image_p3Eczz": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {
-                    "image": "shopify://shop_images/inside-mount_03b4fb6a-8239-4a14-88b2-01f4099849c5.webp",
-                    "alignment": "center",
-                    "border_radius": "rounded-xs",
-                    "border_color": "",
-                    "mobile_image_width": "100%",
-                    "desktop_image_width": "100%"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_p3Eczz"
-              ]
+              "blocks": {}
             },
             "grid_group_fE4bde": {
               "type": "grid-group",
@@ -854,12 +838,12 @@
                 "mobile_column_span": 2,
                 "mobile_row_span": 1,
                 "mobile_text_position": "place-self-center text-center",
-                "desktop_column_span": 2,
+                "desktop_column_span": 1,
                 "desktop_row_span": 1,
                 "desktop_text_position": "sm:place-self-center sm:text-center",
                 "background": "",
                 "background_gradient": "",
-                "border": "transparent",
+                "border": "#1a1a1a",
                 "text_color": "#ffffff",
                 "text_gradient": "",
                 "button_background": "#000000",
