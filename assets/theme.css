@@ -3306,15 +3306,15 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 }
 
 .prose * + :is(p, div, ul, ol) {
-  margin-block-start: var(--spacing-3);
+  margin-block-start: var(--spacing-2);
 }
 
 .prose * + :is(.h0, .h1, .h2, h1, h2) {
-  margin-block-start: var(--spacing-4);
+  margin-block-start: var(--spacing-3);
 }
 
 .prose * + :is(.h3, .h4, .h5, .h6, h3, h4, h5, h6) {
-  margin-block-start: var(--spacing-3);
+  margin-block-start: var(--spacing-2);
 }
 
 .prose * + .button {
@@ -3326,11 +3326,11 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 }
 
 .prose :is(.h0, .h1, .h2, .h3, .h4, h1, h2, h3, h4) + * {
-  margin-block-start: var(--spacing-5);
+  margin-block-start: var(--spacing-2);
 }
 
 .prose :is(.h5, .h6, h5, h6) + * {
-  margin-block-start: var(--spacing-4);
+  margin-block-start: var(--spacing-2);
 }
 
 .prose :is(p img:not([style*="float"]):only-child, div img:not([style*="float"]):only-child, figure, video) {
@@ -3362,19 +3362,19 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 
 @media screen and (min-width: 700px) {
   .prose * + :is(p, div, ul, ol) {
-    margin-block-start: var(--spacing-4);
+    margin-block-start: var(--spacing-2);
   }
 
   .prose * + :is(.h0, .h1, .h2, h1, h2) {
-    margin-block-start: var(--spacing-6);
+    margin-block-start: var(--spacing-4);
   }
 
   .prose * + :is(.h3, .h4, h3, h4) {
-    margin-block-start: var(--spacing-5);
+    margin-block-start: var(--spacing-3);
   }
 
   .prose * + :is(.h5, .h6, h5, h6) {
-    margin-block-start: var(--spacing-4);
+    margin-block-start: var(--spacing-2);
   }
 
   .prose * + .button {
@@ -3386,15 +3386,15 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   }
 
   .prose :is(.h0, .h1, .h2, .h3, h1, h2, h3) + * {
-    margin-block-start: var(--spacing-6);
+    margin-block-start: var(--spacing-2);
   }
 
   .prose :is(.h4, h4) + * {
-    margin-block-start: var(--spacing-5);
+    margin-block-start: var(--spacing-3);
   }
 
   .prose :is(.h5, .h6, h5, h6) + * {
-    margin-block-start: var(--spacing-4);
+    margin-block-start: var(--spacing-2);
   }
 
   .prose :is(p img:not([style*="float"]):only-child, div img:not([style*="float"]):only-child, figure, video) {
@@ -3404,31 +3404,31 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 
 @media screen and (min-width: 1150px) {
   .prose * + p {
-    margin-block-start: var(--spacing-6);
+    margin-block-start: var(--spacing-2);
   }
 
   .prose * + :is(.h0, .h1, h1) {
-    margin-block-start: var(--spacing-8);
+    margin-block-start: var(--spacing-6);
   }
 
   .prose * + :is(.h2, .h3, .h4, h2, h3, h4) {
-    margin-block-start: var(--spacing-6);
+    margin-block-start: var(--spacing-4);
   }
 
   .prose * + :is(.h5, .h6, h5, h6) {
-    margin-block-start: var(--spacing-4);
+    margin-block-start: var(--spacing-2);
   }
 
   .prose :is(.h0, .h1, .h2, h1, h2) + * {
-    margin-block-start: var(--spacing-8);
-  }
-
-  .prose :is(.h3, .h4, h3, h4) + * {
     margin-block-start: var(--spacing-6);
   }
 
-  .prose :is(.h5, .h6, h5, h6) + * {
+  .prose :is(.h3, .h4, h3, h4) + * {
     margin-block-start: var(--spacing-4);
+  }
+
+  .prose :is(.h5, .h6, h5, h6) + * {
+    margin-block-start: var(--spacing-2);
   }
 }
 
