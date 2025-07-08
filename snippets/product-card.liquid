@@ -23,6 +23,12 @@ Supported variables
 * text_alignment: can be "center". If nothing is set, the theme uses the default product card setting
 {%- endcomment -%}
 
+<style>
+  #shopify-section-{{ section.id }} .product-card__info {
+    --product-card-info-padding: var(--spaing-6) 0 0 0;
+  }
+</style>
+
 {%- assign show_rating = show_rating | default: settings.show_product_rating, allow_false: true -%}
 {%- assign show_vendor = show_vendor | default: settings.show_vendor, allow_false: true -%}
 {%- assign show_quick_buy = show_quick_buy | default: settings.show_quick_buy, allow_false: true -%}
