@@ -14,10 +14,14 @@
       "name": "黑五倒计时",
       "settings": {
         "title": "Discount Countdown!",
+        "content": "",
         "timetxt": "Days|Hrs|Mins|Secs",
         "time": "2025-07-15T10:00:00+08:00",
-        "background": "#fff",
-        "text-color": "#e74c3c"
+        "background": "#ffffff",
+        "title_color": "#000000",
+        "countdown_background": "#ffffff",
+        "text-color": "#e74c3c",
+        "content_color": "#ffffff"
       }
     },
     "main": {
