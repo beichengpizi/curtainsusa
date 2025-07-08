@@ -1,5 +1,5 @@
 <div class="black-countdown-global">
-  <div>
+  <div class="title-content">
     {% if section.settings.title != blank %}
       <div class="black-countdown-title">
         {{ section.settings.title }}
@@ -51,6 +51,10 @@
   #shopify-section-{{ section.id }} .countdown-content{
     color: {{ section.settings.content_color }};
     font-size: 20px;
+  }
+
+  #shopify-section-{{ section.id }} .title-content {
+    margin-bottom: 30px;
   }
 
   @media screen and (max-width: 700px){
