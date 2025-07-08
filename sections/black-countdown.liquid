@@ -15,7 +15,7 @@
   <div class="black-countdown-box" data-end-time="{{ section.settings.time }}">
     <div>
       <div class="black-countdown-num-box">
-        <div>
+        <div class="num-box">
           <span class="index-days black-countdown-num">00</span>
           <div class="black-countdown-text">{{ timetxt[0] }}</div>
         </div>
@@ -25,7 +25,7 @@
 
     <div>
       <div class="black-countdown-num-box">
-        <div>
+        <div class="num-box">
           <span class="index-hours black-countdown-num"> 00 </span>
           <div class="black-countdown-text">{{ timetxt[1] }}</div>
         </div>
@@ -34,14 +34,14 @@
     </div>
     <div>
       <div class="black-countdown-num-box">
-        <div>
+        <div class="num-box">
           <span class="index-minutes black-countdown-num">00</span>
           <div class="black-countdown-text">{{ timetxt[2] }}</div>
         </div>
         <em class="">:</em>
       </div>
     </div>
-    <div>
+    <div class="num-box">
       <span class="index-seconds black-countdown-num">00</span>
       <div class="black-countdown-text">{{ timetxt[3] }}</div>
     </div>
@@ -84,8 +84,12 @@
     display: flex;
     align-items: center;
   }
-  #shopify-section-{{ section.id }} .black-countdown-num {
+
+  #shopify-section-{{ section.id }} .num-box {
     background: {{ section.settings.countdown_background }};
+  }
+
+  #shopify-section-{{ section.id }} .black-countdown-num {
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
     border-radius: 4px;
     color: {{ section.settings.text-color }};
