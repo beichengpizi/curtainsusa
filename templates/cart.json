@@ -9,6 +9,17 @@
  */
 {
   "sections": {
+    "black_countdown_GWTD7B": {
+      "type": "black-countdown",
+      "name": "黑五倒计时",
+      "settings": {
+        "title": "Limited-Time Offers",
+        "timetxt": "Days|Hrs|Mins|Secs",
+        "time": "2024-01-15T10:00:00+08:00",
+        "background": "#fff",
+        "text-color": "#fff"
+      }
+    },
     "main": {
       "type": "main-cart",
       "blocks": {
@@ -40,6 +51,7 @@
     }
   },
   "order": [
+    "black_countdown_GWTD7B",
     "main"
   ]
 }
