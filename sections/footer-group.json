@@ -99,6 +99,7 @@
         "text": {
           "type": "text",
           "settings": {
+            "menu_fold": false,
             "title": "",
             "content": "<p>685 Market Street<br/>San Francisco, CA 94105,<br/>United States</p><p>Email:<a href=\"mailto:info@curtainuk.com\" title=\"mailto:info@curtainuk.com\">info@curtainuk.com</a></p>",
             "enable_follow_on_shop": true
@@ -146,9 +147,10 @@
         "newsletter"
       ],
       "settings": {
+        "menu_fold": true,
+        "copyright": "",
         "show_social_media": true,
         "show_payment_icons": true,
-        "show_policy_links": false,
         "show_country_selector": true,
         "show_country_flag": true,
         "show_country_name": true,
