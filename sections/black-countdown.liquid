@@ -1,52 +1,55 @@
-<div {% render 'section-properties' %} class="black-countdown-global">
-  <div class="title-content">
-    {% if section.settings.title != blank %}
-      <div class="black-countdown-title">
-        {{ section.settings.title }}
-      </div>
-    {% endif %}
-    {% if section.settings.content != blank %}
-      <div class="countdown-content">
-        {{ section.settings.content }}
-      </div>
-    {% endif %}
-  </div>
-  {%- assign timetxt = section.settings.timetxt | split: '|' -%}
-  <div class="black-countdown-box" data-end-time="{{ section.settings.time }}">
-    <div>
-      <div class="black-countdown-num-box">
-        <div class="num-box">
-          <span class="index-days black-countdown-num">00</span>
-          <div class="black-countdown-text">{{ timetxt[0] }}</div>
+<div {% render 'section-properties' %}>
+  <div class="black-countdown-global">
+    <div class="title-content">
+      {% if section.settings.title != blank %}
+        <div class="black-countdown-title">
+          {{ section.settings.title }}
         </div>
-        <em class="">:</em>
-      </div>
+      {% endif %}
+      {% if section.settings.content != blank %}
+        <div class="countdown-content">
+          {{ section.settings.content }}
+        </div>
+      {% endif %}
     </div>
+    {%- assign timetxt = section.settings.timetxt | split: '|' -%}
+    <div class="black-countdown-box" data-end-time="{{ section.settings.time }}">
+      <div>
+        <div class="black-countdown-num-box">
+          <div class="num-box">
+            <span class="index-days black-countdown-num">00</span>
+            <div class="black-countdown-text">{{ timetxt[0] }}</div>
+          </div>
+          <em class="">:</em>
+        </div>
+      </div>
 
-    <div>
-      <div class="black-countdown-num-box">
-        <div class="num-box">
-          <span class="index-hours black-countdown-num"> 00 </span>
-          <div class="black-countdown-text">{{ timetxt[1] }}</div>
+      <div>
+        <div class="black-countdown-num-box">
+          <div class="num-box">
+            <span class="index-hours black-countdown-num"> 00 </span>
+            <div class="black-countdown-text">{{ timetxt[1] }}</div>
+          </div>
+          <em class="">:</em>
         </div>
-        <em class="">:</em>
       </div>
-    </div>
-    <div>
-      <div class="black-countdown-num-box">
-        <div class="num-box">
-          <span class="index-minutes black-countdown-num">00</span>
-          <div class="black-countdown-text">{{ timetxt[2] }}</div>
+      <div>
+        <div class="black-countdown-num-box">
+          <div class="num-box">
+            <span class="index-minutes black-countdown-num">00</span>
+            <div class="black-countdown-text">{{ timetxt[2] }}</div>
+          </div>
+          <em class="">:</em>
         </div>
-        <em class="">:</em>
       </div>
-    </div>
-    <div class="num-box">
-      <span class="index-seconds black-countdown-num">00</span>
-      <div class="black-countdown-text">{{ timetxt[3] }}</div>
+      <div class="num-box">
+        <span class="index-seconds black-countdown-num">00</span>
+        <div class="black-countdown-text">{{ timetxt[3] }}</div>
+      </div>
     </div>
   </div>
 </div>
+
 <style>
   #shopify-section-{{ section.id }} .countdown-content{
     color: {{ section.settings.content_color }};
