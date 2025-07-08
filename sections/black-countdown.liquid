@@ -75,6 +75,7 @@
     font-weight: 600;
     font-size: 48px;
     margin-bottom: 50px;
+    color: {{ section.settings.title_color }};
   }
   
   #shopify-section-{{ section.id }} .black-countdown-box {
@@ -138,6 +139,7 @@
     }
     #shopify-section-{{ section.id }} .black-countdown-title {
       font-size: 22px;
+      margin-bottom: 24px;
     }
     #shopify-section-{{ section.id }} .black-countdown-num,
     #shopify-section-{{ section.id }} .black-countdown-text {
@@ -146,9 +148,6 @@
     #shopify-section-{{ section.id }} .black-countdown-num {
       height: 53px;
       font-size: 26px;
-    }
-    #shopify-section-{{ section.id }} .black-countdown-title {
-      margin-bottom: 24px;
     }
     #shopify-section-{{ section.id }} .black-countdown-text {
       margin-top: 2px;
@@ -271,6 +270,11 @@
       "id": "background",
       "label": "Background",
       "default":"#fff",
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color"
     },
     {
       "type": "color",
