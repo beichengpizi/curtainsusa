@@ -32,8 +32,10 @@
       gap: 0;
     }
 
-    #shopify-section-{{ section.id }} .footer__block--text {
+    #shopify-section-{{ section.id }} .footer__block--text,
+    #shopify-section-{{ section.id }} .footer__block--newsletter {
       grid-column: span 1;
+      padding-bottom: 10px;
     }
 
     #shopify-section-{{ section.id }} .footer__block--menu {
@@ -231,14 +233,19 @@
               {% for type in enabled_payment_types %}
                 {{- type | payment_type_svg_tag -}}
               {%- endfor -%}
-              {{ 'klarna' | payment_type_svg_tag }}
             </div>
           {%- endif -%}
-          {% if section.settings.copyright != blank %}
-            <p class="footer__copyright text-sm text-subdued">{{ section.settings.copyright }}</p>
-          {% else %}
-            <p class="footer__copyright text-sm text-subdued">© {{ 'now' | date: '%Y' }}, {{ shop.name }}. {{ powered_by_link }}</p>
-          {% endif %}
+          <div class="footer__copyright v-stack gap-1">
+            <p class="text-sm text-subdued">© {{ 'now' | date: '%Y' }}, {{ shop.name }}. {{ powered_by_link }}</p>
+
+            {%- if section.settings.show_policy_links and shop.policies.size > 0 -%}
+              <ul class="footer__policy-links unstyled-list">
+                {%- for policy in shop.policies -%}
+                  <li class="contents"><a href="{{ policy.url }}" class="text-sm link-faded">{{ policy.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
         </div>
       </div>
     </div>
