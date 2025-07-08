@@ -15,28 +15,10 @@
       }
     }
 
-    #shopify-section-{{ section.id }} .content-over-media>:not(img,video,iframe,svg,video-media){
-      max-width: 100%;
-      width: 100%;
-    }
-
-    #shopify-section-{{ section.id }} .prose:has(.icon-width) {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    #shopify-section-{{ section.id }} .accordion__content {
-      padding-inline-end: 0;
-    }
-
-    #shopify-section-{{ section.id }} .prose :is(.h0,.h1,.h2,.h3,.h4,h1,h2,h3,h4)+* {
-      margin-block-start: 0;
-    }
-
-    @media screen and (min-width: 700px) {
-      #shopify-section-{{ section.id }} .media-grid {
-        grid: auto-flow dense minmax(10px, auto) / repeat({{ section.settings.desktop_column_num }},minmax(0,1fr));
+    @media screen and (max-width: 700px){
+      #shopify-section-{{ section.id }} .tabs-nav__button,
+      #shopify-section-{{ section.id }} [role="tabpanel"] {
+        display: none;
       }
     }
   </style>
@@ -65,7 +47,7 @@
             {{ content }}
           </div>
 
-          <x-tabs class="tabs-inner sm:text-{{ section.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }}">
+          <x-tabs class="tabs-inner sm:text-{{ section.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }} hidden sm:block">
             <template shadowrootmode="open">
               <slot role="tablist" part="tab-list" name="title"></slot>
               <slot part="tab-panels" name="content"></slot>
@@ -81,12 +63,12 @@
 {% schema %}
 {
   "name": "Custom tabs",
+  "class": "shopify-section--tabs",
   "disabled_on": {
-    "templates": ["password"],
     "groups": ["header", "custom.overlay"]
   },
-  "blocks": [{ "type": "tabs" }, { "type": "@app" }],
   "max_blocks": 5,
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
   "settings": [
     {
       "type": "checkbox",
