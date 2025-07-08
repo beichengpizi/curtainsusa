@@ -88,7 +88,7 @@
     align-items: center;
   }
   #shopify-section-{{ section.id }} .black-countdown-num {
-    background: {{ section.settings.background }};
+    background: {{ section.settings.countdown_background }};
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
     border-radius: 4px;
     color: {{ section.settings.text-color }};
@@ -268,7 +268,7 @@
     },
         {
       "type": "color",
-      "id": "background",
+      "id": "countdown_background",
       "label": "倒计时背景颜色",
       "default":"#fff",
     },
