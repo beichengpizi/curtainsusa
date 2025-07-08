@@ -64,7 +64,7 @@
   }
   
   #shopify-section-{{ section.id }} .black-countdown-global {
-    background: #262425;
+    background: {{ section.settings.background }};
     padding: 60px 15px;
     color: #fff;
     position: relative;
@@ -266,7 +266,13 @@
       "default": "2024-01-15T10:00:00+08:00",
       "info": "2024-01-15T10:00:00+08:00"
     },
-        {
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default":"#fff",
+    },
+    {
       "type": "color",
       "id": "countdown_background",
       "label": "倒计时背景颜色",
