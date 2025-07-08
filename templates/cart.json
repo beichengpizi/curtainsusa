@@ -14,14 +14,14 @@
       "name": "黑五倒计时",
       "settings": {
         "title": "Discount Countdown!",
-        "content": "",
+        "content": "Buy 2 Get 10%; Buy 3 Get 15%; Buy 4 Get 20%.",
         "timetxt": "Days|Hrs|Mins|Secs",
         "time": "2025-07-15T10:00:00+08:00",
         "background": "#ffffff",
         "title_color": "#000000",
         "countdown_background": "#ffffff",
         "text-color": "#e74c3c",
-        "content_color": "#ffffff"
+        "content_color": "#e74c3c"
       }
     },
     "main": {
