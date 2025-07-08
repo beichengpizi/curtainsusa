@@ -98,63 +98,6 @@ Supported variables
         {%- endif -%}
       </a>
 
-    {%- if settings.product_color_display != 'hide' and show_swatches != false -%}
-      {%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
-
-      {%- for color_label in color_label_list -%}
-        {%- if product.options_by_name[color_label] != blank -%}
-          {%- assign product_option = product.options_by_name[color_label] -%}
-          
-          <div class="product-card__aside">
-            {%- case settings.product_color_display -%}
-              {%- when 'count' -%}
-                <p class="product-card__color-count text-sm text-subdued">{{- 'product.general.available_colors_count' | t: count: product_option.values.size -}}</p>
-
-              {%- when 'swatch' -%}
-                <fieldset class="product-card__swatch-list h-stack {% if settings.color_swatch_style == 'rectangle' %}gap-2.5{% else %}gap-0.5{% endif %}" data-option-position="{{ product_option.position }}">
-                  <legend class="sr-only">{{ product_option.name }}</legend>
-
-                  {%- capture param_name -%}swatch-{{ quick_buy_context }}-{{ section.id }}-{{ product.id }}-{{ product_option.position }}{%- endcapture -%}
-
-                  {%- liquid
-                    for option_value in product_option.values limit: 4
-                      render 'option-value', type: 'swatch', option_value: option_value, param_name: param_name, option_position: product_option.position, output_variant_media: true, size: 'sm'
-                    endfor
-                  -%}
-
-                  {% if product_option.values.size > 4 %}
-                    <a href="{{ product.url }}" data-instant class="color-swatch__view-more {% if settings.color_swatch_style == 'round' %}rounded-full{% endif %} text-xxs text-subdued">+{{ product_option.values.size | minus: 4 }}</a>
-                  {% endif %}
-                </fieldset>
-
-              {%- when 'variant' -%}
-                <fieldset class="product-card__variant-list" data-option-position="{{ product_option.position }}">
-                  <legend class="sr-only">{{ product_option.name }}</legend>
-                  
-                  {%- capture param_name -%}swatch-{{ quick_buy_context }}-{{ section.id }}-{{ product.id }}-{{ product_option.position }}{%- endcapture -%}
-
-                  {%- for option_value in product_option.values limit: 4 -%}
-                    {%- if forloop.first or option_value.variant.matched and option_value == product_option.selected_value -%}
-                      {%- assign selected = true -%}
-                    {%- else -%}
-                      {%- assign selected = false -%}
-                    {%- endif -%}
-
-                    {%- render 'option-value', type: 'thumbnail', image: option_value.variant.featured_media, option_value: option_value, param_name: param_name, size: 'sm', output_variant_media: true, selected: selected -%}
-                  {%- endfor -%}
-
-                  {%- if product_option.values.size > 4 -%}
-                    <a href="{{ product.url }}" data-instant class="thumbnail-swatch__view-more text-xs text-subdued">+{{ product_option.values.size | minus: 4 }}</a>
-                  {%- endif -%}
-                </fieldset>
-              {%- endcase -%}
-          </div>
-
-          {%- break -%}
-        {%- endif -%}
-      {%- endfor -%}
-    {%- endif -%}
-    
       {%- if show_quick_buy and product.available -%}
         <div class="product-card__quick-buy">
           {%- assign quick_add_label = 'product.general.quick_add' | t -%}
