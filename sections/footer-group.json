@@ -133,7 +133,7 @@
           "type": "newsletter",
           "settings": {
             "image_width": 150,
-            "heading_size": "h3",
+            "heading_size": "h6",
             "title": "Newsletter Sign Up",
             "content": "<p>Receive our latest updates about our products & promotions.</p>"
           }
