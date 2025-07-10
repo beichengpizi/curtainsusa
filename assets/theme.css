@@ -2917,6 +2917,13 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   display: none;
 } */
 
+.product-card__variant-list {
+  gap: var(--spacing-2);
+  margin-block: var(--spacing-2) 2px;
+  flex-wrap: wrap;
+  display: flex;
+}
+
 @media screen and (min-width: 700px) {
   .product-card {
     --product-card-badge-spacing: var(--spacing-4);
