@@ -34,6 +34,7 @@
     #shopify-section-{{ section.id }} .product-gallery--desktop-thumbnails-left .product-gallery__thumbnail-list-wrapper {
       order: unset;
       overflow: unset;
+      height: 100%;
     }
   }
 
@@ -62,6 +63,7 @@
     #shopify-section-{{ section.id }} .product-gallery {
       position: {% if section.settings.media_sticky %}sticky{% else %}static{% endif %};
       top: 0;
+      align-content: center;
     }
 
     #shopify-section-{{ section.id }} .product-gallery img {
