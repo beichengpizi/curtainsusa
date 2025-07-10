@@ -2912,10 +2912,10 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   justify-content: center;
   justify-items: center;
 }
-
+/* 
 .product-card__variant-list {
   display: none;
-}
+} */
 
 @media screen and (min-width: 700px) {
   .product-card {
