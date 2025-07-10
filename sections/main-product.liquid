@@ -64,6 +64,10 @@
       top: 0;
     }
 
+    #shopify-section-{{ section.id }} .product-gallery img {
+      border-radius: 4px;
+    }
+
     {%- if section.settings.desktop_media_layout == 'grid_highlight' -%}
       #shopify-section-{{ section.id }} .product-gallery__media-list > :not([hidden]) {
         grid-column: span 2;
