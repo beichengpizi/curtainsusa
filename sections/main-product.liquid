@@ -61,6 +61,7 @@
 
     #shopify-section-{{ section.id }} .product-gallery {
       position: {% if section.settings.media_sticky %}sticky{% else %}static{% endif %};
+      top: 0;
     }
 
     {%- if section.settings.desktop_media_layout == 'grid_highlight' -%}
