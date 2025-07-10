@@ -30,6 +30,11 @@
     #shopify-section-{{ section.id }} .buy-buttons--multiple {
        grid-template-columns: unset;
     }
+
+    #shopify-section-{{ section.id }} .product-gallery--desktop-thumbnails-left .product-gallery__thumbnail-list-wrapper {
+      order: unset;
+      overflow: unset;
+    }
   }
 
   #shopify-section-{{ section.id }} :checked+.thumbnail-swatch:before, .thumbnail-swatch.is-selected:before {
@@ -87,7 +92,7 @@
   #shopify-section-{{ section.id }} buy-buttons button {
     border-radius: 4px;
   }
-  
+
   @media screen and (max-width: 700px){
     #shopify-section-{{ section.id }} on-sale-badge {
       font-size: 1rem;
@@ -106,7 +111,6 @@
       font-size: 12px;
     }
   }
-
 </style>
 
 <div {% render 'section-properties', tight: true %}>
@@ -127,8 +131,22 @@
   <product-quick-add form="{{ product_form_id }}" class="product-quick-add">
     {%- assign button_label = 'product.general.add_to_cart_button' | t -%}
 
-    <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button class="sm:hidden">
-      {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true, stretch: true, size: 'lg' -%}
+    <buy-buttons
+      template="{{ product.template_suffix }}"
+      form="{{ product_form_id }}"
+      force-secondary-button
+      class="sm:hidden"
+    >
+      {%- render 'button',
+        type: 'submit',
+        content: button_label,
+        form: product_form_id,
+        background: buy_buttons_block.settings.atc_button_background,
+        text_color: buy_buttons_block.settings.atc_button_text_color,
+        secondary: true,
+        stretch: true,
+        size: 'lg'
+      -%}
     </buy-buttons>
 
     {%- assign image = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
@@ -136,7 +154,11 @@
     <div class="product-quick-add__variant {% if image == blank %}no-image{% endif %} hidden sm:grid">
       {%- if image != blank -%}
         <variant-media widths="80,160" form="{{ product_form_id }}">
-          {{- image | image_url: width: image.width | image_tag: loading: 'lazy', sizes: '80px', widths: '80,160', class: 'rounded-xs' -}}
+          {{-
+            image
+            | image_url: width: image.width
+            | image_tag: loading: 'lazy', sizes: '80px', widths: '80,160', class: 'rounded-xs'
+          -}}
         </variant-media>
       {%- endif -%}
 
@@ -148,21 +170,32 @@
         {%- endif -%}
 
         <a href="{{ product.url }}" class="bold truncate-text">{{ product.title }}</a>
-        {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, form_id: product_form_id -%}
+        {%- render 'price-list',
+          product: product,
+          variant: product.selected_or_first_available_variant,
+          form_id: product_form_id
+        -%}
       </div>
 
       <buy-buttons template="{{ product.template_suffix }}" form="{{ product_form_id }}" force-secondary-button>
-        {%- render 'button', type: 'submit', content: button_label, form: product_form_id, background: buy_buttons_block.settings.atc_button_background, text_color: buy_buttons_block.settings.atc_button_text_color, secondary: true -%}
+        {%- render 'button',
+          type: 'submit',
+          content: button_label,
+          form: product_form_id,
+          background: buy_buttons_block.settings.atc_button_background,
+          text_color: buy_buttons_block.settings.atc_button_text_color,
+          secondary: true
+        -%}
       </buy-buttons>
     </div>
   </product-quick-add>
 {%- endif -%}
 
 {%- comment -%}
-IMPLEMENTATION NOTE: Shopify does not currently allows to render a given section within the context of a given product. However,
-when rendering the quick buy popovers, we want to be able to re-use the merchant's choices (such as the selector type). This
-is however only possible by rendering the whole product page, and extracting the relevant part. Here, we therefore render the
-quick buy information in a template, that will be extracted in JS, but ensure it is not visible in the main product page
+  IMPLEMENTATION NOTE: Shopify does not currently allows to render a given section within the context of a given product. However,
+  when rendering the quick buy popovers, we want to be able to re-use the merchant's choices (such as the selector type). This
+  is however only possible by rendering the whole product page, and extracting the relevant part. Here, we therefore render the
+  quick buy information in a template, that will be extracted in JS, but ensure it is not visible in the main product page
 {%- endcomment -%}
 <template id="quick-buy-content">
   {%- capture product_form_id -%}quick-buy-form-{{ product.id }}-{{ section.id }}{%- endcapture -%}
@@ -172,13 +205,21 @@ quick buy information in a template, that will be extracted in JS, but ensure it
 
     {%- if image != blank -%}
       <variant-media widths="80,160" form="{{ product_form_id }}">
-        {{- image | image_url: width: image.width | image_tag: loading: 'lazy', sizes: '80px', widths: '80,160', class: 'quick-buy-drawer__media rounded-xs' -}}
+        {{-
+          image
+          | image_url: width: image.width
+          | image_tag: loading: 'lazy', sizes: '80px', widths: '80,160', class: 'quick-buy-drawer__media rounded-xs'
+        -}}
       </variant-media>
     {%- endif -%}
 
     <div class="v-stack gap-0.5">
       <a href="{{ product.url }}" class="bold justify-self-start">{{ product.title }}</a>
-      {%- render 'price-list', product: product, variant: product.selected_or_first_available_variant, form_id: product_form_id -%}
+      {%- render 'price-list',
+        product: product,
+        variant: product.selected_or_first_available_variant,
+        form_id: product_form_id
+      -%}
     </div>
   </div>
 
@@ -191,10 +232,23 @@ quick buy information in a template, that will be extracted in JS, but ensure it
           {%- render block -%}
 
         {%- when 'variant_picker' -%}
-          {%- render 'variant-picker', product: product, form_id: product_form_id, update_url: false, hide_sold_out_variants: block.settings.hide_sold_out_variants, hide_size_chart: true, force_dropdown_as_block: true, block: block -%}
+          {%- render 'variant-picker',
+            product: product,
+            form_id: product_form_id,
+            update_url: false,
+            hide_sold_out_variants: block.settings.hide_sold_out_variants,
+            hide_size_chart: true,
+            force_dropdown_as_block: true,
+            block: block
+          -%}
 
         {%- when 'buy_buttons' -%}
-          {%- render 'buy-buttons', product: product, form_id: product_form_id, show_payment_button: block.settings.show_payment_button, button_size: 'lg' -%}
+          {%- render 'buy-buttons',
+            product: product,
+            form_id: product_form_id,
+            show_payment_button: block.settings.show_payment_button,
+            button_size: 'lg'
+          -%}
       {%- endcase -%}
     {%- endfor -%}
   </div>
