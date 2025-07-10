@@ -18,7 +18,7 @@
         "type": "range",
         "id": "page_width",
         "min": 1300,
-        "max": 1800,
+        "max": 2000,
         "step": 20,
         "unit": "px",
         "label": "Page width",
