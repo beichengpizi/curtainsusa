@@ -119,7 +119,7 @@
         "mega_menu_hBym6E"
       ],
       "settings": {
-        "enable_sticky": true,
+        "enable_sticky": false,
         "hide_on_scroll": false,
         "logo": "shopify://shop_images/20250708144958.png",
         "logo_max_width": 180,
