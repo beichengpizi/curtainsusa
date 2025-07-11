@@ -5091,7 +5091,7 @@ product-rerender {
 }
 
 .collection {
-  --collection-sidebar-width: 250px;
+  --collection-sidebar-width: 190px;
   gap: var(--spacing-8);
   grid-template-columns: minmax(0, 1fr);
   margin-block-start: var(--spacing-8);
@@ -5179,7 +5179,7 @@ product-rerender {
 
 @media screen and (min-width: 1400px) {
   .collection {
-    --collection-sidebar-width: 300px;
+    --collection-sidebar-width: 190px;
   }
 }
 
