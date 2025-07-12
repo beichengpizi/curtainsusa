@@ -660,7 +660,7 @@
                   "name": "Rich text",
                   "settings": {
                     "text": "<h4>Measure Width and Length Correctly</h4><p>Shades can be inside or outside mounted. Considering the window frame depth is the first step.</p>",
-                    "content_width": "small",
+                    "content_width": "large",
                     "text_alignment": "center",
                     "mobile_text_alignment": "center",
                     "color": "#1a1a1a",
