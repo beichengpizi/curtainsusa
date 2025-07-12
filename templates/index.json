@@ -57,7 +57,7 @@
         "item_YnwVgK": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/AA46F8B0-4D90-49c3-84C4-EF4FCF7DDECE.png",
+            "image": "shopify://shop_images/free-shipping.webp",
             "column_size": "3",
             "title": "Column title",
             "heading_tag": "h4",
@@ -70,7 +70,7 @@
         "item_At87ak": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/AA46F8B0-4D90-49c3-84C4-EF4FCF7DDECE.png",
+            "image": "shopify://shop_images/box.webp",
             "column_size": "3",
             "title": "Column title",
             "heading_tag": "h4",
@@ -83,7 +83,7 @@
         "item_UHbGC9": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/AA46F8B0-4D90-49c3-84C4-EF4FCF7DDECE.png",
+            "image": "shopify://shop_images/return_e1cc6e6d-ec8d-4311-86fe-51c31f0fdef4.webp",
             "column_size": "3",
             "title": "Column title",
             "heading_tag": "h4",
@@ -104,7 +104,7 @@
         "full_width": true,
         "stack_on_mobile": false,
         "gap": "medium",
-        "text_alignment": "center",
+        "text_alignment": "start",
         "subheading": "",
         "title": "",
         "content": "",
@@ -119,7 +119,7 @@
         "item_af9Kdc": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/AA46F8B0-4D90-49c3-84C4-EF4FCF7DDECE.png",
+            "image": "shopify://shop_images/callendar.webp",
             "column_size": "3",
             "title": "Column title",
             "heading_tag": "h4",
@@ -132,7 +132,7 @@
         "item_AeqExp": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/AA46F8B0-4D90-49c3-84C4-EF4FCF7DDECE.png",
+            "image": "shopify://shop_images/return.webp",
             "column_size": "3",
             "title": "Column title",
             "heading_tag": "h4",
@@ -145,7 +145,7 @@
         "item_bMnCw7": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/AA46F8B0-4D90-49c3-84C4-EF4FCF7DDECE.png",
+            "image": "shopify://shop_images/box.webp",
             "column_size": "3",
             "title": "Column title",
             "heading_tag": "h4",
@@ -166,7 +166,7 @@
         "full_width": true,
         "stack_on_mobile": false,
         "gap": "medium",
-        "text_alignment": "center",
+        "text_alignment": "start",
         "subheading": "",
         "title": "",
         "content": "",
