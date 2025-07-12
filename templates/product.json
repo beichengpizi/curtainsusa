@@ -77,6 +77,14 @@
             "payment_button_text_color": ""
           }
         },
+        "image_WawrXq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3e983cce-9d6c-4bb7-9661-35a53c958424_04280261-3b81-4fcb-8758-ac11f41cbb89.jpg",
+            "alignment": "start",
+            "max_width": 500
+          }
+        },
         "offer_beXpTf": {
           "type": "offer",
           "settings": {
@@ -105,6 +113,7 @@
         "optis_product_options_variant_option_set_dMcDfY",
         "quantity_selector",
         "buy_buttons",
+        "image_WawrXq",
         "offer_beXpTf",
         "judge_me_reviews_review_widget_Lw8FyA"
       ],
@@ -140,7 +149,8 @@
             "subheading": "",
             "content": "",
             "desktop_column_num": 3,
-            "mobile_column_num": 1
+            "mobile_column_num": 1,
+            "open_default": false
           },
           "blocks": {
             "grid_group_Dr6K93": {
@@ -172,13 +182,13 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<p>Where Heritage Craftsmanship Meets Light Elimination Science</p><h3>The Ultimate Darkness Experience</h3><p>Engineered for perfectionists who demand absolute light control without compromising natural aesthetics. Our blackout linen shades achieve what others can't - <strong>complete darkness</strong> merged with <strong>breathable organic materials</strong>.</p><h6><strong>Triple-Layer Defense System</strong></h6>",
+                    "text": "<p>Where Heritage Craftsmanship Meets Light Elimination Science</p><h3>The Ultimate Darkness Experience</h3><p>Engineered for perfectionists who demand absolute light control without compromising natural aesthetics. Our blackout linen shades achieve what others can't - <strong>complete darkness</strong> merged with <strong>breathable organic materials</strong>.</p><h5>Triple-Layer Defense System</h5>",
                     "content_width": "large",
                     "text_alignment": "left",
                     "mobile_text_alignment": "left",
-                    "color": "#000000",
+                    "color": "#232323",
                     "desktop_font_size": 16,
-                    "mobile_font_size": 14
+                    "mobile_font_size": 16
                   },
                   "blocks": {}
                 }
@@ -216,13 +226,13 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<p>1</p><h4>Organic Linen Surface</h4><ul><li>200+ GSM heavyweight European flax</li><li>Natural temperature regulation</li><li>Oeko-Tex 100 baby-safe certification</li></ul>",
+                    "text": "<p>1</p><h6>Organic Linen Surface</h6><ul><li>200+ GSM heavyweight European flax</li><li>Natural temperature regulation</li><li>Oeko-Tex 100 baby-safe certification</li></ul>",
                     "content_width": "small",
                     "text_alignment": "left",
                     "mobile_text_alignment": "left",
-                    "color": "#000000",
+                    "color": "#232323",
                     "desktop_font_size": 16,
-                    "mobile_font_size": 14
+                    "mobile_font_size": 16
                   },
                   "blocks": {}
                 }
@@ -260,13 +270,13 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<p>2</p><h4>Nano-Fused Core</h4><ul><li>Micro-encapsulated light-absorbing particles</li><li>Blocks 100% visible light (ASTM D737-96)</li><li>97.3% UV radiation elimination</li></ul>",
+                    "text": "<p>2</p><h6>Nano-Fused Core</h6><ul><li>Micro-encapsulated light-absorbing particles</li><li>Blocks 100% visible light (ASTM D737-96)</li><li>97.3% UV radiation elimination</li></ul>",
                     "content_width": "small",
                     "text_alignment": "left",
                     "mobile_text_alignment": "left",
-                    "color": "#000000",
+                    "color": "#232323",
                     "desktop_font_size": 16,
-                    "mobile_font_size": 14
+                    "mobile_font_size": 16
                   },
                   "blocks": {}
                 }
@@ -304,13 +314,13 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<p>3</p><h4>Acoustic Backing</h4><ul><li>34dB noise reduction (STC Rating)</li><li>Mold/mildew resistant</li><li>Insulation R-value: 3.25</li></ul>",
+                    "text": "<p>3</p><h6>Acoustic Backing</h6><ul><li>34dB noise reduction (STC Rating)</li><li>Mold/mildew resistant</li><li>Insulation R-value: 3.25</li></ul>",
                     "content_width": "small",
                     "text_alignment": "left",
                     "mobile_text_alignment": "left",
-                    "color": "#000000",
+                    "color": "#232323",
                     "desktop_font_size": 16,
-                    "mobile_font_size": 14
+                    "mobile_font_size": 16
                   },
                   "blocks": {}
                 }
@@ -348,13 +358,13 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<h6>Precision Customization Journey</h6>",
+                    "text": "<h5>Precision Customization Journey</h5>",
                     "content_width": "small",
                     "text_alignment": "left",
                     "mobile_text_alignment": "left",
-                    "color": "#1a1a1a",
+                    "color": "#232323",
                     "desktop_font_size": 18,
-                    "mobile_font_size": 14
+                    "mobile_font_size": 16
                   },
                   "blocks": {}
                 }
@@ -392,13 +402,13 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<h4>Laser Measurement</h4><p>Use our <a href=\"https://curtainuk.com/pages/measurement-finder\" target=\"_blank\" title=\"measurement professional guide\">measurement professional guide</a></p>",
+                    "text": "<h6>Laser Measurement</h6><p>Use our <a href=\"https://curtainuk.com/pages/measurement-finder\" target=\"_blank\" title=\"measurement professional guide\">measurement professional guide</a></p>",
                     "content_width": "small",
                     "text_alignment": "left",
                     "mobile_text_alignment": "left",
-                    "color": "#1a1a1a",
+                    "color": "#232323",
                     "desktop_font_size": 16,
-                    "mobile_font_size": 14
+                    "mobile_font_size": 16
                   },
                   "blocks": {}
                 }
@@ -436,13 +446,13 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<h4>Design Studio</h4><p>25 natural hues × 6 texture patterns × 3 header styles</p>",
+                    "text": "<h6>Design Studio</h6><p>25 natural hues × 6 texture patterns × 3 header styles</p>",
                     "content_width": "small",
                     "text_alignment": "left",
                     "mobile_text_alignment": "left",
-                    "color": "#1a1a1a",
+                    "color": "#232323",
                     "desktop_font_size": 16,
-                    "mobile_font_size": 14
+                    "mobile_font_size": 16
                   },
                   "blocks": {}
                 }
@@ -480,11 +490,11 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<h4>German Engineering</h4><p>CNC cutting with 0.2mm precision tolerance</p>",
+                    "text": "<h6>German Engineering</h6><p>CNC cutting with 0.2mm precision tolerance</p>",
                     "content_width": "small",
                     "text_alignment": "left",
                     "mobile_text_alignment": "left",
-                    "color": "#1a1a1a",
+                    "color": "#232323",
                     "desktop_font_size": 16,
                     "mobile_font_size": 14
                   },
@@ -509,7 +519,7 @@
                 "mobile_text_position": "place-self-center text-center",
                 "desktop_column_span": 3,
                 "desktop_row_span": 1,
-                "desktop_text_position": "sm:place-self-center sm:text-center",
+                "desktop_text_position": "sm:place-self-center-start sm:text-start",
                 "background": "",
                 "background_gradient": "",
                 "border": "rgba(0,0,0,0)",
@@ -525,10 +535,10 @@
                   "name": "Rich text",
                   "settings": {
                     "text": "<h5>Performance Comparison</h5>",
-                    "content_width": "small",
-                    "text_alignment": "center",
-                    "mobile_text_alignment": "center",
-                    "color": "",
+                    "content_width": "large",
+                    "text_alignment": "left",
+                    "mobile_text_alignment": "left",
+                    "color": "#232323",
                     "desktop_font_size": 18,
                     "mobile_font_size": 18
                   },
@@ -577,13 +587,13 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<h4>Where Perfection Matters</h4><p><strong>NICU Lighting Control</strong></p><p>Hospital-grade darkness for light-sensitive environments</p><p><strong>5-Star Hotel Suites</strong></p><p>Complete circadian rhythm management</p>",
+                    "text": "<h5>Where Perfection Matters</h5><h6>NICU Lighting Control</h6><p>Hospital-grade darkness for light-sensitive environments</p><h6>5-Star Hotel Suites</h6><p>Complete circadian rhythm management</p>",
                     "content_width": "small",
                     "text_alignment": "left",
                     "mobile_text_alignment": "left",
-                    "color": "#1a1a1a",
+                    "color": "#232323",
                     "desktop_font_size": 16,
-                    "mobile_font_size": 14
+                    "mobile_font_size": 16
                   },
                   "blocks": {}
                 }
@@ -616,7 +626,8 @@
             "subheading": "",
             "content": "",
             "desktop_column_num": 2,
-            "mobile_column_num": 4
+            "mobile_column_num": 4,
+            "open_default": false
           },
           "blocks": {
             "grid_group_D9aNjn": {
@@ -796,7 +807,8 @@
             "subheading": "",
             "content": "",
             "desktop_column_num": 2,
-            "mobile_column_num": 1
+            "mobile_column_num": 1,
+            "open_default": false
           },
           "blocks": {
             "grid_group_xKpzeF": {
@@ -965,6 +977,7 @@
               "type": "accordion",
               "name": "Accordion",
               "settings": {
+                "open_default": true,
                 "title": "Benefits of Roman Shade",
                 "content": "<p><strong>Versatility: </strong>Suitable for various rooms, Roman shades can complement both modern and traditional interiors. It's versatile due to its adaptability in style, fabric, and functionality.<br/><strong>Light Control and Privacy: </strong>The ability to be fully raised, lowered or positioned at different heights provides unparalleled control over the amount of natural light.<br/><strong>Energy-efficient:</strong> Roman shades come with a lining that prevents solar heat gain in hot climates, helping to keep interiors cooler. In cold climates it blocks cold drafts, helping to reduce energy consumption.<br/><strong>Aesthetics and Functionality: </strong>Blending aesthetics and functionality, the neutral tone and soft pleats add a touch of sophistication to the room.</p>",
                 "page": ""
@@ -1069,8 +1082,9 @@
                   "type": "heading",
                   "name": "Heading",
                   "settings": {
+                    "header_line": true,
                     "text": "Stack Height",
-                    "size": "h5",
+                    "size": "h6",
                     "html_tag": "p",
                     "text_color": "#745239",
                     "gradient": ""

@@ -20,6 +20,28 @@
       #shopify-section-{{ section.id }} [role="tabpanel"] {
         display: none;
       }
+
+      #shopify-section-{{ section.id }} .section {
+        padding-block-end: 0;
+      }
+
+      #shopify-section-{{ section.id }} .tabs-accordion {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #shopify-section-{{ section.id }} .tabs-accordion .accordion__toggle {
+        font-size: 20px;
+        padding: 15px 0px;
+      }
+
+      #shopify-section-{{ section.id }} .tabs-accordion .accordion__content {
+        padding-inline-end: 0;
+      }
+
+      #shopify-section-{{ section.id }} .tabs-accordion .accordion__content p {
+        margin-block-start: var(--spacing-4);
+      }
     }
 
     #shopify-section-{{ section.id }} .content-over-media>:not(img,video,iframe,svg,video-media) {
@@ -36,6 +58,28 @@
 
     #shopify-section-{{ section.id }} .accordion__content {
       padding-inline-end: 0;
+    }
+
+    #shopify-section-{{ section.id }} h3 {
+      font-size: 24px;
+    }
+
+    #shopify-section-{{ section.id }} h5 {
+      font-size: 18px;
+    }
+
+    #shopify-section-{{ section.id }} h6 {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 700px){
+      #shopify-section-{{ section.id }} h3 {
+        font-size: 20px;
+      }
+
+      #shopify-section-{{ section.id }} h5 {
+        font-size: 18px;
+      }
     }
   </style>
 
@@ -65,7 +109,7 @@
         {% endcapture %}
 
         <div class="tabs-container">
-          <div class="sm:hidden">
+          <div class="sm:hidden tabs-accordion">
             {{ content }}
           </div>
 

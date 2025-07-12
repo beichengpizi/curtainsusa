@@ -2107,7 +2107,7 @@ scroll-carousel {
 }
 
 .section-stack {
-  gap: var(--section-stack-spacing-block, 0px) var(--section-stack-spacing-inline, 0px);
+  gap: calc(var(--section-stack-spacing-block, 0px)*0.4) var(--section-stack-spacing-inline, 0px);
   grid-auto-columns: minmax(0, 1fr);
   display: grid;
 }
@@ -3411,7 +3411,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 
 @media screen and (min-width: 1150px) {
   .prose * + p {
-    margin-block-start: var(--spacing-2);
+    margin-block-start: var(--spacing-4);
   }
 
   .prose * + :is(.h0, .h1, h1) {
@@ -3857,6 +3857,12 @@ tfoot td {
   --swatch-size: 48px;
 }
 
+@media screen and (max-width: 700px){
+  .thumbnail-swatch--sm {
+    --swatch-size: 28px;
+  }
+}
+
 .thumbnail-swatch__view-more {
   width: var(--spacing-12);
   height: var(--spacing-12);
@@ -3864,6 +3870,13 @@ tfoot td {
   border-width: 1px;
   place-items: center;
   display: grid;
+}
+
+@media screen and (max-width: 700px) {
+  .thumbnail-swatch__view-more {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .block-swatch {

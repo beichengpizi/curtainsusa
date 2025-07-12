@@ -1,4 +1,4 @@
-<search-drawer {% if request.design_mode %}handle-section-events{% endif %} class="search-drawer {% if section.settings.full_width %}search-drawer--full{% endif %} drawer drawer--lg" id="search-drawer">
+<search-drawer {% if request.design_mode %}handle-section-events{% endif %} class="search-drawer {% if section.settings.full_width %}search-drawer--full{% endif %} drawer drawer--sm" id="search-drawer">
   <form action="{{ routes.search_url }}" method="get" class="v-stack gap-5 sm:gap-8" role="search">
     <div class="search-input">
       <input type="search" name="q" placeholder="{{ 'search.general.search_placeholder' | t }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="{{ 'search.general.title' | t | escape }}">

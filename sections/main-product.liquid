@@ -42,6 +42,12 @@
     }
   }
 
+  @media screen and (min-width: 1600px) {
+    #shopify-section-{{ section.id }} .product {
+      column-gap: var(--spacing-32);
+    }
+  }
+
   #shopify-section-{{ section.id }} :checked+.thumbnail-swatch:before, .thumbnail-swatch.is-selected:before {
     transform: scale(1.07);
   }

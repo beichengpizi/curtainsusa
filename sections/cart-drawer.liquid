@@ -1,3 +1,69 @@
+<style>
+    #shopify-section-{{ section.id }} .countdown-content{
+      color: {{ section.settings.content_color }};
+      font-size: 16px;
+      text-align: center;
+    }
+
+    #shopify-section-{{ section.id }} .black-countdown-global {
+      background: {{ section.settings.background }};
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    #shopify-section-{{ section.id }} .black-countdown-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 500;
+      color: {{ section.settings.title_color }};
+    }
+
+    #shopify-section-{{ section.id }} .black-countdown-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #shopify-section-{{ section.id }} .black-countdown-num-box {
+      display: flex;
+      align-items: center;
+    }
+
+    #shopify-section-{{ section.id }} .num-box {
+      background: {{ section.settings.countdown_background }};
+      border-radius: 8px;
+      padding: 10px;
+      min-width: 70px;
+    }
+
+    #shopify-section-{{ section.id }} .black-countdown-num {
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+      color: {{ section.settings.text-color }};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: 500;
+      font-size: 26px;
+    }
+    #shopify-section-{{ section.id }} .black-countdown-box em {
+      vertical-align: top;
+      margin: 0 2px;
+      font-style: normal; /* 去掉斜体样式 */
+      font-weight: 500;
+      font-size: 18px;
+      color: rgba(0,0,0,.6);
+    }
+    #shopify-section-{{ section.id }} .black-countdown-text {
+      text-align: center;
+      margin-top: 2px;
+      font-size: 12px;
+      color: {{ section.settings.title_color }};
+    }
+</style>
+
 <cart-drawer {% if request.design_mode %}handle-section-events{% endif %} class="cart-drawer drawer drawer--lg" id="cart-drawer">
   {%- if cart.item_count == 0 -%}
     <button is="close-button" aria-label="{{ 'general.accessibility.close' | t | escape }}">
@@ -101,15 +167,67 @@
 
     <div class="v-stack gap-4 sm:gap-6" slot="footer">
       <div class="v-stack gap-1">
-        {% for discount_application in cart.cart_level_discount_applications %}
-          <div class="h-stack gap-4 justify-between">
-            <div class="badge">
-              {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
+        {% if section.settings.show_discount == true %}
+          {% for discount_application in cart.cart_level_discount_applications %}
+            <div class="h-stack gap-4 justify-between">
+              <div class="badge">
+                {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
+              </div>
+
+              <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+            </div>
+          {% endfor %}
+        {% endif %}
+
+        <div class="black-countdown-global">
+          <div class="title-content">
+            {% if section.settings.title != blank %}
+              <div class="black-countdown-title">
+                {{ section.settings.title }}
+              </div>
+            {% endif %}
+            {% if section.settings.content != blank %}
+              <div class="countdown-content">
+                {{ section.settings.content }}
+              </div>
+            {% endif %}
+          </div>
+          {%- assign timetxt = section.settings.timetxt | split: '|' -%}
+          <div class="black-countdown-box" data-end-time="{{ section.settings.time }}">
+            <div>
+              <div class="black-countdown-num-box">
+                <div class="num-box">
+                  <span class="index-days black-countdown-num">00</span>
+                  <div class="black-countdown-text">{{ timetxt[0] }}</div>
+                </div>
+                <em class="">:</em>
+              </div>
             </div>
 
-            <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+            <div>
+              <div class="black-countdown-num-box">
+                <div class="num-box">
+                  <span class="index-hours black-countdown-num"> 00 </span>
+                  <div class="black-countdown-text">{{ timetxt[1] }}</div>
+                </div>
+                <em class="">:</em>
+              </div>
+            </div>
+            <div>
+              <div class="black-countdown-num-box">
+                <div class="num-box">
+                  <span class="index-minutes black-countdown-num">00</span>
+                  <div class="black-countdown-text">{{ timetxt[2] }}</div>
+                </div>
+                <em class="">:</em>
+              </div>
+            </div>
+            <div class="num-box">
+              <span class="index-seconds black-countdown-num">00</span>
+              <div class="black-countdown-text">{{ timetxt[3] }}</div>
+            </div>
           </div>
-        {% endfor %}
+        </div>
 
         <div class="h-stack gap-4 justify-between">
           <span class="h5">{{ 'cart.general.total' | t }}</span>
@@ -177,6 +295,83 @@
   {%- endif -%}
 </cart-drawer>
 
+<script type="text/javascript" defer>
+  class Countdown {
+    constructor() {
+      this.container = document.querySelector('.black-countdown-box');
+      this.endTime = new Date(this.container.dataset['endTime']).getTime();
+      // 结束时间
+      this.timer = 0; // 定时器
+      this.distance = 0;
+      // 倒计时容器
+      this.daysEle = document.querySelector('.index-days');
+      // 天数元素
+      this.hoursEle = document.querySelector('.index-hours');
+      // 小时元素
+      this.minutesEle = document.querySelector('.index-minutes');
+      // 分钟元素
+      this.secondsEle = document.querySelector('.index-seconds');
+      // 秒数元素
+      this.init();
+      // 初始化
+    }
+
+    // 初始化
+    init() {
+      // 更新倒计时
+      this.updateCountdown();
+      // 每隔1秒更新倒计时
+      this.timer = setInterval(() => {
+        this.updateCountdown();
+      }, 1000);
+    }
+
+    // 更新倒计时
+    updateCountdown() {
+      // 计算剩余时间
+      let now = new Date().getTime();
+      this.distance = this.endTime - now;
+      if (this.distance > 0) {
+        this.start();
+      }
+    }
+    start() {
+      this.updateCounter();
+      this.timer = setInterval(() => {
+        this.updateCounter();
+      }, 1000);
+    }
+
+    stop() {
+      clearInterval(this.timer);
+      this.timer = null;
+    }
+
+    updateCounter() {
+      const diff = this.distance;
+      if (diff <= 0) {
+        this.stop();
+        // this.container.style.display = 'none';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      this.daysEle.innerHTML = days < 10 ? '0' + days : days;
+      // 天数元素
+      this.hoursEle.innerHTML = hours < 10 ? '0' + hours : hours;
+      // 小时元素
+      this.minutesEle.innerHTML = minutes < 10 ? '0' + minutes : minutes;
+      // 分钟元素
+      this.secondsEle.innerHTML = seconds < 10 ? '0' + seconds : seconds;
+      // 秒数元素
+    }
+  }
+  new Countdown();
+</script>
+
 {% schema %}
 {
   "name": "Cart drawer",
@@ -214,6 +409,12 @@
       "default": true
     },
     {
+      "type": "checkbox",
+      "id": "show_discount",
+      "label": "Show discounts",
+      "default": true
+    },
+    {
       "type": "header",
       "content": "Product recommendations"
     },
@@ -239,6 +440,68 @@
       "type": "color",
       "id": "product_card_text_color",
       "label": "Product card text"
+    },
+    {
+      "type": "header",
+      "content": "Customize the countdown timer"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "Limited-Time Offers"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "timetxt",
+      "label": "时间文案用 | 隔开",
+      "default": "Days|Hrs|Mins|Secs"
+    },
+    {
+      "type": "text",
+      "id": "time",
+      "label": "倒计时时间",
+      "default": "2024-01-15T10:00:00+08:00",
+      "info": "2024-01-15T10:00:00+08:00"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default":"#fff",
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color"
+    },
+    {
+      "type": "color",
+      "id": "countdown_background",
+      "label": "倒计时背景颜色",
+      "default":"#fff",
+    },
+    {
+      "type": "color",
+      "id": "text-color",
+      "label": "倒计时数字颜色",
+      "default":"#fff",
+    },
+    {
+      "type": "color",
+      "id": "content_color",
+      "label": "Content color",
+      "default":"#fff",
+    },
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "底部图标"
     }
   ]
 }

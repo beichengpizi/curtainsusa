@@ -6,7 +6,7 @@
     </div>
   {%- endcapture -%}
 
-  {%- render 'accordion', title: block.settings.title, content: accordion_content, block: block -%}
+  {%- render 'accordion', title: block.settings.title, content: accordion_content, block: block, open: block.settings.open_default, uppercase: true, new_arrow: true -%}
 {%- endif -%}
 
 {% schema %}
@@ -14,6 +14,11 @@
   "name": "Accordion",
   "tag": null,
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "open_default",
+      "label": "Open by default"
+    },
     {
       "type": "text",
       "id": "title",

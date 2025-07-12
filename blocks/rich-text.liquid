@@ -2,10 +2,12 @@
   #shopify-block-{{ block.id }} .rich-text__wrapper {
     color: {{ block.settings.color }};
     font-size: {{ block.settings.desktop_font_size }}px;
+    width: 100%;
   }
 
   #shopify-block-{{ block.id }} {
     text-align: {{ block.settings.text_alignment | replace: 'left', 'start' | replace: 'right', 'end' }};
+    width: 100%;
   }
 
   @media screen and (max-width: 768px) {
