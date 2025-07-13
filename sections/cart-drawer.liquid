@@ -100,6 +100,7 @@
     </div>
 
     <div class="v-stack gap-4 sm:gap-6" slot="footer">
+      {% render 'discounts', block: section %}
       <div class="v-stack gap-1">
         {% if section.settings.show_discount == true %}
           {% for discount_application in cart.cart_level_discount_applications %}
@@ -331,61 +332,53 @@
     },
     {
       "type": "text",
-      "id": "title",
-      "label": "标题",
-      "default": "Limited-Time Offers"
+      "id": "discount1",
+      "label": "Discount 1"
     },
     {
       "type": "text",
-      "id": "content",
-      "label": "Content"
-    },
-    {
-      "type": "textarea",
-      "id": "timetxt",
-      "label": "时间文案用 | 隔开",
-      "default": "Days|Hrs|Mins|Secs"
+      "id": "discount2",
+      "label": "Discount 2"
     },
     {
       "type": "text",
-      "id": "time",
-      "label": "倒计时时间",
-      "default": "2024-01-15T10:00:00+08:00",
-      "info": "2024-01-15T10:00:00+08:00"
+      "id": "discount3",
+      "label": "Discount 3"
     },
     {
-      "type": "color",
-      "id": "background",
-      "label": "Background",
-      "default":"#fff",
+      "type": "text",
+      "id": "discount4",
+      "label": "Discount 4"
     },
     {
-      "type": "color",
-      "id": "title_color",
-      "label": "Title color"
+      "type": "text",
+      "id": "discount5",
+      "label": "Discount 5"
     },
     {
-      "type": "color",
-      "id": "countdown_background",
-      "label": "倒计时背景颜色",
-      "default":"#fff",
+      "type": "text",
+      "id": "discount6",
+      "label": "Discount 6"
     },
     {
-      "type": "color",
-      "id": "text-color",
-      "label": "倒计时数字颜色",
-      "default":"#fff",
+      "type": "text",
+      "id": "discount7",
+      "label": "Discount 7"
     },
     {
-      "type": "color",
-      "id": "content_color",
-      "label": "Content color",
-      "default":"#fff",
+      "type": "text",
+      "id": "discount8",
+      "label": "Discount 8"
     },
     {
-      "type": "image_picker",
-      "id": "icon",
-      "label": "底部图标"
+      "type": "text",
+      "id": "discount9",
+      "label": "Discount 9"
+    },
+    {
+      "type": "text",
+      "id": "discount10",
+      "label": "Discount 10"
     }
   ]
 }
