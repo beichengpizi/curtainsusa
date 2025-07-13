@@ -147,10 +147,10 @@
 
                       {% for discount_application in cart.cart_level_discount_applications %}
                         <div class="h-stack gap-4 justify-between">
-                          <div class="text-on-sale">
+                          <div class="text-on-sale text-sm">
                             Discount: 
                           </div>
-                          <div class="h-stack text-on-sale">
+                          <div class="h-stack text-on-sale text-sm">
                             {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
                             <span>(-{{ discount_application.total_allocated_amount | money }})</span>
                           </div>
