@@ -35,6 +35,7 @@
     "text_font_size_mobile": 16,
     "heading_apparition": "split_fade",
     "color_swatch_style": "square",
+    "show_quick_buy": false,
     "show_product_rating": true,
     "product_rating_mode": "rating",
     "product_color_display": "variant",
