@@ -115,10 +115,13 @@
 
                       {% for discount_application in cart.cart_level_discount_applications %}
                         <div class="h-stack gap-4 justify-between">
-                          <div class="badge">
-                            Discount: {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
+                          <div class="text-on-sale">
+                            Discount: 
                           </div>
-                          <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+                          <div class="badge">
+                            {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
+                            <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+                          </div>
                         </div>
                       {% endfor %}
 
