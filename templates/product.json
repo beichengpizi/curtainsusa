@@ -1162,7 +1162,7 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<p><a href=\"/products/custom-100-blackout-linen-roman-shades-for-inside-mount\" title=\"Custom 100% Blackout Bamboo Hemp Roman Shade\">INSIDE MOUNT STACK HEIGHT</a></p>",
+                    "text": "<p><a href=\"/products/custom-100-blackout-linen-roman-shades-for-inside-mount\" title=\"Custom 100% Blackout Bamboo Hemp Roman Shade\"><strong>INSIDE MOUNT STACK HEIGHT</strong></a></p>",
                     "content_width": "small",
                     "text_alignment": "center",
                     "mobile_text_alignment": "center",
@@ -1228,7 +1228,7 @@
                   "type": "rich-text",
                   "name": "Rich text",
                   "settings": {
-                    "text": "<p><a>OUTSIDE MOUNT STACK HEIGHT</a></p>",
+                    "text": "<p><a><strong>OUTSIDE MOUNT STACK HEIGHT</strong></a></p>",
                     "content_width": "small",
                     "text_alignment": "center",
                     "mobile_text_alignment": "center",
