@@ -2773,7 +2773,7 @@ scroll-carousel {
 }
 
 .page-spacer {
-  margin-block-start: 0;
+  margin-block-start: var(--spacing-4);
   margin-block-end: var(--section-outer-spacing-block);
 }
 
