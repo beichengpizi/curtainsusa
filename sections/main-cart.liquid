@@ -115,7 +115,7 @@
 
                       {% for discount_application in cart.cart_level_discount_applications %}
                         <div class="h-stack gap-4 justify-between">
-                          <span class="h5">{{ 'cart.general.total' | t }}</span>
+                          <span class="h5">Discount: </span>
                           <div class="badge">
                             {%- render 'icon' with 'discount' -%} 
                             {{- discount_application.title -}}
