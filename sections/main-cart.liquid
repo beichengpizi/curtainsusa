@@ -120,7 +120,7 @@
                           </div>
                           <div class="h-stack text-on-sale">
                             {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
-                            <span>-{{ discount_application.total_allocated_amount | money }}</span>
+                            <span>(-{{ discount_application.total_allocated_amount | money }})</span>
                           </div>
                         </div>
                       {% endfor %}
