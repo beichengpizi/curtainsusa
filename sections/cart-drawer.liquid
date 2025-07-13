@@ -1,3 +1,35 @@
+<style>
+    @keyframes progress-bar-stripes {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 40px 0;
+      }
+    }
+    
+    #shopify-section-{{ section.id }} .progress-bar:before {
+      text-align: center;
+      animation: 2s linear 0s infinite progress-bar-stripes;
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+      background-size: 40px 40px;
+      transition: .9s linear;
+      transition-property: width, background-color;
+      background-color: #69c69c;
+    }
+  
+    #shopify-section-{{ section.id }} .progress-bar {
+      height: 16px;
+      background: #ededed;
+    }
+  
+    #shopify-section-{{ section.id }} .progress-truck-wrapper {
+      position: absolute;
+      right: 0;
+      bottom: -2px;
+    }
+</style>
+
 <cart-drawer {% if request.design_mode %}handle-section-events{% endif %} class="cart-drawer drawer drawer--lg" id="cart-drawer">
   {%- if cart.item_count == 0 -%}
     <button is="close-button" aria-label="{{ 'general.accessibility.close' | t | escape }}">
