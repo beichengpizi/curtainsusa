@@ -1101,7 +1101,7 @@
                     "mobile_text_alignment": "center",
                     "color": "#3c3c3c",
                     "desktop_font_size": 16,
-                    "mobile_font_size": 14
+                    "mobile_font_size": 16
                   },
                   "blocks": {}
                 }
