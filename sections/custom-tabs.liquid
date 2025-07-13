@@ -89,6 +89,10 @@
     #shopify-section-{{ section.id }} .group[aria-expanded=true] .circle-chevron.group-expanded\:colors:not([disabled]) {
       background: none;
     }
+
+    #shopify-section-{{ section.id }} .accordion-arrow svg {
+      transform: rotate(-90deg);
+    }
   </style>
 
   <div {% render 'section-properties' %}>
