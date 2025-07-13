@@ -6393,7 +6393,7 @@ product-rerender {
 }
 
 .cart {
-  gap: 0;
+  gap: var(--spacing-4);
   max-width: 1350px;
   margin-inline-start: auto;
   margin-inline-end: auto;
