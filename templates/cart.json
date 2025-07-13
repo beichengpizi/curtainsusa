@@ -11,6 +11,9 @@
   "sections": {
     "black_countdown_GWTD7B": {
       "type": "black-countdown",
+      "custom_css": [
+        ".section-full {padding: 0;}"
+      ],
       "name": "黑五倒计时",
       "settings": {
         "title": "Discount Countdown!",
