@@ -6408,7 +6408,7 @@ product-rerender {
 }
 
 .cart-header .free-shipping-bar {
-  max-width: 450px;
+  max-width: 100%;
 }
 
 .cart-order {
