@@ -6698,7 +6698,7 @@ product-rerender {
 
 @media screen and (min-width: 1400px) {
   .collection {
-    --collection-sidebar-width: 220px;
+    --collection-sidebar-width: 190px;
   }
 }
 
