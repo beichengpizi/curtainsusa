@@ -1255,7 +1255,7 @@
         "grid_group_96jd33"
       ],
       "custom_css": [
-        ".rich-text__wrapper:has(a) {margin-left: 45px; margin-bottom: 30px; padding: 15px; background: rgba(116, 82, 57, 0.6); border-radius: 4px;}",
+        ".rich-text__wrapper:has(a) {margin-left: 45px; margin-bottom: 30px; padding: 15px; background: rgba(116, 82, 57, 0.6); border-radius: 4px; width: fit-content;}",
         "@media screen and (max-width: 700px) {.rich-text__wrapper:has(a) {margin-left: 0; margin-bottom: 0; }}"
       ],
       "name": "Custom grid",
