@@ -9735,7 +9735,7 @@ product-rerender {
 
 @media screen and (min-width: 1150px) {
   .product {
-    column-gap: var(--spacing-12);
+    column-gap: var(--spacing-28);
   }
 }
 
