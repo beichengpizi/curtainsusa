@@ -7,6 +7,10 @@
     --product-gallery-media-list-gap: {% if section.settings.mobile_media_size == 'expanded' %}var(--spacing-0-5){% else %}var(--grid-gutter){% endif %};
   }
 
+  [data-block-type="@app"].product-info__block-item {
+    margin-top: 0.5rem;
+  }
+
   #shopify-section-{{ section.id }} .section-full {
     padding-block-start: 0;
   }
