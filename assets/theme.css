@@ -9890,7 +9890,7 @@ product-rerender {
 }
 
 .product-gallery {
-  gap: var(--spacing-5);
+  gap: var(--spacing-2);
   grid-auto-columns: minmax(0, 1fr);
   display: grid;
 }
