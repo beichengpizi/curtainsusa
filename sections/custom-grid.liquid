@@ -72,10 +72,6 @@
     #shopify-section-{{ section.id }} .section {
       padding-block-end: 0;
     }
-
-    #shopify-section-{{ section.id }} .accordion__toggle {
-      font-size: 16px;
-    }
   }
 
   @media screen and (pointer: fine) {
@@ -96,11 +92,14 @@
 
 <div {% render 'section-properties' %}>
   <div class="section-stack">
-
     {% if section.settings.heading != blank or section.settings.content != blank %}
-      {% render 'section-header', heading: section.settings.heading, subheading: section.settings.subheading, text_alignment: 'center' %}
+      {% render 'section-header',
+        heading: section.settings.heading,
+        subheading: section.settings.subheading,
+        text_alignment: 'center'
+      %}
     {% endif %}
-      
+
     {%- capture class -%}{% if section.settings.image != blank %}content-over-media content-over-media--{{ section.settings.image_size }}{% endif %} {% if
       section.settings.full_width and section.settings.image != blank %}full-bleed{% endif %}{%- endcapture -%}
     <image-banner
