@@ -1,4 +1,8 @@
 <style>
+  #shopify-section-{{ section.id }} .quantity-input {
+    border-width: 0;
+  }
+
   @keyframes progress-bar-stripes {
     0% {
       background-position: 0 0;
@@ -69,7 +73,7 @@
               <thead class="order-summary__header">
                 <tr>
                   <th>{{ 'customer.order.product' | t }}</th>
-                  <th class="w-0">{{ 'customer.order.quantity' | t }}</th>
+                  <th class="w-0 text-center">{{ 'customer.order.quantity' | t }}</th>
                   <th class="text-end">{{ 'customer.order.total' | t }}</th>
                 </tr>
               </thead>
@@ -93,9 +97,12 @@
                     <td>{%- render 'line-item', line_item: line_item -%}</td>
 
                     <td class="hidden align-center text-center text-subdued sm:table-cell">
-                      <line-item-quantity class="v-stack justify-center gap-2">
-                        <input class="quantity-input" type="number" is="quantity-input" inputmode="numeric" min="{{ line_item.variant.quantity_rule.min }}" step="{{ line_item.variant.quantity_rule.increment }}" {% if max_quantity != nil %}max="{{ max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
-
+                      <line-item-quantity class="v-stack justify-center gap-2 ">
+                        <quantity-selector class="quantity-selector">
+                          <button type="button" class="quantity-selector__button" aria-label="{{ 'product.quantity.decrease_quantity' | t }}">{% render 'icon' with 'minus', width: 10, height: 2 %}</button>
+                          <input class="quantity-input" type="number" is="quantity-input" inputmode="numeric" min="{{ line_item.variant.quantity_rule.min }}" step="{{ line_item.variant.quantity_rule.increment }}" {% if max_quantity != nil %}max="{{ max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
+                          <button type="button" class="quantity-selector__button" aria-label="{{ 'product.quantity.increase_quantity' | t }}">{% render 'icon' with 'plus', width: 10, height: 10 %}</button>
+                        </quantity-selector>
                         <span class="text-xs">
                           <a href="{{ line_item.url_to_remove }}" class="link" aria-label="{{ 'cart.order.remove_with_title' | t: title: line_item.title | escape }}">
                             {{- 'cart.order.remove' | t -}}
