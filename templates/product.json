@@ -25,8 +25,8 @@
         "discount_JTGPhe": {
           "type": "discount",
           "settings": {
-            "discount1": "discount 1",
-            "discount2": "discount 2",
+            "discount1": "BUY 2 GET 10%OFF",
+            "discount2": "BUY 3 GET 15% OFF",
             "discount3": "",
             "discount4": "",
             "discount5": "",
