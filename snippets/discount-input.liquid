@@ -96,7 +96,7 @@
   function applyDiscount(code, action) {
     applyBtn.innerHTML += "<div class='loader'></div>";
     applyBtn.style.pointerEvents = "none";
-    let discountApplyUrl = window.location.href+"/checkout?discount="+code+"&t="+Date.now();
+    let discountApplyUrl = window.location.href+"/checkouts?discount="+code+"&t="+Date.now();
     fetch(discountApplyUrl)
     .then(function(response) {
       return response.text();
