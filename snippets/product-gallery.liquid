@@ -267,9 +267,9 @@ only way to do it on Shopify right now.
     }
       
       for (let i = 0; i < itemPositions.length; i++) {
-        let offset = items[i].offsetHeight;
+        let offset = itemsthumb[i].offsetHeight;
         if(isMobileView()){
-          offset = items[i].offsetWidth;
+          offset = itemsthumb[i].offsetWidth;
         }
           if (scrollPosition < itemPositions[i] + offset / 2) {
               currentIndexthumb = i;
