@@ -241,10 +241,17 @@ only way to do it on Shopify right now.
       if (index >= itemsthumb.length) index = itemsthumb.length - 1;
       
       currentIndexthumb = index;
+    if(isMobileView()){
+      scrollablethumb.scrollTo({
+          left: itemPositions[index],
+          behavior: 'smooth'
+      });
+    }else{
       scrollablethumb.scrollTo({
           top: itemPositions[index],
           behavior: 'smooth'
       });
+    }
   }
   
   // 上按钮点击事件
