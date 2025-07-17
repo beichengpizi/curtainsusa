@@ -162,7 +162,7 @@ only way to do it on Shopify right now.
 
     {%- if section.settings.mobile_carousel_control == 'thumbnails' or section.settings.desktop_media_layout contains 'thumbnails' -%}
       <scroll-shadow class="product-gallery__thumbnail-list-wrapper">
-        <div onclick="upthumb()" style="width:30px;height:30px;cursor:pointer;">
+        <div id="upthumb" style="width:30px;height:30px;cursor:pointer;">
           <svg style="transform: rotate(-90deg);width: 100%;height: 100%;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg>
         </div>
         <page-dots align-selected style="scroll-snap-type: y mandatory;" class="product-gallery__thumbnail-list scroll-area bleed md:unbleed" aria-controls="{{ product_gallery_id }}">
@@ -182,7 +182,7 @@ only way to do it on Shopify right now.
             </button>
           {%- endfor -%}
         </page-dots>
-        <div onclick="downthumb()" style="width:30px;height:30px;cursor:pointer;">
+        <div id="downthumb" style="width:30px;height:30px;cursor:pointer;">
           <svg style="transform: rotate(90deg);width: 100%;height: 100%;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg>
         </div>
       </scroll-shadow>
@@ -190,22 +190,59 @@ only way to do it on Shopify right now.
   {%- endif -%}
 </product-gallery>
 <script>
+  const viewportthumb = document.getElementsByClassName('product-gallery__thumbnail-list-wrapper')[0];
   const scrollablethumb = document.getElementsByClassName('product-gallery__thumbnail-list')[0];
-  const scrollStepthumb = 50; // 每次滚动的像素数
-
-  function upthumb(){
-    scrollablethumb.scrollTop -= scrollStepthumb;
-    event.preventDefault(); // 防止默认的滚动行为
-    if (scrollablethumb.scrollTop <= 0) {
-      scrollablethumb.scrollTop = 0;
-    }
-  }
-
-  function downthumb(){
-    scrollablethumb.scrollTop += scrollStepthumb;
-    event.preventDefault(); // 防止默认的滚动行为
-    if (scrollablethumb.scrollTop + scrollablethumb.clientHeight >= scrollablethumb.scrollHeight) {
-      scrollablethumb.scrollTop = scrollablethumb.scrollHeight - scrollablethumb.clientHeight;
-    }
-  }
-</script>
+  const itemsthumb = document.querySelectorAll('.product-gallery__thumbnail');
+        const btnUpthumb = document.getElementById('upthumb');
+        const btnDownthumb = document.getElementById('downthumb');
+        
+        // 存储每个项目的位置
+        const itemPositions = Array.from(itemsthumb).map(item => item.offsetTop);
+        
+        // 当前活动项目的索引
+        let currentIndexthumb = 0;
+        
+        // 滚动到指定索引的项目
+        function scrollToIndexthumb(index) {
+            if (index < 0) index = 0;
+            if (index >= itemsthumb.length) index = itemsthumb.length - 1;
+            
+            currentIndexthumb = index;
+            viewportthumb.scrollTo({
+                top: itemPositions[index],
+                behavior: 'smooth'
+            });
+        }
+        
+        // 上按钮点击事件
+        btnUpthumb.addEventListener('click', () => {
+            scrollToIndexthumb(currentIndex - 1);
+        });
+        
+        // 下按钮点击事件
+        btnDownthumb.addEventListener('click', () => {
+            scrollToIndexthumb(currentIndex + 1);
+        });
+        
+        // 监听滚动事件，更新当前索引
+        viewportthumb.addEventListener('scroll', () => {
+            // 找到最接近顶部的项目
+            const scrollPosition = viewportthumb.scrollTop + 10; // 加10px偏移量使判断更准确
+            
+            for (let i = 0; i < itemPositions.length; i++) {
+                if (scrollPosition < itemPositions[i] + items[i].offsetHeight / 2) {
+                    currentIndexthumb = i;
+                    break;
+                }
+            }
+        });
+        
+        // 初始禁用上按钮
+        btnUpthumb.disabled = currentIndexthumb === 0;
+        
+        // 监听索引变化，更新按钮状态
+        viewportthumb.addEventListener('scroll', () => {
+            btnUpthumb.disabled = currentIndexthumb === 0;
+            btnDownthumb.disabled = currentIndexthumb === itemsthumb.length - 1;
+        });
+    </script>
