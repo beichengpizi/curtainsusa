@@ -208,11 +208,10 @@ only way to do it on Shopify right now.
             if (index >= itemsthumb.length) index = itemsthumb.length - 1;
             
             currentIndexthumb = index;
-            viewportthumb.scrollTo({
+            scrollablethumb.scrollTo({
                 top: itemPositions[index],
                 behavior: 'smooth'
             });
-          console.log(currentIndexthumb,index);
         }
         
         // 上按钮点击事件
@@ -226,9 +225,9 @@ only way to do it on Shopify right now.
         });
         
         // 监听滚动事件，更新当前索引
-        viewportthumb.addEventListener('scroll', () => {
+        scrollablethumb.addEventListener('scroll', () => {
             // 找到最接近顶部的项目
-            const scrollPosition = viewportthumb.scrollTop + 10; // 加10px偏移量使判断更准确
+            const scrollPosition = scrollablethumb.scrollTop + 10; // 加10px偏移量使判断更准确
             
             for (let i = 0; i < itemPositions.length; i++) {
                 if (scrollPosition < itemPositions[i] + items[i].offsetHeight / 2) {
@@ -236,14 +235,11 @@ only way to do it on Shopify right now.
                     break;
                 }
             }
+          
+            btnUpthumb.disabled = currentIndexthumb === 0;
+            btnDownthumb.disabled = currentIndexthumb === itemsthumb.length - 1;
         });
         
         // 初始禁用上按钮
         btnUpthumb.disabled = currentIndexthumb === 0;
-        
-        // 监听索引变化，更新按钮状态
-        viewportthumb.addEventListener('scroll', () => {
-            btnUpthumb.disabled = currentIndexthumb === 0;
-            btnDownthumb.disabled = currentIndexthumb === itemsthumb.length - 1;
-        });
     </script>
