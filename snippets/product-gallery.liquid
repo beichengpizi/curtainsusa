@@ -163,9 +163,9 @@ only way to do it on Shopify right now.
     {%- if section.settings.mobile_carousel_control == 'thumbnails' or section.settings.desktop_media_layout contains 'thumbnails' -%}
       <scroll-shadow class="product-gallery__thumbnail-list-wrapper">
         <div id="upthumb" style="width:30px;height:30px;cursor:pointer;">
-          <svg style="transform: rotate(-90deg);width: 100%;height: 100%;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg>
+          <svg style="width: 100%;height: 100%;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg>
         </div>
-        <page-dots align-selected style="scroll-snap-type: y mandatory;" class="product-gallery__thumbnail-list scroll-area bleed md:unbleed" aria-controls="{{ product_gallery_id }}">
+        <page-dots align-selected class="product-gallery__thumbnail-list scroll-area bleed md:unbleed" aria-controls="{{ product_gallery_id }}">
           {%- for media in product.media -%}
             <button type="button" style="scroll-snap-align: start; display: flex; align-items: center; justify-content: center;" class="product-gallery__thumbnail" {% if filtered_indexes contains media.position %}hidden{% endif %} aria-current="{% if media == default_media %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}">
               {{- media | image_url: width: media.preview_image.width | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 56px, 64px', widths: '56,64,112,128,168,192', class: 'object-contain rounded-sm' -}}
@@ -183,12 +183,30 @@ only way to do it on Shopify right now.
           {%- endfor -%}
         </page-dots>
         <div id="downthumb" style="width:30px;height:30px;cursor:pointer;">
-          <svg style="transform: rotate(90deg);width: 100%;height: 100%;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg>
+          <svg style="width: 100%;height: 100%;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg>
         </div>
       </scroll-shadow>
     {%- endif -%}
   {%- endif -%}
 </product-gallery>
+<style>
+  @media screen and (min-width: 750px) {
+    .product-gallery__thumbnail-list {
+      scroll-snap-type: y mandatory;
+    }
+    .upthumb svg {
+      transform: rotate(-90deg);
+    }
+    .downthumb svg {
+      transform: rotate(90deg);
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .downthumb svg {
+      transform: rotate(180deg);
+    }
+  }
+</style>
 <script>
   const scrollablethumb = document.getElementsByClassName('product-gallery__thumbnail-list')[0];
   const itemsthumb = document.querySelectorAll('.product-gallery__thumbnail');
