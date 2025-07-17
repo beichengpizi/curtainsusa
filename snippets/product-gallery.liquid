@@ -193,7 +193,6 @@ only way to do it on Shopify right now.
   const viewportthumb = document.getElementsByClassName('product-gallery__thumbnail-list-wrapper')[0];
   const scrollablethumb = document.getElementsByClassName('product-gallery__thumbnail-list')[0];
   const itemsthumb = document.querySelectorAll('.product-gallery__thumbnail');
-  console.log(viewportthumb,scrollablethumb,itemsthumb);
         const btnUpthumb = document.getElementById('upthumb');
         const btnDownthumb = document.getElementById('downthumb');
         
@@ -213,6 +212,7 @@ only way to do it on Shopify right now.
                 top: itemPositions[index],
                 behavior: 'smooth'
             });
+          console.log(currentIndexthumb,index);
         }
         
         // 上按钮点击事件
