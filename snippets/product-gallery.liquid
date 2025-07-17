@@ -163,6 +163,7 @@ only way to do it on Shopify right now.
     {%- if section.settings.mobile_carousel_control == 'thumbnails' or section.settings.desktop_media_layout contains 'thumbnails' -%}
       <scroll-shadow class="product-gallery__thumbnail-list-wrapper">
         <page-dots align-selected class="product-gallery__thumbnail-list scroll-area bleed md:unbleed" aria-controls="{{ product_gallery_id }}">
+          <span><</span>
           {%- for media in product.media -%}
             <button type="button" class="product-gallery__thumbnail" {% if filtered_indexes contains media.position %}hidden{% endif %} aria-current="{% if media == default_media %}true{% else %}false{% endif %}" aria-label="{{ 'general.accessibility.go_to_item' | t: index: forloop.index | escape }}">
               {{- media | image_url: width: media.preview_image.width | image_tag: loading: 'lazy', sizes: '(max-width: 699px) 56px, 64px', widths: '56,64,112,128,168,192', class: 'object-contain rounded-sm' -}}
@@ -178,6 +179,7 @@ only way to do it on Shopify right now.
               {% endunless %}
             </button>
           {%- endfor -%}
+          <span>></span>
         </page-dots>
       </scroll-shadow>
     {%- endif -%}
