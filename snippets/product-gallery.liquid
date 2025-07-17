@@ -29,15 +29,15 @@ only way to do it on Shopify right now.
     .product-gallery__thumbnail-list {
       scroll-snap-type: y mandatory;
     }
-    .upthumb svg {
+    #upthumb svg {
       transform: rotate(-90deg);
     }
-    .downthumb svg {
+    #downthumb svg {
       transform: rotate(90deg);
     }
   }
   @media screen and (max-width: 750px) {
-    .downthumb svg {
+    #upthumb svg {
       transform: rotate(180deg);
     }
   }
