@@ -24,6 +24,25 @@ The implementation is rather complex and inefficient due to a lot of string pars
 only way to do it on Shopify right now.
 {%- endcomment -%}
 
+<style>
+  @media screen and (min-width: 750px) {
+    .product-gallery__thumbnail-list {
+      scroll-snap-type: y mandatory;
+    }
+    .upthumb svg {
+      transform: rotate(-90deg);
+    }
+    .downthumb svg {
+      transform: rotate(90deg);
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .downthumb svg {
+      transform: rotate(180deg);
+    }
+  }
+</style>
+
 {%- liquid
   assign filtered_indexes = null | sort
 
@@ -189,24 +208,6 @@ only way to do it on Shopify right now.
     {%- endif -%}
   {%- endif -%}
 </product-gallery>
-<style>
-  @media screen and (min-width: 750px) {
-    .product-gallery__thumbnail-list {
-      scroll-snap-type: y mandatory;
-    }
-    .upthumb svg {
-      transform: rotate(-90deg);
-    }
-    .downthumb svg {
-      transform: rotate(90deg);
-    }
-  }
-  @media screen and (max-width: 750px) {
-    .downthumb svg {
-      transform: rotate(180deg);
-    }
-  }
-</style>
 <script>
   const scrollablethumb = document.getElementsByClassName('product-gallery__thumbnail-list')[0];
   const itemsthumb = document.querySelectorAll('.product-gallery__thumbnail');
