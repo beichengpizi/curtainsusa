@@ -47,7 +47,16 @@ only way to do it on Shopify right now.
       transform: rotate(180deg);
     }
     #upthumb, #downthumb {
+      position: absolute;
+      background: white;
+      padding: 15px 0;
       z-index:10;
+    }
+    #upthumb {
+      left: -20px;
+    }
+    #downthumb {
+      right: -20px;
     }
   }
 </style>
