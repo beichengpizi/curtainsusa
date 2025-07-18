@@ -46,7 +46,6 @@
   }
 </style>
 
-<script src="{{ 'cart-addon.js' | asset_url }}" defer="defer"></script>
 
 <cart-drawer {% if request.design_mode %}handle-section-events{% endif %} class="cart-drawer drawer drawer--lg" id="cart-drawer">
   {%- if cart.item_count == 0 -%}
@@ -202,7 +201,7 @@
               <div class="v-stack gap-4 sm:gap-6">
                 <p class="h5">Add a discount</p>
 
-                <cart-note class="v-stack gap-4">
+                <cart-coupon class="v-stack gap-4">
                   {%- assign order_save_label = 'cart.general.save_note' | t -%}
 
                   {%- render 'input', name: 'coupon', label: 'Add a discount', value: cart.coupon -%}
@@ -210,7 +209,7 @@
                   <div class="justify-self-start">
                     {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
                   </div>
-                </cart-note>
+                </cart-coupon>
               </div>
             </div>
           </cart-note-dialog>
