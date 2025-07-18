@@ -10,6 +10,40 @@
       padding-inline-end: var(--spacing-3);
     }
   }
+
+    @keyframes progress-bar-stripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 0;
+    }
+  }
+  
+  cart-drawer .progress-bar:before {
+    text-align: center;
+    animation: 2s linear 0s infinite progress-bar-stripes;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    transition: .9s linear;
+    transition-property: width, background-color;
+    background-color: #69c69c;
+  }
+
+  cart-drawer .progress-bar {
+    height: 16px;
+    background: #ededed;
+  }
+
+  cart-drawer .progress-truck-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+  }
+
+  cart-drawer .cart-icon {
+    height: 20px;
+  }
 </style>
 
 <script src="{{ 'cart-addon.js' | asset_url }}" defer="defer"></script>
@@ -48,9 +82,7 @@
           </button>
         </div>
 
-        {%- if settings.cart_show_free_shipping_threshold -%}
-          {%- render 'free-shipping-bar' -%}
-        {%- endif -%}
+        {% render 'discounts', block: section %}
       </div>
 
       <div class="v-stack gap-6 sm:gap-8">
@@ -116,37 +148,11 @@
     </div>
 
     <div class="v-stack gap-4 sm:gap-6" slot="footer">
-      <div class="v-stack gap-1">
-        {% for discount_application in cart.cart_level_discount_applications %}
-          <div class="h-stack gap-4 justify-between">
-            <div class="badge">
-              {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
-            </div>
+      {%- if settings.cart_show_free_shipping_threshold -%}
+        {%- render 'free-shipping-bar' -%}
+      {%- endif -%}
 
-            <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
-          </div>
-        {% endfor %}
-
-        <div class="h-stack gap-4 justify-between">
-          <span class="h5">{{ 'cart.general.total' | t }}</span>
-          <span class="h-stack gap-2">
-            <span class="h5">{{- cart.total_price | money_with_currency -}}</span>
-            <span class="text-subdued line-through">{{- cart.original_total_price | money_with_currency -}}</span>
-          </span>
-        </div>
-
-        {%- if section.settings.show_shipping_text -%}
-          {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-            <p class="text-subdued text-sm">{{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}</p>
-          {%- elsif cart.taxes_included -%}
-            <p class="text-subdued text-sm">{{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}</p>
-          {%- elsif shop.shipping_policy.body != blank -%}
-            <p class="text-subdued text-sm">{{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}</p>
-          {%- else -%}
-            <p class="text-subdued text-sm">{{ 'cart.general.taxes_and_shipping_at_checkout' | t }}</p>
-          {%- endif -%}
-        {%- endif -%}
-
+      <div class="h-stack gap-4 justify-between">
         {%- if section.settings.show_cart_note -%}
           <div class="h-stack gap-2 justify-between align-center">
 
@@ -194,10 +200,56 @@
           <cart-note-dialog id="cart-drawer-coupon" class="cart-drawer__note">
             <div class="cart-drawer__note-inner">
               <div class="v-stack gap-4 sm:gap-6">
-                {% render 'discount-input' %}
+                <p class="h5">Add a discount</p>
+
+                <cart-note class="v-stack gap-4">
+                  {%- assign order_save_label = 'cart.general.save_note' | t -%}
+
+                  {%- render 'input', name: 'coupon', label: 'Add a discount', value: cart.coupon -%}
+
+                  <div class="justify-self-start">
+                    {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
+                  </div>
+                </cart-note>
               </div>
             </div>
           </cart-note-dialog>
+        {%- endif -%}
+
+        <div class="h-stack gap-4">
+          {% for discount_application in cart.cart_level_discount_applications %}
+            <div class="h-stack gap-2 justify-between">
+              <div class="badge">
+                {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
+              </div>
+
+              <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+            </div>
+          {% endfor %}
+        </div>
+        
+      </div>
+      
+      
+      <div class="v-stack gap-1">
+        <div class="h-stack gap-4 justify-between">
+          <span class="h5">{{ 'cart.general.total' | t }}</span>
+          <span class="h-stack gap-2">
+            <span class="text-subdued line-through">{{- cart.original_total_price | money_with_currency -}}</span>
+            <span class="h5">{{- cart.total_price | money_with_currency -}}</span>
+          </span>
+        </div>
+
+        {%- if section.settings.show_shipping_text -%}
+          {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+            <p class="text-subdued text-sm">{{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}</p>
+          {%- elsif cart.taxes_included -%}
+            <p class="text-subdued text-sm">{{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}</p>
+          {%- elsif shop.shipping_policy.body != blank -%}
+            <p class="text-subdued text-sm">{{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}</p>
+          {%- else -%}
+            <p class="text-subdued text-sm">{{ 'cart.general.taxes_and_shipping_at_checkout' | t }}</p>
+          {%- endif -%}
         {%- endif -%}
       </div>
 
@@ -280,6 +332,60 @@
       "type": "color",
       "id": "product_card_text_color",
       "label": "Product card text"
+    },
+    {
+      "type": "header",
+      "content": "Discounts"
+    },
+    {
+      "type": "text",
+      "id": "discount1",
+      "label": "Discount 1"
+    },
+    {
+      "type": "text",
+      "id": "discount2",
+      "label": "Discount 2"
+    },
+    {
+      "type": "text",
+      "id": "discount3",
+      "label": "Discount 3"
+    },
+    {
+      "type": "text",
+      "id": "discount4",
+      "label": "Discount 4"
+    },
+    {
+      "type": "text",
+      "id": "discount5",
+      "label": "Discount 5"
+    },
+    {
+      "type": "text",
+      "id": "discount6",
+      "label": "Discount 6"
+    },
+    {
+      "type": "text",
+      "id": "discount7",
+      "label": "Discount 7"
+    },
+    {
+      "type": "text",
+      "id": "discount8",
+      "label": "Discount 8"
+    },
+    {
+      "type": "text",
+      "id": "discount9",
+      "label": "Discount 9"
+    },
+    {
+      "type": "text",
+      "id": "discount10",
+      "label": "Discount 10"
     }
   ]
 }

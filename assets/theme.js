@@ -1830,6 +1830,27 @@ var CartNote = class extends HTMLElement {
     });
   }
 };
+var CartCoupon = class extends HTMLElement {
+  constructor() {
+    super();
+    this.addEventListener("change", this._onNoteChanged);
+  }
+  _onNoteChanged(event) {
+    let discount = {
+      discount: event.target.value
+    };
+    if (event.target.getAttribute("name") !== "coupon") {
+      return;
+    }
+    fetch(`${Shopify.routes.root}cart/update.js`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(discount),
+      keepalive: true,
+      // Allows to make sure the request is fired even when submitting the form
+    });
+  }
+};
 var CartNoteDialog = class extends DialogElement {
   constructor() {
     super();
@@ -1845,6 +1866,9 @@ var CartNoteDialog = class extends DialogElement {
 };
 if (!window.customElements.get("cart-note")) {
   window.customElements.define("cart-note", CartNote);
+}
+if (!window.customElements.get("cart-coupon")) {
+  window.customElements.define("cart-coupon", CartCoupon);
 }
 if (!window.customElements.get("cart-note-dialog")) {
   window.customElements.define("cart-note-dialog", CartNoteDialog);
