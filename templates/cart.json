@@ -37,8 +37,8 @@
             "show_shipping_text": true
           }
         },
-        "cart_note": {
-          "type": "cart_note",
+        "dialogs_EcWxhC": {
+          "type": "dialogs",
           "settings": {}
         },
         "checkout_button": {
@@ -48,7 +48,7 @@
       },
       "block_order": [
         "totals",
-        "cart_note",
+        "dialogs_EcWxhC",
         "checkout_button"
       ],
       "settings": {
