@@ -43,6 +43,17 @@ only way to do it on Shopify right now.
       display:flex;
       align-items:center;
     }
+    .product-gallery__thumbnail {
+      width: 100px;
+    }
+    .scroll-area {
+      margin: 0px;
+    }
+    .product-gallery__thumbnail-list {
+      grid-auto-columns: auto;
+      width: 300px;
+      margin: auto;
+    }
     #upthumb svg {
       transform: rotate(180deg);
     }
@@ -236,9 +247,11 @@ only way to do it on Shopify right now.
   const btnDownthumb = document.getElementById('downthumb');
   
   // 存储每个项目的位置
-  let itemPositions = Array.from(itemsthumb).map(item => item.offsetTop);
+  let itemPositions;
   if(isMobileView()){
     itemPositions = Array.from(itemsthumb).map(item => item.offsetLeft);
+  }else{
+    itemPositions = Array.from(itemsthumb).map(item => item.offsetTop);
   }
   
   // 当前活动项目的索引
@@ -276,22 +289,26 @@ only way to do it on Shopify right now.
   // 监听滚动事件，更新当前索引
   scrollablethumb.addEventListener('scroll', () => {
       // 找到最接近顶部的项目
-      let scrollPosition = scrollablethumb.scrollTop + 10; // 加10px偏移量使判断更准确
+      let scrollPosition; // 加10px偏移量使判断更准确
     if(isMobileView()){
-      scrollPosition = scrollablethumb.scrollLeft + 10;
+      scrollPosition = scrollablethumb.scrollLeft;// - 30;
+    } else {
+      scrollPosition = scrollablethumb.scrollTop + 10;
     }
       
       for (let i = 0; i < itemPositions.length; i++) {
-        let offset = itemsthumb[i].offsetHeight;
+        let offset;
         if(isMobileView()){
-          offset = itemsthumb[i].offsetWidth;
+          offset = itemsthumb[i].offsetWidth / 4;
+        } else {
+          offset = itemsthumb[i].offsetHeight / 2;
         }
-          if (scrollPosition < itemPositions[i] + offset / 2) {
+          if (scrollPosition < itemPositions[i] + offset) {
               currentIndexthumb = i;
               break;
           }
       }
-    
+    console.log(currentIndexthumb, scrollPosition);
       btnUpthumb.disabled = currentIndexthumb === 0;
       btnDownthumb.disabled = currentIndexthumb === itemsthumb.length - 1;
   });
