@@ -10412,7 +10412,7 @@ product-rerender {
   .product-gallery--desktop-thumbnails-left .product-gallery__thumbnail-list {
     gap: var(--spacing-2-5);
     grid-auto-flow: row;
-    max-height: 600px;
+    max-height: 443px;
     overflow: auto;
   }
 
