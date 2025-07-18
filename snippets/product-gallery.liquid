@@ -247,9 +247,11 @@ only way to do it on Shopify right now.
   const btnDownthumb = document.getElementById('downthumb');
   
   // 存储每个项目的位置
-  let itemPositions = Array.from(itemsthumb).map(item => item.offsetTop);
+  let itemPositions;
   if(isMobileView()){
     itemPositions = Array.from(itemsthumb).map(item => item.offsetLeft);
+  }else{
+    itemPositions = Array.from(itemsthumb).map(item => item.offsetTop);
   }
   
   // 当前活动项目的索引
@@ -293,9 +295,11 @@ only way to do it on Shopify right now.
     }
       
       for (let i = 0; i < itemPositions.length; i++) {
-        let offset = itemsthumb[i].offsetHeight;
+        let offset;
         if(isMobileView()){
           offset = itemsthumb[i].offsetWidth;
+        } else {
+          offset = itemsthumb[i].offsetHeight;
         }
           if (scrollPosition < itemPositions[i] + offset / 2) {
               currentIndexthumb = i;
