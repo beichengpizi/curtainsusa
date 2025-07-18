@@ -10398,7 +10398,7 @@ product-rerender {
 @media screen and (min-width: 1150px) {
   .product-gallery--desktop-thumbnails-left {
     grid: auto / auto-flow auto minmax(0, 1fr);
-    align-items: start;
+    align-items: center;
   }
 
   .product-gallery--desktop-thumbnails-left
