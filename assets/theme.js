@@ -1845,7 +1845,7 @@ var CartCoupon = class extends HTMLElement {
     fetch(`${Shopify.routes.root}cart/update.js`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({discount}),
+      body: JSON.stringify(discount),
       keepalive: true,
       // Allows to make sure the request is fired even when submitting the form
     });
