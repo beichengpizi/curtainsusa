@@ -1845,7 +1845,7 @@ var CartCoupon = class extends HTMLElement {
     fetch(`${Shopify.routes.root}cart/update.js`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(discount),
+      body: JSON.stringify({discount}),
       keepalive: true,
       // Allows to make sure the request is fired even when submitting the form
     });
@@ -1853,7 +1853,6 @@ var CartCoupon = class extends HTMLElement {
       "cart.discount_codes",
       JSON.stringify(event.target.value)
     );
-    console.log("localStorage.cart.discount_codes", localStorage.getItem("cart.discount_codes"));
   }
 };
 var CartNoteDialog = class extends DialogElement {
