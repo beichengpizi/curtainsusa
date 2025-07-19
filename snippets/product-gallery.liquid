@@ -263,19 +263,7 @@ only way to do it on Shopify right now.
   let currentIndexthumb = 0;
   
   // 滚动到指定索引的项目
-  function scrollToIndexthumb(e, index) {
-    const currentTime = new Date().getTime();
-    const timeSinceLastClick = currentTime - lastClickTime;
-    
-    // 设置时间阈值（例如500毫秒）
-    if (timeSinceLastClick < 500) {
-        e.preventDefault();
-        e.stopPropagation();
-        return;
-    }
-    
-    lastClickTime = currentTime;
-    
+  function scrollToIndexthumb(index) {
       if (index < 0) index = 0;
       if (index >= itemsthumb.length) index = itemsthumb.length - 1;
       
@@ -295,12 +283,36 @@ only way to do it on Shopify right now.
   
   // 上按钮点击事件
   btnUpthumb.addEventListener('click', (e) => {
-      scrollToIndexthumb(e, currentIndexthumb - 1);
+    const currentTime = new Date().getTime();
+    const timeSinceLastClick = currentTime - lastClickTime;
+    
+    // 设置时间阈值（例如500毫秒）
+    if (timeSinceLastClick < 500) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+    }
+    
+    lastClickTime = currentTime;
+    
+      scrollToIndexthumb(currentIndexthumb - 1);
   });
   
   // 下按钮点击事件
   btnDownthumb.addEventListener('click', (e) => {
-      scrollToIndexthumb(e, currentIndexthumb + 1);
+    const currentTime = new Date().getTime();
+    const timeSinceLastClick = currentTime - lastClickTime;
+    
+    // 设置时间阈值（例如500毫秒）
+    if (timeSinceLastClick < 500) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+    }
+    
+    lastClickTime = currentTime;
+    
+      scrollToIndexthumb(currentIndexthumb + 1);
   });
   
   // 监听滚动事件，更新当前索引
