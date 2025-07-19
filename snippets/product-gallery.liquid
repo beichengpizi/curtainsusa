@@ -29,6 +29,12 @@ only way to do it on Shopify right now.
     .product-gallery__thumbnail-list {
       scroll-snap-type: y mandatory;
     }
+    #upthumb, #downthumb {
+      pointer-events: none;
+      touch-action: manipulation;
+      width: 64px;
+      height: 70px;
+    }
     #upthumb svg {
       transform: rotate(-90deg);
       cursor:pointer;
