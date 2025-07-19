@@ -37,9 +37,14 @@ only way to do it on Shopify right now.
     }
     #upthumb svg {
       transform: rotate(-90deg);
+      width:40px;
+      height:40px;
     }
     #downthumb svg {
       transform: rotate(90deg);
+      width:40px;
+      height:40px;
+      margin-top: 30px;
     }
   }
   @media screen and (max-width: 750px) {
@@ -59,9 +64,13 @@ only way to do it on Shopify right now.
     #upthumb svg {
       transform: rotate(180deg);
       margin-top: 20px;
+      width:30px;
+      height:30px;
     }
     #downthumb svg {
       margin-top: 20px;
+      width:30px;
+      height:30px;
     }
     #upthumb, #downthumb {
       pointer-events: none;
@@ -219,7 +228,7 @@ only way to do it on Shopify right now.
     {%- if section.settings.mobile_carousel_control == 'thumbnails' or section.settings.desktop_media_layout contains 'thumbnails' -%}
       <scroll-shadow class="product-gallery__thumbnail-list-wrapper">
         <div id="upthumb">
-          <svg style="width:30px;height:30px;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg>
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg>
         </div>
         <page-dots align-selected class="product-gallery__thumbnail-list scroll-area bleed md:unbleed" aria-controls="{{ product_gallery_id }}">
           {%- for media in product.media -%}
@@ -239,7 +248,7 @@ only way to do it on Shopify right now.
           {%- endfor -%}
         </page-dots>
         <div id="downthumb">
-          <svg style="width:30px;height:30px;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg>
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path></svg>
         </div>
       </scroll-shadow>
     {%- endif -%}
