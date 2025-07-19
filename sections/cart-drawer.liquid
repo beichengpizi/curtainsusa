@@ -9,6 +9,11 @@
       padding-inline-start: var(--spacing-3);
       padding-inline-end: var(--spacing-3);
     }
+
+    .drawer::part(body) {
+      padding: 11px;
+      scrollbar-width: none;
+    }
   }
 
     @keyframes progress-bar-stripes {
@@ -222,7 +227,7 @@
                 {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
               </div>
 
-              <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+              <span class="text-subdued text-on-sale">-{{ discount_application.total_allocated_amount | money }}</span>
             </div>
           {% endfor %}
         </div>
@@ -234,8 +239,8 @@
         <div class="h-stack gap-4 justify-between">
           <span class="h5">{{ 'cart.general.total' | t }}</span>
           <span class="h-stack gap-2">
-            <span class="text-subdued line-through">{{- cart.original_total_price | money_with_currency -}}</span>
-            <span class="h5">{{- cart.total_price | money_with_currency -}}</span>
+            <span class="text-subdued line-through">{{- cart.original_total_price | money -}}</span>
+            <span class="h5 text-on-sale">{{- cart.total_price | money -}}</span>
           </span>
         </div>
 

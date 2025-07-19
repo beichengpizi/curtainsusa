@@ -164,7 +164,7 @@
 
                       <div class="h-stack gap-4 justify-between">
                         <span class="h5">{{ 'cart.general.total' | t }}</span>
-                        <span class="h5">{{- cart.total_price | money_with_currency -}}</span>
+                        <span class="h5">{{- cart.total_price | money -}}</span>
                       </div>
 
                       {%- if block.settings.show_shipping_text -%}
