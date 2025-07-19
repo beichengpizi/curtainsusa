@@ -294,10 +294,15 @@ only way to do it on Shopify right now.
     scrollToIndexthumb(currentIndexthumb + 1);
   });
 
-  scrollablethumb.addEventListener('dblclick', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-  });
+  // CSS 方法
+    scrollablethumb.style.userSelect = 'none';
+    scrollablethumb.style.webkitUserSelect = 'none';
+    
+    // 事件方法
+    scrollablethumb.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
   
   // 监听滚动事件，更新当前索引
   scrollablethumb.addEventListener('scroll', () => {
