@@ -16,6 +16,37 @@ Supported variables
 * layout
 {%- endcomment -%}
 
+<style>
+  navigation-drawer .panel__scroller li,
+  navigation-drawer .panel__wrapper li {
+    border-block-end: 1px solid #EDEDED;
+    padding: 11px 20px 12px;
+  }
+
+  navigation-drawer .panel__wrapper,
+  navigation-drawer .panel__wrapper ul {
+    padding: 0;
+    gap: 0;
+  }
+
+  navigation-drawer .navigation-promo__wrapper img {
+    padding: 20px;
+  }
+
+  navigation-drawer .panel__wrapper h4 {
+    padding: 0 20px 12px;
+    border-block-end: 1px solid #EDEDED;
+  }
+
+  navigation-drawer .drawer::part(body) {
+    padding: 0;
+  }
+
+  .navigation-drawer[mobile-opening=left]::part(body) {
+    padding-block-start: 0;
+  }
+</style>
+
 <div class="panel-list__wrapper">
   <div class="panel">
     <div class="panel__wrapper" {% if mega_menu_block.settings.promo_content_layout == 'grid' or mega_menu_block.settings.promo_content_layout == 'collage' %}style="--panel-wrapper-justify-content: flex-start"{% endif %}>
@@ -27,7 +58,7 @@ Supported variables
           </button>
         {%- endif -%}
 
-        <ul class="v-stack gap-4">
+        <ul class="v-stack">
           {%- for link in main_menu.links -%}
             {%- unless is_mega_menu -%}
               {% liquid
