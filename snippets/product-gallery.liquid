@@ -253,7 +253,6 @@ only way to do it on Shopify right now.
   const itemsthumb = document.querySelectorAll('.product-gallery__thumbnail');
   const btnUpthumb = document.getElementById('upthumb');
   const btnDownthumb = document.getElementById('downthumb');
-  let clickthumb = true;
   
   // 存储每个项目的位置
   let itemPositions;
@@ -268,8 +267,6 @@ only way to do it on Shopify right now.
   
   // 滚动到指定索引的项目
   function scrollToIndexthumb(index) {
-    if(clickthumb){
-      clickthumb = false;
       if (index < 0) index = 0;
       if (index >= itemsthumb.length) index = itemsthumb.length - 1;
       
@@ -285,10 +282,6 @@ only way to do it on Shopify right now.
           behavior: 'smooth'
       });
     }
-      setTimeout((){
-        clickthumb = true;
-      },500);
-    }
   }
   
   // 上按钮点击事件
@@ -301,12 +294,7 @@ only way to do it on Shopify right now.
     scrollToIndexthumb(currentIndexthumb + 1);
   });
 
-  btnUpthumb.addEventListener('dblclick', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-  });
-
-  btnDownthumb.addEventListener('dblclick', function(e) {
+  scrollablethumb.addEventListener('dblclick', function(e) {
     e.preventDefault();
     e.stopPropagation();
   });
