@@ -254,7 +254,6 @@ only way to do it on Shopify right now.
   const itemsthumb = document.querySelectorAll('.product-gallery__thumbnail');
   const btnUpthumb = document.getElementById('upthumb');
   const btnDownthumb = document.getElementById('downthumb');
-  let lastClickTime = 0;
   
   // 存储每个项目的位置
   let itemPositions;
@@ -288,36 +287,22 @@ only way to do it on Shopify right now.
   
   // 上按钮点击事件
   btnUpthumb.addEventListener('click', (e) => {
-    const currentTime = new Date().getTime();
-    const timeSinceLastClick = currentTime - lastClickTime;
-    
-    // 设置时间阈值（例如500毫秒）
-    if (timeSinceLastClick < 500) {
-        e.preventDefault();
-        e.stopPropagation();
-        return;
-    }
-    
-    lastClickTime = currentTime;
-    
-      scrollToIndexthumb(currentIndexthumb - 1);
+    scrollToIndexthumb(currentIndexthumb - 1);
   });
   
   // 下按钮点击事件
   btnDownthumb.addEventListener('click', (e) => {
-    const currentTime = new Date().getTime();
-    const timeSinceLastClick = currentTime - lastClickTime;
-    
-    // 设置时间阈值（例如500毫秒）
-    if (timeSinceLastClick < 500) {
-        e.preventDefault();
-        e.stopPropagation();
-        return;
-    }
-    
-    lastClickTime = currentTime;
-    
-      scrollToIndexthumb(currentIndexthumb + 1);
+    scrollToIndexthumb(currentIndexthumb + 1);
+  });
+
+  btnUpthumb.addEventListener('dblclick', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  });
+
+  btnDownthumb.addEventListener('dblclick', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
   });
   
   // 监听滚动事件，更新当前索引
