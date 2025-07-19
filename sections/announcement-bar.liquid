@@ -20,6 +20,11 @@
         top: calc(var(--sticky-header-enabled, 0) * var(--header-height, 0px));
       }
     {%- endif -%}
+
+    #shopify-section-{{ section.id }} .announcement-bar {
+      padding-block-start: var(--spacing-1);
+      padding-block-end: var(--spacing-1);
+    }
   </style>
 
   {%- comment -%}
