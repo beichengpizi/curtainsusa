@@ -217,7 +217,7 @@
                 <cart-coupon class="v-stack gap-4">
                   {%- assign order_save_label = 'cart.general.save_note' | t -%}
 
-                  {%- render 'input', name: 'attributes[coupon]', label: 'Add a discount', value: cart.attributes.coupon -%}
+                  {%- render 'input', name: 'coupon', label: 'Add a discount', value: cart.coupon -%}
 
                   <div class="justify-self-start">
                     {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
@@ -239,9 +239,7 @@
             </div>
           {% endfor %}
         </div>
-        
       </div>
-      
       
       <div class="v-stack gap-1">
         <div class="h-stack gap-4 justify-between">
