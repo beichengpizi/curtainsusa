@@ -1842,17 +1842,17 @@ var CartCoupon = class extends HTMLElement {
     if (event.target.getAttribute("name") !== "attributes[coupon]") {
       return;
     }
+    fetch(`${Shopify.routes.root}cart/update.js`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(discount),
+      keepalive: true,
+      // Allows to make sure the request is fired even when submitting the form
+    });
     localStorage.setItem(
       "cart.discount_codes",
       JSON.stringify(event.target.value)
     );
-    fetch(`${Shopify.routes.root}cart/update.js`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({discount}),
-      keepalive: true,
-      // Allows to make sure the request is fired even when submitting the form
-    });
   }
 };
 var CartNoteDialog = class extends DialogElement {
