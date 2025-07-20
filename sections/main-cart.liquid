@@ -41,6 +41,15 @@
     #shopify-section-{{ section.id }} .cart-drawer__note-inner {
       padding: var(--spacing-5) 0 0 0;
     }
+
+    #shopify-section-{{ section.id }} .cart-drawer__note[open] {
+      height: fit-content;
+    }
+
+    #shopify-section-{{ section.id }} .cart-drawer__note {
+      height: 0;
+      transition: height .2s ease-in-out;
+    }
   }
 </style>
 
