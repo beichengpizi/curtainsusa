@@ -1842,14 +1842,13 @@ var CartCoupon = class extends HTMLElement {
     if (event.target.getAttribute("name") !== "coupon") {
       return;
     }
-    const response = await fetch(`${Shopify.routes.root}cart/update.js`, {
+    fetch(`${Shopify.routes.root}cart/update.js`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(discount),
       keepalive: true,
       // Allows to make sure the request is fired even when submitting the form
     });
-    console.log('response', response);
     localStorage.setItem(
       "cart.discount_codes",
       JSON.stringify(event.target.value)
