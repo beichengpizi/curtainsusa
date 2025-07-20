@@ -141,6 +141,12 @@
         gap: var(--spacing-6) var(--spacing-10);
     }
   }
+
+  @media screen and (min-width: 1150px) {
+    #shopify-section-{{ section.id }} .product {
+        column-gap: var(--spacing-24);
+    }
+  }
 </style>
 
 <div {% render 'section-properties', tight: true %}>
