@@ -1861,11 +1861,11 @@ var CartNoteDialog = class extends DialogElement {
     this.addEventListener("change", this._onNoteChanged);
   }
   _onNoteChanged(event) {
-    if (event.target.value === "") {
-      this.controls.forEach((control) => control.innerHTML = `<span class="link text-sm text-subdued">${window.themeVariables.strings.addOrderNote}</span>`);
-    } else {
-      this.controls.forEach((control) => control.innerHTML = `<span class="link text-sm text-subdued">${window.themeVariables.strings.editOrderNote}</span>`);
-    }
+    // if (event.target.value === "") {
+    //   this.controls.forEach((control) => control.innerHTML = `<span class="link text-sm text-subdued">${window.themeVariables.strings.addOrderNote}</span>`);
+    // } else {
+    //   this.controls.forEach((control) => control.innerHTML = `<span class="link text-sm text-subdued">${window.themeVariables.strings.editOrderNote}</span>`);
+    // }
   }
 };
 if (!window.customElements.get("cart-note")) {
