@@ -135,6 +135,12 @@
       font-size: 12px;
     }
   }
+
+  @media screen and (min-width: 1000px) {
+    #shopify-section-{{ section.id }} .product-gallery {
+        gap: var(--spacing-6) var(--spacing-10);
+    }
+  }
 </style>
 
 <div {% render 'section-properties', tight: true %}>
