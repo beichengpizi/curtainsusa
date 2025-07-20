@@ -206,65 +206,63 @@
                     </cart-note>
 
                   {% when 'dialogs' %}
-                    <div>
-                      <div class="h-stack gap-2 justify-between align-center">
-  
-                        <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-note">
-                          {% render 'icon' with 'pen', width: 20, height: 20 %}
-                        </button>
-            
-                        <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-shipping">
-                          {% render 'icon' with 'picto-truck', width: 20, height: 20 %}
-                        </button>
-            
-                        <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-coupon">
-                          {% render 'icon' with 'coupon', width: 24, height: 20 %}
-                          <span data-discount-noti class="m-cart-addon__icon--noti m:hidden m:rounded-full"></span>
-                        </button>
-                      </div>
-                      <cart-note-dialog id="main-cart-note" class="cart-drawer__note">
-                        <div class="cart-drawer__note-inner">
-                          <div class="v-stack gap-4 sm:gap-6">
-                            <p class="h5">{{ 'cart.general.order_note' | t }}</p>
-            
-                            <cart-note class="v-stack gap-4">
-                              {%- assign order_note = 'cart.general.order_note' | t -%}
-                              {%- assign order_save_label = 'cart.general.save_note' | t -%}
-            
-                              {%- render 'input', name: 'note', multiline: 3, label: order_note, value: cart.note -%}
-            
-                              <div class="justify-self-start">
-                                {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
-                              </div>
-                            </cart-note>
-                          </div>
-                        </div>
-                      </cart-note-dialog>
-                      <cart-note-dialog id="main-cart-shipping" class="cart-drawer__note">
-                        <div class="cart-drawer__note-inner">
-                          <div class="v-stack gap-4 sm:gap-6">
-                            {% render 'shipping-estimator' %}
-                          </div>
-                        </div>
-                      </cart-note-dialog>
-                      <cart-note-dialog id="main-cart-coupon" class="cart-drawer__note">
-                        <div class="cart-drawer__note-inner">
-                          <div class="v-stack gap-4 sm:gap-6">
-                            <p class="h5">Add a discount</p>
-            
-                            <cart-coupon class="v-stack gap-4">
-                              {%- assign order_save_label = 'cart.general.save_note' | t -%}
-            
-                              {%- render 'input', name: 'coupon', label: 'Add a discount', value: cart.coupon -%}
-            
-                              <div class="justify-self-start">
-                                {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
-                              </div>
-                            </cart-coupon>
-                          </div>
-                        </div>
-                      </cart-note-dialog>
+                    <div class="h-stack gap-2 justify-between align-center">
+
+                      <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-note">
+                        {% render 'icon' with 'pen', width: 20, height: 20 %}
+                      </button>
+          
+                      <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-shipping">
+                        {% render 'icon' with 'picto-truck', width: 20, height: 20 %}
+                      </button>
+          
+                      <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-coupon">
+                        {% render 'icon' with 'coupon', width: 24, height: 20 %}
+                        <span data-discount-noti class="m-cart-addon__icon--noti m:hidden m:rounded-full"></span>
+                      </button>
                     </div>
+                    <cart-note-dialog id="main-cart-note" class="cart-drawer__note">
+                      <div class="cart-drawer__note-inner">
+                        <div class="v-stack gap-4 sm:gap-6">
+                          <p class="h5">{{ 'cart.general.order_note' | t }}</p>
+          
+                          <cart-note class="v-stack gap-4">
+                            {%- assign order_note = 'cart.general.order_note' | t -%}
+                            {%- assign order_save_label = 'cart.general.save_note' | t -%}
+          
+                            {%- render 'input', name: 'note', multiline: 3, label: order_note, value: cart.note -%}
+          
+                            <div class="justify-self-start">
+                              {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
+                            </div>
+                          </cart-note>
+                        </div>
+                      </div>
+                    </cart-note-dialog>
+                    <cart-note-dialog id="main-cart-shipping" class="cart-drawer__note">
+                      <div class="cart-drawer__note-inner">
+                        <div class="v-stack gap-4 sm:gap-6">
+                          {% render 'shipping-estimator' %}
+                        </div>
+                      </div>
+                    </cart-note-dialog>
+                    <cart-note-dialog id="main-cart-coupon" class="cart-drawer__note">
+                      <div class="cart-drawer__note-inner">
+                        <div class="v-stack gap-4 sm:gap-6">
+                          <p class="h5">Add a discount</p>
+          
+                          <cart-coupon class="v-stack gap-4">
+                            {%- assign order_save_label = 'cart.general.save_note' | t -%}
+          
+                            {%- render 'input', name: 'coupon', label: 'Add a discount', value: cart.coupon -%}
+          
+                            <div class="justify-self-start">
+                              {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
+                            </div>
+                          </cart-coupon>
+                        </div>
+                      </div>
+                    </cart-note-dialog>
 
                   {%- when 'text' -%}
                     {%- if block.settings.content != blank -%}
