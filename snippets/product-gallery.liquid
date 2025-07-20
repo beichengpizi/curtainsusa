@@ -26,7 +26,7 @@ only way to do it on Shopify right now.
 
 <style>
   @media screen and (min-width: 750px) {
-    .product-gallery__thumbnail-list {
+    #shopify-section-{{ section.id }} .product-gallery__thumbnail-list {
       scroll-snap-type: y mandatory;
     }
     #upthumb, #downthumb {
@@ -50,14 +50,14 @@ only way to do it on Shopify right now.
     }
   }
   @media screen and (max-width: 750px) {
-    .product-gallery__thumbnail-list-wrapper {
+    #shopify-section-{{ section.id }} .product-gallery__thumbnail-list-wrapper {
       display:flex;
       align-items:center;
     }
-    .product-gallery__thumbnail {
+    #shopify-section-{{ section.id }} .product-gallery__thumbnail {
       width: 75px;
     }
-    .product-gallery__thumbnail-list {
+    #shopify-section-{{ section.id }} .product-gallery__thumbnail-list {
       grid-auto-columns: auto;
       width: 310px;
       margin: auto;
