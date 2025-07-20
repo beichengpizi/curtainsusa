@@ -193,11 +193,11 @@
                   {% when 'dialogs' %}
                     <div class="h-stack gap-2 justify-between align-center">
                       <div class="dialog-container">
-                        <button type="button" class="justify-self-start cart-icon" aria-controls="cart-drawer-note">
+                        <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-note">
                           {% render 'icon' with 'pen', width: 20, height: 20 %}
                         </button>
 
-                        <cart-note-dialog id="cart-drawer-note" class="cart-drawer__note">
+                        <cart-note-dialog id="main-cart-note" class="cart-drawer__note">
                           <div class="cart-drawer__note-inner">
                             <div class="v-stack gap-4 sm:gap-6">
                               <p class="h5">{{ 'cart.general.order_note' | t }}</p>
@@ -218,11 +218,11 @@
                       </div>
                       
                       <div class="dialog-container">
-                        <button type="button" class="justify-self-start cart-icon" aria-controls="cart-drawer-shipping">
+                        <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-shipping">
                           {% render 'icon' with 'picto-truck', width: 20, height: 20 %}
                         </button>
 
-                        <cart-note-dialog id="cart-drawer-shipping" class="cart-drawer__note">
+                        <cart-note-dialog id="main-cart-shipping" class="cart-drawer__note">
                           <div class="cart-drawer__note-inner">
                             <div class="v-stack gap-4 sm:gap-6">
                               {% render 'shipping-estimator' %}
@@ -232,12 +232,12 @@
                       </div>
                       
                       <div class="dialog-container">
-                        <button type="button" class="justify-self-start cart-icon" aria-controls="cart-drawer-coupon">
+                        <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-coupon">
                           {% render 'icon' with 'coupon', width: 24, height: 20 %}
                           <span data-discount-noti class="m-cart-addon__icon--noti m:hidden m:rounded-full"></span>
                         </button>
 
-                        <cart-note-dialog id="cart-drawer-coupon" class="cart-drawer__note">
+                        <cart-note-dialog id="main-cart-coupon" class="cart-drawer__note">
                           <div class="cart-drawer__note-inner">
                             <div class="v-stack gap-4 sm:gap-6">
                               <p class="h5">Add a discount</p>
