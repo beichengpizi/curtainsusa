@@ -1839,7 +1839,7 @@ var CartCoupon = class extends HTMLElement {
     let discount = {
       discount: event.target.value
     };
-    if (event.target.getAttribute("name") !== "coupon") {
+    if (event.target.getAttribute("name") !== "attributes[coupon]") {
       return;
     }
     localStorage.setItem(
@@ -1849,7 +1849,7 @@ var CartCoupon = class extends HTMLElement {
     fetch(`${Shopify.routes.root}cart/update.js`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(discount),
+      body: JSON.stringify({discount}),
       keepalive: true,
       // Allows to make sure the request is fired even when submitting the form
     });
