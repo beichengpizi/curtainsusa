@@ -151,6 +151,8 @@
           </div>
 
           <safe-sticky class="cart-order__recap v-stack gap-6">
+
+            <h5 class="h5">ORDER SUMMARY</h5>
             <form action="{{ routes.cart_url }}" method="POST" class="cart-form rounded">
               {%- for block in section.blocks -%}
                 {%- case block.type -%}
