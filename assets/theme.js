@@ -1839,7 +1839,7 @@ var CartCoupon = class extends HTMLElement {
     let discount = {
       discount: event.target.value
     };
-    if (event.target.getAttribute("name") !== "attributes[coupon]") {
+    if (event.target.getAttribute("name") !== "coupon") {
       return;
     }
     fetch(`${Shopify.routes.root}cart/update.js`, {
