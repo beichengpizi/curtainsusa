@@ -57,6 +57,12 @@
     font-size: 16px;
     font-weight: bolder;
   }
+
+  @media screen and (min-width: 700px){
+    #shopify-section-{{ section.id }} .final-line-price {
+      padding-top: var(--spacing-2);
+    }
+  }
 </style>
 
 <div class="container">
@@ -165,7 +171,9 @@
                       </line-item-quantity>
                     </td>
 
-                    <td class="hidden text-subdued text-end sm:table-cell">{{ line_item.final_line_price | money }}</td>
+                    <td class="hidden text-subdued text-end sm:table-cell final-line-price">
+                      {{ line_item.final_line_price | money }}
+                    </td>
                   </tr>
                 {%- endfor -%}
               </tbody>
