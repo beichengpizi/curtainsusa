@@ -24,7 +24,7 @@
       background-position: 40px 0;
     }
   }
-  
+
   cart-drawer .progress-bar:before {
     text-align: center;
     animation: 2s linear 0s infinite progress-bar-stripes;
@@ -57,10 +57,42 @@
   cart-drawer .buy-buttons--compact {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  cart-drawer .accordion {
+    border-block-start-width: 0;
+    border-block-end-width: 0;
+  }
+
+  cart-drawer .accordion__toggle {
+    padding-block-start: 0;
+    padding-block-end: 0;
+    font-weight: 400;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    padding-inline: var(--spacing-2);
+  }
+
+  cart-drawer .circle-chevron {
+    background: transparent;
+  }
+
+  cart-drawer .accordion__content {
+    margin-block-start: var(--accordion-spacing);
+  }
+
+  cart-drawer .group[aria-expanded=true] .circle-chevron.group-expanded\:colors:not([disabled]) {
+    color: currentColor;
+  }
 </style>
 
-
-<cart-drawer {% if request.design_mode %}handle-section-events{% endif %} class="cart-drawer drawer drawer--lg" id="cart-drawer">
+<cart-drawer
+  {% if request.design_mode %}
+    handle-section-events
+  {% endif %}
+  class="cart-drawer drawer drawer--lg"
+  id="cart-drawer"
+>
   {%- if cart.item_count == 0 -%}
     <button is="close-button" aria-label="{{ 'general.accessibility.close' | t | escape }}">
       {%- render 'icon' with 'close' -%}
@@ -139,15 +171,34 @@
 
                   {%- if rendered_recommendations > 1 -%}
                     <div class="h-stack gap-2 hidden sm:flex">
-                      <button is="prev-button" class="circle-chevron hover:colors" aria-controls="{{ carousel_id }}" aria-label="{{ 'general.accessibility.previous' | t | escape }}" disabled>{%- render 'icon' with 'chevron-left-small', direction_aware: true -%}</button>
-                      <button is="next-button" class="circle-chevron hover:colors" aria-controls="{{ carousel_id }}" aria-label="{{ 'general.accessibility.next' | t | escape }}">{%- render 'icon' with 'chevron-right-small', direction_aware: true -%}</button>
+                      <button
+                        is="prev-button"
+                        class="circle-chevron hover:colors"
+                        aria-controls="{{ carousel_id }}"
+                        aria-label="{{ 'general.accessibility.previous' | t | escape }}"
+                        disabled
+                      >
+                        {%- render 'icon' with 'chevron-left-small', direction_aware: true -%}
+                      </button>
+                      <button
+                        is="next-button"
+                        class="circle-chevron hover:colors"
+                        aria-controls="{{ carousel_id }}"
+                        aria-label="{{ 'general.accessibility.next' | t | escape }}"
+                      >
+                        {%- render 'icon' with 'chevron-right-small', direction_aware: true -%}
+                      </button>
                     </div>
                   {%- endif -%}
                 </div>
               {%- endif -%}
 
               {%- if recommendations != blank -%}
-                <scroll-carousel selector=".horizontal-product" id="{{ carousel_id }}" class="horizontal-product-list-carousel {% unless horizontal_products_blends %}separate{% endunless %} scroll-area bleed">
+                <scroll-carousel
+                  selector=".horizontal-product"
+                  id="{{ carousel_id }}"
+                  class="horizontal-product-list-carousel {% unless horizontal_products_blends %}separate{% endunless %} scroll-area bleed"
+                >
                   <div class="horizontal-product-list {% if horizontal_products_blends %}divide-x{% else %}separate{% endif %}">
                     {{- recommendations -}}
                   </div>
@@ -167,7 +218,6 @@
       <div class="h-stack gap-4 justify-between">
         {%- if section.settings.show_cart_note -%}
           <div class="h-stack gap-2 justify-between align-center">
-
             <button type="button" class="justify-self-start cart-icon" aria-controls="cart-drawer-note">
               {% render 'icon' with 'pen', width: 20, height: 20 %}
             </button>
@@ -194,7 +244,13 @@
                   {%- render 'input', name: 'note', multiline: 3, label: order_note, value: cart.note -%}
 
                   <div class="justify-self-start">
-                    {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
+                    {%- render 'button',
+                      type: 'button',
+                      content: order_save_label,
+                      size: 'lg',
+                      is: 'close-button',
+                      secondary: true
+                    -%}
                   </div>
                 </cart-note>
               </div>
@@ -220,7 +276,13 @@
                   {%- render 'input', name: 'coupon', label: 'Add a discount', value: cart.coupon -%}
 
                   <div class="justify-self-start">
-                    {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
+                    {%- render 'button',
+                      type: 'button',
+                      content: order_save_label,
+                      size: 'lg',
+                      is: 'close-button',
+                      secondary: true
+                    -%}
                   </div>
                 </cart-coupon>
               </div>
@@ -232,15 +294,18 @@
           {% for discount_application in cart.cart_level_discount_applications %}
             <div class="h-stack gap-2 justify-between">
               <div class="badge">
-                {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
+                {%- render 'icon' with 'discount' -%}
+                {{- discount_application.title -}}
               </div>
 
-              <span class="text-subdued text-on-sale text-sm">-{{ discount_application.total_allocated_amount | money }}</span>
+              <span class="text-subdued text-on-sale text-sm"
+                >-{{ discount_application.total_allocated_amount | money -}}
+              </span>
             </div>
           {% endfor %}
         </div>
       </div>
-      
+
       <div class="v-stack gap-1">
         <div class="h-stack gap-4 justify-between">
           <span class="h5">{{ 'cart.general.total' | t }}</span>
@@ -252,18 +317,26 @@
 
         {%- if section.settings.show_shipping_text -%}
           {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-            <p class="text-subdued text-sm">{{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}</p>
+            <p class="text-subdued text-sm">
+              {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+            </p>
           {%- elsif cart.taxes_included -%}
             <p class="text-subdued text-sm">{{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}</p>
           {%- elsif shop.shipping_policy.body != blank -%}
-            <p class="text-subdued text-sm">{{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}</p>
+            <p class="text-subdued text-sm">
+              {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+            </p>
           {%- else -%}
             <p class="text-subdued text-sm">{{ 'cart.general.taxes_and_shipping_at_checkout' | t }}</p>
           {%- endif -%}
         {%- endif -%}
       </div>
 
-      <form action="{{ routes.cart_url }}" method="POST" class="buy-buttons {% if section.settings.show_checkout_button %}buy-buttons--compact{% endif %}">
+      <form
+        action="{{ routes.cart_url }}"
+        method="POST"
+        class="buy-buttons {% if section.settings.show_checkout_button %}buy-buttons--compact{% endif %}"
+      >
         {%- assign checkout_label = 'cart.general.checkout' | t -%}
 
         {%- if section.settings.show_view_cart_button or section.settings.show_checkout_button == false -%}
@@ -273,7 +346,13 @@
         {%- endif -%}
 
         {%- if section.settings.show_checkout_button -%}
-          {%- render 'button', type: 'submit', content: checkout_label, icon: 'picto-lock', name: 'checkout', background: section.settings.checkout_background -%}
+          {%- render 'button',
+            type: 'submit',
+            content: checkout_label,
+            icon: 'picto-lock',
+            name: 'checkout',
+            background: section.settings.checkout_background
+          -%}
         {%- endif -%}
       </form>
     </div>
