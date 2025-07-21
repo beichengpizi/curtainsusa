@@ -71,7 +71,8 @@ Supported variables
     border-bottom-color: #06bfe2;
   }
 
-  navigation-drawer button:has(.new-label) {
+  navigation-drawer button:has(.new-label),
+  navigation-drawer .reversed-link:has(.new-label){
     position: relative;
   }
 </style>
@@ -132,7 +133,12 @@ Supported variables
                 </button>
               {%- else -%}
                 <a href="{{ link.url }}" class="group block w-full">
-                  <span><span class="reversed-link">{{ link.title }}</span></span>
+                  <span><span class="reversed-link">
+                    {{ link.title }}
+                    {% if section.settings.link_badge contains link.title %}
+                      <span class="label new-label">New</span>
+                    {% endif %}
+                  </span></span>
                 </a>
               {%- endif -%}
             </li>
