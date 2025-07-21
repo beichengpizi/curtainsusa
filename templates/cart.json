@@ -19,7 +19,7 @@
         "title": "Discount Countdown!",
         "content": "Buy 2 Get 10%; Buy 3 Get 15%; Buy 4 Get 20%.",
         "timetxt": "day|hr|min|sec",
-        "time": "2025-07-22T00:00:00+08:00",
+        "time": "2025-07-21T23:00:00+08:00",
         "background": "rgba(0,0,0,0)",
         "title_color": "#000000",
         "countdown_background": "#f5f5f5",
