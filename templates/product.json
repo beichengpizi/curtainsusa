@@ -18,6 +18,10 @@
             "heading_tag": "h2"
           }
         },
+        "badges_4xqaBe": {
+          "type": "badges",
+          "settings": {}
+        },
         "judge_me_reviews_preview_badge_NUKQ6a": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
@@ -105,6 +109,7 @@
       },
       "block_order": [
         "title",
+        "badges_4xqaBe",
         "judge_me_reviews_preview_badge_NUKQ6a",
         "discount_JTGPhe",
         "price",
