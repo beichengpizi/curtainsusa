@@ -50,7 +50,7 @@
             <span {% if sub_link.url != '#' %}class="{% if mega_menu_block.settings.submenu_style == 'bold_text' %}link-faded{% else %}reversed-link hover:show{% endif %}"{% endif %}>
               {{- sub_link.title -}}
               {% if section.settings.link_badge contains sub_link.title %}
-                <span class="label new-label">New</span>
+                <span class="label new-label blink">New</span>
               {% endif %}
             </span>
           </a>
