@@ -141,6 +141,12 @@
     constructor() {
       this.container = document.querySelector('.black-countdown-box');
       this.endTime = new Date(this.container.dataset['endTime']).getTime();
+      /*let now = new Date().getTime();
+      let lefttime = now - this.endTime;
+      if(lefttime<2*60*60*1000){
+        const 12hours = 12*60*60*1000;
+        this.endTime = now+12hours-(lefttime % 12hours);
+      }*/
       // 结束时间
       this.timer = 0; // 定时器
       this.distance = 0;
