@@ -1,27 +1,27 @@
 {%- comment -%}
-----------------------------------------------------------------------------------------------------------------------
-LINE ITEM
-----------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------
+  LINE ITEM
+  ----------------------------------------------------------------------------------------------------------------------
 
-This component renders a single line item product information, and is used on order and cart page.
+  This component renders a single line item product information, and is used on order and cart page.
 
-********************************************
-Supported variables
-********************************************
+  ********************************************
+  Supported variables
+  ********************************************
 
-* line_item: the line item to render (required)
-* show_desktop_quantity: if set to true (for instance on cart drawer), the quantity is also shown on the line
+  * line_item: the line item to render (required)
+  * show_desktop_quantity: if set to true (for instance on cart drawer), the quantity is also shown on the line
 {%- endcomment -%}
 
 {% liquid
-  assign max_quantity = nil
+  assign max_quantity = null
 
   if line_item.variant.inventory_management != blank and line_item.variant.inventory_policy == 'deny'
     assign current_quantity_for_variant = cart | item_count_for_variant: line_item.variant.id
     assign max_quantity = line_item.variant.inventory_quantity | minus: current_quantity_for_variant | plus: line_item.quantity
   endif
 
-  if line_item.variant.quantity_rule.max != nil
+  if line_item.variant.quantity_rule.max != null
     assign max_quantity = max_quantity | default: 999999 | at_most: line_item.variant.quantity_rule.max
   endif
 %}
@@ -29,7 +29,15 @@ Supported variables
 <line-item class="line-item">
   {%- if line_item.image != blank -%}
     <div class="line-item__media-wrapper">
-      {{- line_item.image | image_url: width: line_item.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 740px) 80px, 96px', widths: '80,96,160,192', class: 'line-item__media rounded-xs' -}}
+      {{-
+        line_item.image
+        | image_url: width: line_item.image.width
+        | image_tag:
+          loading: 'lazy',
+          sizes: '(max-width: 740px) 80px, 96px',
+          widths: '80,96,160,192',
+          class: 'line-item__media rounded-xs'
+      -}}
 
       <pill-loader class="pill-loader"></pill-loader>
     </div>
@@ -57,36 +65,68 @@ Supported variables
     {%- endif -%}
 
     {%- unless line_item.properties == blank -%}
-      <ul class="list-disc">
-        {%- for property in line_item.properties -%}
-          {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
-
-          {%- if property.last == blank or first_character_in_key == '_' -%}
-            {%- continue -%}
-          {%- endif -%}
-
-          <li class="text-sm text-subdued">
-            {%- if property.last contains '/uploads/' -%}
-              <a href="{{ property.last }}" class="link">{{ property.last | split: '/' | last }}</a>
-            {%- else -%}
-              {{ property.first }}: {{ property.last }}
+      {% capture accordion_content %}
+        <ul class="list-disc">
+          {%- for property in line_item.properties -%}
+            {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+  
+            {%- if property.last == blank or first_character_in_key == '_' -%}
+              {%- continue -%}
             {%- endif -%}
-          </li>
-        {%- endfor -%}
-      </ul>
+  
+            <li class="text-sm text-subdued">
+              {%- if property.last contains '/uploads/' -%}
+                <a href="{{ property.last }}" class="link">{{ property.last | split: '/' | last }}</a>
+              {%- else -%}
+                {{ property.first }}: {{ property.last }}
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {% endcapture %}
+      {% render 'accordion', title: 'Show more details', content: accordion_content %}
     {%- endunless -%}
 
     <div class="text-sm text-subdued sm:hidden">
       {%- if line_item.url_to_remove -%}
         <line-item-quantity class="h-stack justify-center gap-3">
           <quantity-selector class="quantity-selector">
-            <button type="button" class="quantity-selector__button" aria-label="{{ 'product.quantity.decrease_quantity' | t }}">{% render 'icon' with 'minus', width: 10, height: 2 %}</button>
-            <input class="quantity-input" type="number" is="quantity-input" inputmode="numeric" min="{{ line_item.variant.quantity_rule.min }}" step="{{ line_item.variant.quantity_rule.increment }}" {% if max_quantity != nil %}max="{{ max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
-            <button type="button" class="quantity-selector__button" aria-label="{{ 'product.quantity.increase_quantity' | t }}">{% render 'icon' with 'plus', width: 10, height: 10 %}</button>
+            <button
+              type="button"
+              class="quantity-selector__button"
+              aria-label="{{ 'product.quantity.decrease_quantity' | t }}"
+            >
+              {% render 'icon' with 'minus', width: 10, height: 2 %}
+            </button>
+            <input
+              class="quantity-input"
+              type="number"
+              is="quantity-input"
+              inputmode="numeric"
+              min="{{ line_item.variant.quantity_rule.min }}"
+              step="{{ line_item.variant.quantity_rule.increment }}"
+              {% if max_quantity != null %}
+                max="{{ max_quantity }}"
+              {% endif %}
+              data-line-key="{{ line_item.key }}"
+              aria-label="{{ 'cart.order.change_quantity' | t | escape }}"
+              value="{{ line_item.quantity }}"
+            >
+            <button
+              type="button"
+              class="quantity-selector__button"
+              aria-label="{{ 'product.quantity.increase_quantity' | t }}"
+            >
+              {% render 'icon' with 'plus', width: 10, height: 10 %}
+            </button>
           </quantity-selector>
 
           <span class="text-xs">
-            <a href="{{ line_item.url_to_remove }}" class="link" aria-label="{{ 'cart.order.remove_with_title' | t: title: line_item.title | escape }}">
+            <a
+              href="{{ line_item.url_to_remove }}"
+              class="link"
+              aria-label="{{ 'cart.order.remove_with_title' | t: title: line_item.title | escape }}"
+            >
               {{- 'cart.order.remove' | t -}}
             </a>
           </span>
@@ -100,7 +140,8 @@ Supported variables
       <ul class="contents" role="list">
         {%- for discount_allocation in line_item.line_level_discount_allocations -%}
           <li class="badge">
-            {%- render 'icon' with 'discount' -%} {{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
+            {%- render 'icon' with 'discount' -%}
+            {{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
           </li>
         {%- endfor -%}
       </ul>
@@ -111,13 +152,42 @@ Supported variables
     <div class="line-item__actions text-subdued hidden sm:block">
       <line-item-quantity class="v-stack gap-2">
         <quantity-selector class="quantity-selector">
-          <button type="button" class="quantity-selector__button" aria-label="{{ 'product.quantity.decrease_quantity' | t }}">{% render 'icon' with 'minus', width: 10, height: 2 %}</button>
-          <input class="quantity-input" type="number" is="quantity-input" inputmode="numeric" min="{{ line_item.variant.quantity_rule.min }}" step="{{ line_item.variant.quantity_rule.increment }}" {% if max_quantity != nil %}max="{{ max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
-          <button type="button" class="quantity-selector__button" aria-label="{{ 'product.quantity.increase_quantity' | t }}">{% render 'icon' with 'plus', width: 10, height: 10 %}</button>
+          <button
+            type="button"
+            class="quantity-selector__button"
+            aria-label="{{ 'product.quantity.decrease_quantity' | t }}"
+          >
+            {% render 'icon' with 'minus', width: 10, height: 2 %}
+          </button>
+          <input
+            class="quantity-input"
+            type="number"
+            is="quantity-input"
+            inputmode="numeric"
+            min="{{ line_item.variant.quantity_rule.min }}"
+            step="{{ line_item.variant.quantity_rule.increment }}"
+            {% if max_quantity != null %}
+              max="{{ max_quantity }}"
+            {% endif %}
+            data-line-key="{{ line_item.key }}"
+            aria-label="{{ 'cart.order.change_quantity' | t | escape }}"
+            value="{{ line_item.quantity }}"
+          >
+          <button
+            type="button"
+            class="quantity-selector__button"
+            aria-label="{{ 'product.quantity.increase_quantity' | t }}"
+          >
+            {% render 'icon' with 'plus', width: 10, height: 10 %}
+          </button>
         </quantity-selector>
 
         <span class="text-xs text-center">
-          <a href="{{ line_item.url_to_remove }}" class="link" aria-label="{{ 'cart.order.remove_with_title' | t: title: line_item.title | escape }}">
+          <a
+            href="{{ line_item.url_to_remove }}"
+            class="link"
+            aria-label="{{ 'cart.order.remove_with_title' | t: title: line_item.title | escape }}"
+          >
             {{- 'cart.order.remove' | t -}}
           </a>
         </span>
