@@ -6617,11 +6617,11 @@ product-rerender {
   margin-block-end: var(--section-outer-spacing-block);
   display: grid;
 }
-
+/* 
 .collection__top-bar,
 .collection__facets {
   display: none;
-}
+} */
 
 .collection__results {
   scroll-padding-top: calc(var(--sticky-area-height) + 20px);
