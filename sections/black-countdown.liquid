@@ -144,12 +144,10 @@
       // 结束时间
       /**/let now = new Date().getTime();
       let lefttime = this.endTime - now;
-      console.log(lefttime);
       if(lefttime<2*60*60*1000){
         let hours12 = 12*60*60*1000;
         let hours10 = 10*60*60*1000;
         this.endTime = now+hours10+(lefttime % hours12);
-        console.log(this.endTime);
       }
       this.timer = 0;
       // 定时器
