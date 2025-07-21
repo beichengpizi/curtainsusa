@@ -75,6 +75,10 @@
   #shopify-section-{{ section.id }} .accordion__content {
     margin-block-start: var(--accordion-spacing);
   }
+
+  #shopify-section-{{ section.id }} .group[aria-expanded=true] .circle-chevron.group-expanded\:colors:not([disabled]) {
+    color: currentColor;
+  }
 </style>
 
 <div class="container">
