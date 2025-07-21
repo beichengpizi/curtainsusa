@@ -46,11 +46,11 @@
   <div class="line-item__info">
     <div class="v-stack gap-0.5">
       {%- if line_item.url != blank -%}
-        <a href="{{ line_item.url }}" class="bold">
+        <a href="{{ line_item.url }}">
           <span class="reversed-link hover:show">{{ line_item.product.title | default: line_item.title }}</span>
         </a>
       {%- else -%}
-        <p class="bold">{{ line_item.product.title | default: line_item.title }}</p>
+        <p>{{ line_item.product.title | default: line_item.title }}</p>
       {%- endif -%}
 
       {%- render 'price-list', product: line_item -%}
