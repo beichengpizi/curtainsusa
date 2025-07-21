@@ -146,8 +146,8 @@
       let lefttime = this.endTime - now;
       console.log(lefttime);
       if(lefttime<2*60*60*1000){
-        const 12hours = 12*60*60*1000;
-        const 10hours = 10*60*60*1000;
+        let 12hours = 12*60*60*1000;
+        let 10hours = 10*60*60*1000;
         this.endTime = now+10hours+(lefttime % 12hours);
         console.log(this.endTime);
       }
