@@ -106,7 +106,13 @@ the underlying logic of the menu.
 
   @media screen and (min-width: 1025px) {
     #shopify-section-{{ section.id }} .new-label:before {
-      background: #06bfe2;
+      border-bottom-color: #06bfe2;
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -9px;
+      transform: translate(-50%) rotate(180deg);
+      border: 5px solid transparent;
     }
   }
 </style>
