@@ -11,7 +11,7 @@
       background-position: 40px 0;
     }
   }
-  
+
   #shopify-section-{{ section.id }} .progress-bar:before {
     text-align: center;
     animation: 2s linear 0s infinite progress-bar-stripes;
@@ -90,9 +90,9 @@
         <div class="cart-order">
           <div class="cart-order__summary">
             {%- comment -%}
-            ----------------------------------------------------------------------------------------------------------------
-            ORDER SUMMARY
-            ----------------------------------------------------------------------------------------------------------------
+              ----------------------------------------------------------------------------------------------------------------
+              ORDER SUMMARY
+              ----------------------------------------------------------------------------------------------------------------
             {%- endcomment -%}
             <table class="order-summary">
               <thead class="order-summary__header">
@@ -106,14 +106,14 @@
               <tbody class="order-summary__body">
                 {%- for line_item in cart.items -%}
                   {% liquid
-                    assign max_quantity = nil
-                  
+                    assign max_quantity = null
+
                     if line_item.variant.inventory_management != blank and line_item.variant.inventory_policy == 'deny'
                       assign current_quantity_for_variant = cart | item_count_for_variant: line_item.variant.id
                       assign max_quantity = line_item.variant.inventory_quantity | minus: current_quantity_for_variant | plus: line_item.quantity
                     endif
-                  
-                    if line_item.variant.quantity_rule.max != nil
+
+                    if line_item.variant.quantity_rule.max != null
                       assign max_quantity = max_quantity | default: 999999 | at_most: line_item.variant.quantity_rule.max
                     endif
                   %}
@@ -121,38 +121,72 @@
                   <tr>
                     <td>{%- render 'line-item', line_item: line_item -%}</td>
 
-                    <td class="hidden align-center text-center text-subdued sm:table-cell">
+                    <td class="hidden text-center text-subdued sm:table-cell">
                       <line-item-quantity class="v-stack justify-center gap-2 ">
                         <quantity-selector class="quantity-selector">
-                          <button type="button" class="quantity-selector__button" aria-label="{{ 'product.quantity.decrease_quantity' | t }}">{% render 'icon' with 'minus', width: 10, height: 2 %}</button>
-                          <input class="quantity-input" type="number" is="quantity-input" inputmode="numeric" min="{{ line_item.variant.quantity_rule.min }}" step="{{ line_item.variant.quantity_rule.increment }}" {% if max_quantity != nil %}max="{{ max_quantity }}"{% endif %} data-line-key="{{ line_item.key }}" aria-label="{{ 'cart.order.change_quantity' | t | escape }}" value="{{ line_item.quantity }}">
-                          <button type="button" class="quantity-selector__button" aria-label="{{ 'product.quantity.increase_quantity' | t }}">{% render 'icon' with 'plus', width: 10, height: 10 %}</button>
+                          <button
+                            type="button"
+                            class="quantity-selector__button"
+                            aria-label="{{ 'product.quantity.decrease_quantity' | t }}"
+                          >
+                            {% render 'icon' with 'minus', width: 10, height: 2 %}
+                          </button>
+                          <input
+                            class="quantity-input"
+                            type="number"
+                            is="quantity-input"
+                            inputmode="numeric"
+                            min="{{ line_item.variant.quantity_rule.min }}"
+                            step="{{ line_item.variant.quantity_rule.increment }}"
+                            {% if max_quantity != null %}
+                              max="{{ max_quantity }}"
+                            {% endif %}
+                            data-line-key="{{ line_item.key }}"
+                            aria-label="{{ 'cart.order.change_quantity' | t | escape }}"
+                            value="{{ line_item.quantity }}"
+                          >
+                          <button
+                            type="button"
+                            class="quantity-selector__button"
+                            aria-label="{{ 'product.quantity.increase_quantity' | t }}"
+                          >
+                            {% render 'icon' with 'plus', width: 10, height: 10 %}
+                          </button>
                         </quantity-selector>
                         <span class="text-xs">
-                          <a href="{{ line_item.url_to_remove }}" class="link" aria-label="{{ 'cart.order.remove_with_title' | t: title: line_item.title | escape }}">
+                          <a
+                            href="{{ line_item.url_to_remove }}"
+                            class="link"
+                            aria-label="{{ 'cart.order.remove_with_title' | t: title: line_item.title | escape }}"
+                          >
                             {{- 'cart.order.remove' | t -}}
                           </a>
                         </span>
                       </line-item-quantity>
                     </td>
 
-                    <td class="hidden align-center text-subdued text-end sm:table-cell">{{ line_item.final_line_price | money }}</td>
+                    <td class="hidden text-subdued text-end sm:table-cell">{{ line_item.final_line_price | money }}</td>
                   </tr>
                 {%- endfor -%}
               </tbody>
             </table>
 
             {%- comment -%}
-            ----------------------------------------------------------------------------------------------------------------
-            SHIPPING ESTIMATOR
-            ----------------------------------------------------------------------------------------------------------------
+              ----------------------------------------------------------------------------------------------------------------
+              SHIPPING ESTIMATOR
+              ----------------------------------------------------------------------------------------------------------------
             {%- endcomment -%}
 
             {%- if section.settings.show_shipping_estimator and cart.requires_shipping -%}
               {%- assign accordion_title = 'cart.shipping_estimator.estimate_shipping' | t -%}
               {%- capture accordion_content -%}{%- render 'shipping-estimator' -%}{%- endcapture -%}
 
-              {%- render 'accordion', title: accordion_title, icon: 'picto-box', content: accordion_content, size: 'lg' -%}
+              {%- render 'accordion',
+                title: accordion_title,
+                icon: 'picto-box',
+                content: accordion_content,
+                size: 'lg'
+              -%}
             {%- endif -%}
           </div>
 
@@ -181,7 +215,8 @@
                       {% for discount_application in cart.cart_level_discount_applications %}
                         <div class="h-stack gap-4 justify-between">
                           <div class="badge">
-                            {%- render 'icon' with 'discount' -%} {{- discount_application.title -}}
+                            {%- render 'icon' with 'discount' -%}
+                            {{- discount_application.title -}}
                           </div>
 
                           <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
@@ -195,13 +230,27 @@
 
                       {%- if block.settings.show_shipping_text -%}
                         {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-                          <span class="text-subdued text-sm">{{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}</span>
+                          <span class="text-subdued text-sm">
+                            {{-
+                              'cart.general.taxes_included_and_shipping_policy_html'
+                              | t: link: shop.shipping_policy.url
+                            -}}
+                          </span>
                         {%- elsif cart.taxes_included -%}
-                          <span class="text-subdued text-sm">{{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}</span>
+                          <span class="text-subdued text-sm">
+                            {{- 'cart.general.taxes_included_but_shipping_at_checkout' | t -}}
+                          </span>
                         {%- elsif shop.shipping_policy.body != blank -%}
-                          <span class="text-subdued text-sm">{{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}</span>
+                          <span class="text-subdued text-sm">
+                            {{-
+                              'cart.general.taxes_and_shipping_policy_at_checkout_html'
+                              | t: link: shop.shipping_policy.url
+                            -}}
+                          </span>
                         {%- else -%}
-                          <span class="text-subdued text-sm">{{ 'cart.general.taxes_and_shipping_at_checkout' | t }}</span>
+                          <span class="text-subdued text-sm">
+                            {{- 'cart.general.taxes_and_shipping_at_checkout' | t -}}
+                          </span>
                         {%- endif -%}
                       {%- endif -%}
                     </div>
@@ -209,21 +258,26 @@
                   {%- when 'cart_note' -%}
                     <cart-note class="cart-form__note block" {{ block.shopify_attributes }}>
                       {%- assign order_note = 'cart.general.order_note' | t -%}
-                      {%- render 'input', name: 'note', multiline: 3, label: order_note, value: cart.note, maxlength: block.settings.maxlength -%}
+                      {%- render 'input',
+                        name: 'note',
+                        multiline: 3,
+                        label: order_note,
+                        value: cart.note,
+                        maxlength: block.settings.maxlength
+                      -%}
                     </cart-note>
 
                   {% when 'dialogs' %}
                     <div>
                       <div class="h-stack gap-2 justify-between align-center">
-  
                         <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-note">
                           {% render 'icon' with 'pen', width: 20, height: 20 %}
                         </button>
-            
+
                         <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-shipping">
                           {% render 'icon' with 'picto-truck', width: 20, height: 20 %}
                         </button>
-            
+
                         <button type="button" class="justify-self-start cart-icon" aria-controls="main-cart-coupon">
                           {% render 'icon' with 'coupon', width: 24, height: 20 %}
                           <span data-discount-noti class="m-cart-addon__icon--noti m:hidden m:rounded-full"></span>
@@ -233,15 +287,21 @@
                         <div class="cart-drawer__note-inner">
                           <div class="v-stack gap-4 sm:gap-6">
                             <p class="h5">{{ 'cart.general.order_note' | t }}</p>
-            
+
                             <cart-note class="v-stack gap-4">
                               {%- assign order_note = 'cart.general.order_note' | t -%}
                               {%- assign order_save_label = 'cart.general.save_note' | t -%}
-            
+
                               {%- render 'input', name: 'note', multiline: 3, label: order_note, value: cart.note -%}
-            
+
                               <div class="justify-self-start">
-                                {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
+                                {%- render 'button',
+                                  type: 'button',
+                                  content: order_save_label,
+                                  size: 'lg',
+                                  is: 'close-button',
+                                  secondary: true
+                                -%}
                               </div>
                             </cart-note>
                           </div>
@@ -258,14 +318,20 @@
                         <div class="cart-drawer__note-inner">
                           <div class="v-stack gap-4 sm:gap-6">
                             <p class="h5">Add a discount</p>
-            
+
                             <cart-coupon class="v-stack gap-4">
                               {%- assign order_save_label = 'cart.general.save_note' | t -%}
-            
+
                               {%- render 'input', name: 'coupon', label: 'Add a discount', value: cart.coupon -%}
-            
+
                               <div class="justify-self-start">
-                                {%- render 'button', type: 'button', content: order_save_label, size: 'lg', is: 'close-button', secondary: true -%}
+                                {%- render 'button',
+                                  type: 'button',
+                                  content: order_save_label,
+                                  size: 'lg',
+                                  is: 'close-button',
+                                  secondary: true
+                                -%}
                               </div>
                             </cart-coupon>
                           </div>
@@ -296,14 +362,25 @@
 
                   {%- when 'accelerated_buttons' -%}
                     {% if additional_checkout_buttons %}
-                      <div class="additional-checkout-buttons additional-checkout-buttons--vertical" {{ block.shopify_attributes }}>
+                      <div
+                        class="additional-checkout-buttons additional-checkout-buttons--vertical"
+                        {{ block.shopify_attributes }}
+                      >
                         {{- content_for_additional_checkout_buttons -}}
                       </div>
                     {% endif %}
 
                   {%- when 'checkout_button' -%}
                     {%- assign checkout_button = 'cart.general.checkout' | t -%}
-                    {%- render 'button', type: 'submit', icon: 'picto-lock', content: checkout_button, size: 'xl', name: 'checkout', stretch: true, block: block -%}
+                    {%- render 'button',
+                      type: 'submit',
+                      icon: 'picto-lock',
+                      content: checkout_button,
+                      size: 'xl',
+                      name: 'checkout',
+                      stretch: true,
+                      block: block
+                    -%}
                 {%- endcase -%}
               {%- endfor -%}
             </form>
