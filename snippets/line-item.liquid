@@ -53,7 +53,7 @@
         <p class="bold">{{ line_item.product.title | default: line_item.title }}</p>
       {%- endif -%}
 
-      {%- render 'price-list', product: line_item.variant -%}
+      {%- render 'price-list', product: line_item -%}
     </div>
 
     {%- unless line_item.product.has_only_default_variant or line_item.gift_card -%}
