@@ -144,7 +144,8 @@ the underlying logic of the menu.
     animation: .6s blink infinite;
   }
 
-  #shopify-section-{{ section.id }} summary:has(.new-label) {
+  #shopify-section-{{ section.id }} summary:has(.new-label),
+  #shopify-section-{{ section.id }} .link-faded:has(.new-label){
     position: relative;
   }
 </style>
