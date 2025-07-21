@@ -84,6 +84,10 @@
   #shopify-section-{{ section.id }} .group[aria-expanded=true] .circle-chevron.group-expanded\:colors:not([disabled]) {
     color: currentColor;
   }
+
+  #shopify-section-{{ section.id }} .order-summary__body tr:first-child td.final-line-price {
+    padding-block-start: var(--spacing-9);
+  }
 </style>
 
 <div class="container">
