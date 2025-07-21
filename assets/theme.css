@@ -9748,7 +9748,7 @@ product-rerender {
 }
 
 .product-info {
-  --product-info-block-spacing: var(--spacing-4);
+  --product-info-block-spacing: var(--spacing-3);
 }
 
 .product-info > * + * {
