@@ -1,12 +1,6 @@
 {%- render 'section-spacing-collapsing' -%}
 
 <style>
-  @media screen and (max-width: 700px){
-    #shopify-section-{{ section.id }} .product-info>*+* {
-      margin-block-start: var(--spacing-4);
-    }
-  }
-
   #shopify-section-{{ section.id }} {
     --product-grid: auto / minmax(0, 1fr);
     --product-gallery-media-list-grid: auto / auto-flow {% if section.settings.mobile_carousel_control == 'free_scroll' %}{% if section.settings.mobile_media_size == 'expanded' %}84vw{% else %}73vw{% endif %}{% else %}100%{% endif %};
