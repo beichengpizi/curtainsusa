@@ -119,7 +119,7 @@ the underlying logic of the menu.
   }
 
   @media screen and (min-width: 700px) {
-    .new-label:before {
+    #shopify-section-{{ section.id }} .new-label:before {
       content: "";
       position: absolute;
       left: 50%;
@@ -131,7 +131,7 @@ the underlying logic of the menu.
   }
 
   @media screen and (max-width: 700px){
-    .new-label:after {
+    #shopify-section-{{ section.id }} .new-label:after {
       content: "";
       position: absolute;
       bottom: -2px;
@@ -144,7 +144,7 @@ the underlying logic of the menu.
     }
   }
 
-  summary:has(.new-label) {
+  #shopify-section-{{ section.id }} summary:has(.new-label) {
     position: relative;
   }
 </style>
