@@ -130,6 +130,20 @@ the underlying logic of the menu.
     }
   }
 
+  @media screen and (max-width: 700px){
+    .new-label:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      transform: scaleX(0);
+      transition: transform var(--duration-default) ease-out;
+      transform-origin: right;
+    }
+  }
+
   summary:has(.new-label) {
     position: relative;
   }
