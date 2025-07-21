@@ -206,7 +206,7 @@
                     </td>
 
                     <td class="hidden align-center text-subdued text-end sm:table-cell final-line-price">
-                      {{ line_item.line_level_total_discount | times: line_item.quantity | money }}
+                      {{ line_item.line_price | times: line_item.quantity | money }}
                     </td>
                   </tr>
                 {%- endfor -%}
