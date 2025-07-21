@@ -9751,6 +9751,12 @@ product-rerender {
   --product-info-block-spacing: var(--spacing-3);
 }
 
+@media screen and (min-width: 700px) {
+  .product-info {
+    --product-info-block-spacing: var(--spacing-4);
+  }
+}
+
 .product-info > * + * {
   margin-block-start: var(--product-info-block-spacing);
   margin-block-end: var(--product-info-block-spacing);
