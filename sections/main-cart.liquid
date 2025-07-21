@@ -85,8 +85,10 @@
     color: currentColor;
   }
 
-  #shopify-section-{{ section.id }} .order-summary__body tr:first-child td.final-line-price {
-    padding-block-start: var(--spacing-9);
+  @media screen and (min-width: 700px){
+    #shopify-section-{{ section.id }} .order-summary__body tr:first-child td.final-line-price {
+      padding-block-start: var(--spacing-9);
+    }
   }
 </style>
 
