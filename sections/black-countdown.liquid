@@ -143,11 +143,15 @@
       this.endTime = new Date(this.container.dataset['endTime']).getTime();
       // 结束时间
       /*let now = new Date().getTime();
-      let lefttime = (this.endTime - now) % 12hours;
+      let lefttime = this.endTime - now;
       if(lefttime<2*60*60*1000){
         const 12hours = 12*60*60*1000;
         const 10hours = 10*60*60*1000;
-        this.endTime = now+10hours+lefttime;
+        this.endTime = now+10hours+(lefttime % 12hours);
+        if(lefttime>0){
+        }else{
+          lefttime = lefttime % 12hours;
+        }
       }*/
       this.timer = 0;
       // 定时器
