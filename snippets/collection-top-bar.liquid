@@ -16,11 +16,13 @@ Supported variables
 * show_sort_by: if set to true, show the sort by
 {%- endcomment -%}
 
-@media screen and (max-width: 700px) {
-  #shopify-section-{{ section.id }} .filters{
-    display: none;
+<style>
+  @media screen and (max-width: 700px) {
+    #shopify-section-{{ section.id }} .filters{
+      display: none;
+    }
   }
-}
+</style>
 
 {%- assign selected_sort_by_value = results.sort_by | default: results.default_sort_by -%}
 {%- assign selected_sort_by = results.sort_options | where: 'value', selected_sort_by_value | first -%}
