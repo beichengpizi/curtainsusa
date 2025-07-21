@@ -128,17 +128,15 @@ the underlying logic of the menu.
     border-bottom-color: #06bfe2;
   }
 
-  @media screen and (max-width: 700px){
-    .new-label:after {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      transform: scaleX(0);
-      transition: transform var(--duration-default) ease-out;
-      transform-origin: right;
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
