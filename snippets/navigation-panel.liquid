@@ -51,22 +51,16 @@ Supported variables
   }
 
   navigation-drawer .new-label {
+    position: relative;
+    top: -1px;
+    right: 0;
+    margin-left: 12px;
+    line-height: 18px;
+    height: 18px;
+    vertical-align: top;
+    color: white;
     background: #06bfe2;
-    color: #fff;
-    display: inline-block;
-    vertical-align: middle;
-    position: absolute;
-    right: -15px;
-    top: 2px;
-    font-size: calc(var(--font-body-size) - 2px);
-    font-weight: var(--font-weight-normal);
-    letter-spacing: 0;
-    line-height: 15px;
-    height: 15px;
-    padding: 0 6px;
-    text-transform: capitalize;
-    text-align: center;
-    border-radius: 1px;
+    border-color: #06bfe2;
   }
 
   navigation-drawer button:has(.new-label) {
