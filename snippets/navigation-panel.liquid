@@ -187,7 +187,11 @@ Supported variables
                                 {%- endif -%}
                               {%- endif -%}
 
-                              <span><span class="reversed-link">{{ sub_link.title }}</span></span>
+                              <span><span class="reversed-link">{{ sub_link.title }}
+                                {% if section.settings.link_badge contains link.title %}
+                                  <span class="label new-label">New</span>
+                                {% endif %}
+                              </span></span>
                             </a>
                           {%- endif -%}
                         </li>
