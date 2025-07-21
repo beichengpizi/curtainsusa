@@ -143,8 +143,8 @@
       this.endTime = new Date(this.container.dataset['endTime']).getTime();
       // 结束时间
       /**/let now = new Date().getTime();
-      console.log(new Date());
       let lefttime = this.endTime - now;
+      console.log(new Date(), this.endTime, lefttime, parseInt(lefttime/(60*60*1000)));
       if(lefttime<2*60*60*1000){
         let hours12 = 12*60*60*1000;
         let hours10 = 10*60*60*1000;
