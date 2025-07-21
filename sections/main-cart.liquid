@@ -271,7 +271,9 @@
                             {{- discount_application.title -}}
                           </div>
 
-                          <span class="text-subdued">-{{ discount_application.total_allocated_amount | money }}</span>
+                          <span class="text-subdued text-on-sale"
+                            >-{{ discount_application.total_allocated_amount | money -}}
+                          </span>
                         </div>
                       {% endfor %}
 
