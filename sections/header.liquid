@@ -155,6 +155,9 @@ the underlying logic of the menu.
                           <details is="mega-menu-disclosure" trigger="{{ section.settings.menu_open_trigger | escape }}" {{ mega_menu_block.shopify_attributes }}>
                             <summary class="text-with-icon gap-2.5 link-faded-reverse" {% if link.url != '#' %}data-url="{{ link.url | escape }}"{% endif %}>
                               {{- link.title -}}
+                              {% if section.settings.link_badge contains link.title %}
+                                <span class="label new-label">New</span>
+                              {% endif %}
                               {% comment %} {%- render 'icon' with 'chevron-bottom' -%} {% endcomment %}
                             </summary>
 
@@ -263,9 +266,6 @@ the underlying logic of the menu.
                 <li>
                   <a href="{{ link.url }}" class="link-faded-reverse">
                     {{ link.title }}
-                    {% if section.settings.link_badge contains link.title %}
-                      <span class="label new-label">New</span>
-                    {% endif %}
                   </a>
                 </li>
               {%- endfor -%}
