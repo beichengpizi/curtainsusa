@@ -146,7 +146,8 @@
       let lefttime = now - this.endTime;
       if(lefttime<2*60*60*1000){
         const 12hours = 12*60*60*1000;
-        this.endTime = now+12hours-(lefttime % 12hours);
+        const 10hours = 10*60*60*1000;
+        this.endTime = now+10hours+(lefttime % 12hours);
       }*/
       this.timer = 0;
       // 定时器
