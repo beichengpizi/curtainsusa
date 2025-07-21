@@ -260,8 +260,8 @@
                       </div>
 
                       {% for discount_application in cart.cart_level_discount_applications %}
-                        <div class="h-stack gap-4 justify-between text-on-sale">
-                          <div class="badge">
+                        <div class="h-stack gap-4 justify-between">
+                          <div class="badge text-on-sale">
                             {%- render 'icon' with 'discount' -%}
                             {{- discount_application.title -}}
                           </div>
