@@ -27,9 +27,14 @@ Supported variables
         <span class="reversed-link">{{- 'collection.faceting.filters' | t -}}</span>
       </button>
     {%- elsif section.settings.filter_layout == 'sidebar' -%}
-      <div class="text-with-icon">
+      <div class="text-with-icon hidden sm:block">
         {%- render 'icon' with 'filter', class: 'icon-subdued' -%} {{- 'collection.faceting.filters' | t -}}
       </div>
+
+      <button class="text-with-icon group justify-self-start sm:hidden" aria-controls="facets-drawer" aria-expanded="false">
+        {%- render 'icon' with 'filter', class: 'icon-subdued' -%}
+        <span class="reversed-link">{{- 'collection.faceting.filters' | t -}}</span>
+      </button>
     {%- endif -%}
   {%- endif -%}
 
