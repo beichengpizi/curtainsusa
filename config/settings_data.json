@@ -38,6 +38,7 @@
     "show_quick_buy": false,
     "show_product_rating": true,
     "product_rating_mode": "count",
+    "discount_mode": "percentage",
     "product_color_display": "variant",
     "product_info_alignment": "start",
     "cart_icon": "shopping_cart",
