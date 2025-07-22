@@ -30,7 +30,7 @@
     #shopify-section-{{ section.id }} facet-floating-filter {
       display: none;
     }
-    
+
     #shopify-section-{{ section.id }} .collection__top-bar {
       display: flex;
       justify-content: space-between;
@@ -173,7 +173,9 @@
             <div class="v-stack gap-6">
               <div class="v-stack gap-4 md:hidden">
                 {%- comment -%}We have to duplicate some information on mobile and tablet here{%- endcomment -%}
-                <p class="text-center">{{ 'collection.products_count' | t: count: collection.products_count }}</p>
+                <!--
+                  <p class="text-center">{{ 'collection.products_count' | t: count: collection.products_count }}</p>
+                -->
                 {%- render 'active-facets', results: collection -%}
               </div>
 
