@@ -199,7 +199,9 @@
             aria-controls="{{ sort_by_popover_id }}"
             aria-expanded="false"
           >
-            <span id="{{ sort_by_popover_id }}-value" class="reversed-link">{{- selected_sort_by.name -}}</span>
+            <!--
+              <span id="{{ sort_by_popover_id }}-value" class="reversed-link">{{- selected_sort_by.name -}}</span>
+            -->
             <span class="circle-chevron group-hover:colors group-expanded:rotate">
               {%- render 'icon' with 'chevron-bottom-small', direction_aware: true -%}
             </span>
