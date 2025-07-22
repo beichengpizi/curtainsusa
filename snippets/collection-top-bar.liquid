@@ -186,6 +186,8 @@
         {%- endif -%}
       {%- endif -%}
 
+      <span class="text-center">{{ 'collection.products_count' | t: count: collection.products_count }}</span>
+
       {%- if show_sort_by -%}
         {%- capture sort_by_popover_id -%}popover-sort-by-{{ section.id }}{%- endcapture -%}
 
