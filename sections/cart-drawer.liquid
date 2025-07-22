@@ -308,7 +308,7 @@
         <div class="v-stack gap-2">
           {% for discount_application in cart.cart_level_discount_applications %}
             <div class="h-stack gap-2 justify-between">
-              <div class="badge text-on-sale text-sm">
+              <div class="badge text-on-sale text-base">
                 {%- render 'icon' with 'discount' -%}
                 {{- discount_application.title -}}
               </div>
