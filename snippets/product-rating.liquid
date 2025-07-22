@@ -16,6 +16,12 @@
   * class: extra class to add
 {%- endcomment -%}
 
+<style>
+  .rating {
+    flex-wrap: wrap;
+  }
+</style>
+
 {%- assign rating_max = 5 -%}
 
 {%- if product.metafields.reviews.rating.value != blank -%}
