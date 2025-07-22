@@ -147,7 +147,11 @@
       if(lefttime<2*60*60*1000){
         let hours12 = 12*60*60*1000;
         let hours10 = 10*60*60*1000;
-        this.endTime = now+hours10+(lefttime % hours12);
+        lefttime = lefttime % hours12+hours10;
+        if(lefttime<0){
+          lefttime+=2*60*60*1000;
+        }
+        this.endTime = now+lefttime;
       }
       this.timer = 0;
       // 定时器
