@@ -51,7 +51,7 @@
     {%- endif -%}
   {%- endif -%}
 
-  <span class="text-center">{{ 'collection.products_count' | t: count: collection.products_count }}</span>
+  <span class="text-center sm:hidden">{{ 'collection.products_count' | t: count: collection.products_count }}</span>
 
   {%- if show_active_filters or show_sort_by -%}
     <div class="facets-summary">
