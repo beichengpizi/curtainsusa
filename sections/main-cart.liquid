@@ -427,7 +427,7 @@
                     {% endif %}
 
                   {%- when 'checkout_button' -%}
-                    {%- assign checkout_button = 'cart.general.checkout' | t -%}
+                    {% comment %} {%- assign checkout_button = 'cart.general.checkout' | t -%}
                     {%- render 'button',
                       type: 'submit',
                       icon: 'picto-lock',
@@ -436,7 +436,23 @@
                       name: 'checkout',
                       stretch: true,
                       block: block
-                    -%}
+                    -%} {% endcomment %}
+                    <form
+                      action="{{ routes.cart_url }}"
+                      method="POST"
+                      class="buy-buttons buy-buttons--compact"
+                    >
+                      {%- assign checkout_label = 'cart.general.checkout' | t -%}
+
+                      {%- render 'button',
+                        type: 'submit',
+                        content: checkout_label,
+                        icon: 'picto-lock',
+                        name: 'checkout',
+                        background: section.settings.checkout_background
+                      -%}
+
+                    </form>
                 {%- endcase -%}
               {%- endfor -%}
             </form>
