@@ -42,7 +42,7 @@
         "full_width": true,
         "allow_transparent_header": true,
         "enable_parallax": false,
-        "image_size": "lg",
+        "image_size": "fill",
         "image": "shopify://shop_images/CURTAINUK-133.webp",
         "mobile_image": "shopify://shop_images/111.png",
         "mobile_text_position": "place-self-center text-center",
