@@ -134,7 +134,7 @@
         "show_social_media": true,
         "show_locale_selector": true,
         "show_country_selector": true,
-        "show_country_flag": true,
+        "show_country_flag": false,
         "show_country_name": false,
         "transparent_header_text_color": "#ffffff",
         "transparent_logo": "shopify://shop_images/20250708144958.png",
