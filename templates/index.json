@@ -1074,35 +1074,21 @@
         "product_card_text_color": ""
       }
     },
-    "video_xeqHBq": {
-      "type": "video",
-      "blocks": {
-        "play_MqW7wT": {
-          "type": "play",
-          "settings": {}
-        },
-        "heading_3Ywt3A": {
-          "type": "heading",
-          "settings": {
-            "text": "Video",
-            "heading_tag": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "play_MqW7wT",
-        "heading_3Ywt3A"
-      ],
-      "name": "Video",
+    "custom_tabs_B6qG4t": {
+      "type": "custom-tabs",
+      "name": "Custom tabs",
       "settings": {
         "full_width": true,
-        "allow_transparent_header": false,
-        "autoplay": false,
-        "video_size": "sm",
-        "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30
+        "content_size": "medium",
+        "subheading": "Subheading",
+        "title": "Heading",
+        "text_alignment": "center",
+        "first_tab_open": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
       }
     },
     "featured_collection_CgFHcU": {
@@ -1329,7 +1315,7 @@
     "collection_list_9kAC3G",
     "featured_product_UB3nMQ",
     "featured_collection_ebTeHJ",
-    "video_xeqHBq",
+    "custom_tabs_B6qG4t",
     "featured_collection_CgFHcU",
     "rich_text_wGQxNk",
     "multi_column_WYnPar",
