@@ -58,10 +58,10 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/free-shipping.webp",
-            "column_size": "3",
+            "column_size": "4",
             "title": "Column title",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. </p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -71,7 +71,7 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/box.webp",
-            "column_size": "3",
+            "column_size": "4",
             "title": "Column title",
             "heading_tag": "h4",
             "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
@@ -84,7 +84,20 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/return_e1cc6e6d-ec8d-4311-86fe-51c31f0fdef4.webp",
-            "column_size": "3",
+            "column_size": "4",
+            "title": "Column title",
+            "heading_tag": "h4",
+            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_k6xmGP": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/return_e1cc6e6d-ec8d-4311-86fe-51c31f0fdef4.webp",
+            "column_size": "4",
             "title": "Column title",
             "heading_tag": "h4",
             "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
@@ -97,7 +110,8 @@
       "block_order": [
         "item_YnwVgK",
         "item_At87ak",
-        "item_UHbGC9"
+        "item_UHbGC9",
+        "item_k6xmGP"
       ],
       "name": "Multi-column",
       "settings": {
