@@ -119,8 +119,8 @@
         "mega_menu_hBym6E"
       ],
       "settings": {
-        "enable_sticky": false,
-        "hide_on_scroll": false,
+        "enable_sticky": true,
+        "hide_on_scroll": true,
         "link_badge": "Shop All Curtains, Roman Shades, Linen Curtains, Velvet Curtains",
         "logo": "shopify://shop_images/20250708144958.png",
         "logo_max_width": 180,
