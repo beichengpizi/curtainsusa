@@ -44,6 +44,7 @@
         "enable_parallax": false,
         "image_size": "auto",
         "image": "shopify://shop_images/CURTAINUK-133.webp",
+        "mobile_image": "shopify://shop_images/111.png",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center-start sm:text-start",
         "text_color": "#ffffff",
