@@ -328,74 +328,48 @@
         "product_card_text_color": ""
       }
     },
-    "collection_list_FyQrRr": {
-      "type": "collection-list",
+    "timeline_GQLcLB": {
+      "type": "timeline",
       "blocks": {
-        "collection_3xLN8L": {
-          "type": "collection",
+        "slide_PXpGWx": {
+          "type": "slide",
           "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "navigation_label": "1953",
+            "subheading": "Subheading",
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
           }
         },
-        "collection_jyQ37Y": {
-          "type": "collection",
+        "slide_Pem4R7": {
+          "type": "slide",
           "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "navigation_label": "1960",
+            "subheading": "Subheading",
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
           }
         },
-        "collection_JHXap6": {
-          "type": "collection",
+        "slide_Hj4raQ": {
+          "type": "slide",
           "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "navigation_label": "1966",
+            "subheading": "Subheading",
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
           }
         }
       },
       "block_order": [
-        "collection_3xLN8L",
-        "collection_jyQ37Y",
-        "collection_JHXap6"
+        "slide_PXpGWx",
+        "slide_Pem4R7",
+        "slide_Hj4raQ"
       ],
-      "name": "Collection list",
+      "name": "Timeline",
       "settings": {
         "full_width": true,
-        "stack_collections": true,
-        "collections_per_row_mobile": "1",
-        "collections_per_row": 3,
-        "show_progress_bar": false,
-        "subheading": "",
-        "title": "Collection list",
-        "content": "",
-        "link_url": "",
-        "link_text": "View all",
         "background": "",
         "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
+        "text_color": ""
       }
     },
     "before-after-image": {
@@ -929,8 +903,8 @@
       "settings": {
         "full_width": true,
         "stack_collections": true,
-        "collections_per_row_mobile": "1",
-        "collections_per_row": 3,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 4,
         "show_progress_bar": false,
         "subheading": "",
         "title": "Collection list",
@@ -1300,7 +1274,7 @@
     "multi_column_3JQLyH",
     "collection_list_DLCEPN",
     "featured-collection",
-    "collection_list_FyQrRr",
+    "timeline_GQLcLB",
     "before-after-image",
     "rich_text_femRG8",
     "video_RQPyA3",
