@@ -175,6 +175,7 @@
         "item_AeqExp",
         "item_bMnCw7"
       ],
+      "disabled": true,
       "name": "Multi-column",
       "settings": {
         "full_width": true,
